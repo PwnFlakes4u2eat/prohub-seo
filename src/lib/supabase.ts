@@ -48,6 +48,62 @@ export interface BlogPost {
 
 // Fetch providers for a service and town
 export async function getProviders(serviceSlug: string, townSlug: string): Promise<Provider[]> {
+  // Convert townSlug to town name (e.g., "george" -> "George", "mossel-bay" -> "Mossel Bay")
+  const townName = townSlug
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+
+  // First get the category ID for this service
+  const { data: categoryData } = await supabase
+    .from('categories')
+    .select('id')
+    .eq('slug', serviceSlug)
+    .single();
+
+  if (!categoryData) {
+    console.error('Category not found:', serviceSlug);
+    return [];
+  }
+
+  // Get the region ID for this town
+  const { data: regionData } = await supabase
+    .from('regions')
+    .select('id')
+    .eq('name', townName)
+    .single();
+
+  if (!regionData) {
+    console.error('Region not found:', townName);
+    return [];
+  }
+
+  // Get providers that match both the category AND region
+  const { data: providerCategories } = await supabase
+    .from('provider_categories')
+    .select('provider_id')
+    .eq('category_id', categoryData.id);
+
+  const { data: providerRegions } = await supabase
+    .from('provider_regions')
+    .select('provider_id')
+    .eq('region_id', regionData.id);
+
+  if (!providerCategories || !providerRegions) {
+    return [];
+  }
+
+  // Find providers that appear in both lists
+  const categoryProviderIds = new Set(providerCategories.map(pc => pc.provider_id));
+  const matchingProviderIds = providerRegions
+    .filter(pr => categoryProviderIds.has(pr.provider_id))
+    .map(pr => pr.provider_id);
+
+  if (matchingProviderIds.length === 0) {
+    return [];
+  }
+
+  // Fetch the actual provider data
   const { data, error } = await supabase
     .from('providers')
     .select(`
@@ -55,25 +111,33 @@ export async function getProviders(serviceSlug: string, townSlug: string): Promi
       business_name,
       avatar_url,
       cover_image_url,
-      bio,
+      description,
       years_experience,
-      is_verified,
-      subscription_tier,
-      featured_until,
+      status,
       created_at
     `)
-    .eq('is_verified', true)
-    .contains('service_categories', [serviceSlug])
-    .contains('service_areas', [townSlug])
-    .order('featured_until', { ascending: false, nullsFirst: false })
-    .limit(10);
+    .in('id', matchingProviderIds)
+    .eq('status', 'verified')
+    .limit(3);
 
   if (error) {
     console.error('Error fetching providers:', error);
     return [];
   }
 
-  return data || [];
+  // Map to expected interface
+  return (data || []).map(p => ({
+    id: p.id,
+    business_name: p.business_name,
+    avatar_url: p.avatar_url,
+    cover_image_url: p.cover_image_url,
+    bio: p.description,
+    years_experience: p.years_experience,
+    is_verified: p.status === 'verified',
+    subscription_tier: null,
+    featured_until: null,
+    created_at: p.created_at,
+  }));
 }
 
 // Fetch reviews for a service and town
@@ -119,28 +183,70 @@ export async function getBlogPosts(serviceSlug: string, townSlug?: string): Prom
 
 // Get aggregate stats for a service and town
 export async function getStats(serviceSlug: string, townSlug: string) {
-  // Get provider count
-  const { count: providerCount } = await supabase
-    .from('providers')
-    .select('*', { count: 'exact', head: true })
-    .eq('is_verified', true)
-    .contains('service_categories', [serviceSlug])
-    .contains('service_areas', [townSlug]);
+  // Convert townSlug to town name
+  const townName = townSlug
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 
-  // Get average rating
+  // Get category and region IDs
+  const { data: categoryData } = await supabase
+    .from('categories')
+    .select('id')
+    .eq('slug', serviceSlug)
+    .single();
+
+  const { data: regionData } = await supabase
+    .from('regions')
+    .select('id')
+    .eq('name', townName)
+    .single();
+
+  let providerCount = 0;
+
+  if (categoryData && regionData) {
+    // Get matching providers
+    const { data: providerCategories } = await supabase
+      .from('provider_categories')
+      .select('provider_id')
+      .eq('category_id', categoryData.id);
+
+    const { data: providerRegions } = await supabase
+      .from('provider_regions')
+      .select('provider_id')
+      .eq('region_id', regionData.id);
+
+    if (providerCategories && providerRegions) {
+      const categoryProviderIds = new Set(providerCategories.map(pc => pc.provider_id));
+      const matchingIds = providerRegions.filter(pr => categoryProviderIds.has(pr.provider_id));
+      
+      // Count verified providers
+      if (matchingIds.length > 0) {
+        const { count } = await supabase
+          .from('providers')
+          .select('*', { count: 'exact', head: true })
+          .in('id', matchingIds.map(m => m.provider_id))
+          .eq('status', 'verified');
+        providerCount = count || 0;
+      }
+    }
+  }
+
+  // Get average rating from providers table
   const { data: ratingData } = await supabase
-    .from('reviews')
-    .select('rating')
-    .eq('service_category', serviceSlug);
+    .from('providers')
+    .select('avg_rating')
+    .eq('status', 'verified')
+    .gt('avg_rating', 0);
 
   const avgRating = ratingData && ratingData.length > 0
-    ? ratingData.reduce((sum, r) => sum + r.rating, 0) / ratingData.length
+    ? ratingData.reduce((sum, r) => sum + Number(r.avg_rating), 0) / ratingData.length
     : null;
 
   return {
     providerCount: providerCount || 0,
     avgRating: avgRating ? avgRating.toFixed(1) : null,
-    avgResponseTime: '< 30 mins', // Default - could calculate from data
-    jobsThisMonth: null, // Could track this
+    avgResponseTime: '< 30 mins',
+    jobsThisMonth: null,
   };
 }
