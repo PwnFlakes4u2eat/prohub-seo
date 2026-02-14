@@ -46,6 +46,36 @@ export interface BlogPost {
   published_at: string;
 }
 
+// Map SEO slugs to database slugs (SEO uses singular, DB uses plural/variant)
+const slugMap: Record<string, string> = {
+  'plumber': 'plumbers',
+  'electrician': 'electricians',
+  'pest-control': 'pest-control',
+  'cleaning-service': 'cleaning-services',
+  'garden-service': 'garden-services',
+  'handyman': 'handyman',
+  'painter': 'painters',
+  'roofing': 'roofing',
+  'solar-installer': 'solar-installers',
+  'security': 'security',
+  'aircon': 'air-conditioning',
+  'geyser-service': 'geyser-services',
+  'pool-service': 'pool-services',
+  'locksmith': 'locksmith',
+  'building-renovation': 'building-renovation',
+  'tiling': 'tiling',
+  'waterproofing': 'waterproofing',
+  'damp-proofing': 'damp-proofing',
+  'paving': 'paving',
+  'gate-motor-repair': 'gate-motor-repairs',
+  'garage-door': 'garage-doors',
+  'moving-service': 'moving-services',
+  'appliance-repair': 'appliance-repair',
+  'furniture-repair': 'furniture-repair',
+  'ceilings-partitions': 'ceilings-partitions',
+  'electric-fencing': 'electric-fencing',
+};
+
 // Fetch providers for a service and town
 export async function getProviders(serviceSlug: string, townSlug: string): Promise<Provider[]> {
   // Convert townSlug to town name (e.g., "george" -> "George", "mossel-bay" -> "Mossel Bay")
@@ -54,11 +84,14 @@ export async function getProviders(serviceSlug: string, townSlug: string): Promi
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 
+  // Map SEO slug to database slug
+  const dbSlug = slugMap[serviceSlug] || serviceSlug;
+
   // First get the category ID for this service
   const { data: categoryData } = await supabase
     .from('categories')
     .select('id')
-    .eq('slug', serviceSlug)
+    .eq('slug', dbSlug)
     .single();
 
   if (!categoryData) {
@@ -189,11 +222,14 @@ export async function getStats(serviceSlug: string, townSlug: string) {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 
+  // Map SEO slug to database slug
+  const dbSlug = slugMap[serviceSlug] || serviceSlug;
+
   // Get category and region IDs
   const { data: categoryData } = await supabase
     .from('categories')
     .select('id')
-    .eq('slug', serviceSlug)
+    .eq('slug', dbSlug)
     .single();
 
   const { data: regionData } = await supabase
