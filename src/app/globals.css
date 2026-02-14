@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  /* ProHub Color Palette */
+  --color-border: hsl(40, 15%, 88%);
+  --color-input: hsl(40, 15%, 88%);
+  --color-ring: hsl(38, 95%, 50%);
+  --color-background: hsl(40, 30%, 97%);
+  --color-foreground: hsl(200, 25%, 12%);
+  
+  --color-primary: hsl(38, 95%, 50%);
+  --color-primary-foreground: hsl(0, 0%, 100%);
+  
+  --color-secondary: hsl(220, 15%, 16%);
+  --color-secondary-foreground: hsl(0, 0%, 100%);
+  
+  --color-tertiary: hsl(140, 25%, 42%);
+  --color-tertiary-foreground: hsl(0, 0%, 100%);
+  
+  --color-muted: hsl(40, 20%, 92%);
+  --color-muted-foreground: hsl(200, 10%, 45%);
+  
+  --color-accent: hsl(38, 95%, 50%);
+  --color-accent-foreground: hsl(0, 0%, 100%);
+  
+  --color-success: hsl(152, 60%, 40%);
+  --color-success-foreground: hsl(0, 0%, 100%);
+  
+  --color-card: hsl(0, 0%, 100%);
+  --color-card-foreground: hsl(200, 25%, 12%);
+  
+  /* Typography */
+  --font-display: var(--font-display), "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: var(--font-body), "Inter", system-ui, sans-serif;
+  
+  /* Border Radius */
+  --radius-lg: 0.75rem;
+  --radius-md: calc(0.75rem - 2px);
+  --radius-sm: calc(0.75rem - 4px);
+  
+  /* Shadows */
+  --shadow-card: 0 4px 24px -4px hsl(200, 25%, 12%, 0.08);
+  --shadow-elevated: 0 12px 40px -8px hsl(200, 25%, 12%, 0.12);
+}
+
+/* Base Styles */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Card Styles */
+.card-elevated {
+  box-shadow: 0 1px 3px hsl(200, 25%, 12%, 0.06), 0 8px 24px -4px hsl(200, 25%, 12%, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.card-elevated:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px hsl(200, 25%, 12%, 0.08), 0 12px 32px -4px hsl(200, 25%, 12%, 0.12);
+  border-color: hsl(38, 95%, 50%, 0.25);
+}
+
+/* Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom Components */
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-elevated {
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Prose Overrides */
+.prose p {
+  color: var(--color-muted-foreground);
+}
+
+.prose h3 {
+  color: var(--color-foreground);
+}
+
+/* FAQ Accordion */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary svg {
+  transform: rotate(180deg);
+}

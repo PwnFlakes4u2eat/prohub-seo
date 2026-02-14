@@ -1,0 +1,208 @@
+{
+  "towns": [
+    {
+      "slug": "george",
+      "name": "George",
+      "region": "Garden Route",
+      "regionSlug": "garden-route",
+      "province": "Western Cape",
+      "nearbyTowns": ["wilderness", "knysna", "mossel-bay", "oudtshoorn", "sedgefield", "hartenbos"],
+      "localAreas": ["Blanco", "Denneoord", "Heatherlands", "Pacaltsdorp", "Thembalethu"],
+      "description": "The largest city on the Garden Route, George serves as the economic hub of the Southern Cape with excellent infrastructure and a growing service industry."
+    },
+    {
+      "slug": "knysna",
+      "name": "Knysna",
+      "region": "Garden Route",
+      "regionSlug": "garden-route",
+      "province": "Western Cape",
+      "nearbyTowns": ["sedgefield", "plettenberg-bay", "george", "wilderness", "nature's-valley"],
+      "localAreas": ["The Heads", "Leisure Isle", "Knysna Quays", "Hornlee", "Concordia"],
+      "description": "Famous for its lagoon and oysters, Knysna is a popular tourist destination with a vibrant local economy."
+    },
+    {
+      "slug": "mossel-bay",
+      "name": "Mossel Bay",
+      "region": "Garden Route",
+      "regionSlug": "garden-route",
+      "province": "Western Cape",
+      "nearbyTowns": ["george", "hartenbos", "oudtshoorn", "riversdale", "albertinia"],
+      "localAreas": ["Hartenbos", "Dana Bay", "Pinnacle Point", "KwaNonqaba", "Dias Beach"],
+      "description": "Historic harbour town and the start of the Garden Route, known for its mild climate and industrial port."
+    },
+    {
+      "slug": "plettenberg-bay",
+      "name": "Plettenberg Bay",
+      "region": "Garden Route",
+      "regionSlug": "garden-route",
+      "province": "Western Cape",
+      "nearbyTowns": ["knysna", "nature's-valley", "sedgefield", "storms-river"],
+      "localAreas": ["Beacon Isle", "Robberg", "Keurbooms", "New Horizons", "Kwanokuthula"],
+      "description": "Upmarket coastal resort town popular with holidaymakers, known for whale watching and beautiful beaches."
+    },
+    {
+      "slug": "sedgefield",
+      "name": "Sedgefield",
+      "region": "Garden Route",
+      "regionSlug": "garden-route",
+      "province": "Western Cape",
+      "nearbyTowns": ["knysna", "george", "wilderness", "plettenberg-bay"],
+      "localAreas": ["Sedgefield Village", "Cola Beach", "Myoli Beach", "Swartvlei"],
+      "description": "Peaceful 'slow town' between Knysna and George, known for its Saturday Wild Oats Market and lagoon."
+    },
+    {
+      "slug": "wilderness",
+      "name": "Wilderness",
+      "region": "Garden Route",
+      "regionSlug": "garden-route",
+      "province": "Western Cape",
+      "nearbyTowns": ["george", "sedgefield", "knysna", "hoekwil"],
+      "localAreas": ["Wilderness Village", "Wilderness Heights", "Kleinkrantz", "Hoekwil"],
+      "description": "Scenic village surrounded by national park, rivers, and pristine beaches. Popular for outdoor activities."
+    },
+    {
+      "slug": "hartenbos",
+      "name": "Hartenbos",
+      "region": "Garden Route",
+      "regionSlug": "garden-route",
+      "province": "Western Cape",
+      "nearbyTowns": ["mossel-bay", "george", "oudtshoorn", "riversdale"],
+      "localAreas": ["Hartenbos Heuwels", "Hartenbos Beach"],
+      "description": "Family-friendly beach town adjacent to Mossel Bay, popular holiday destination."
+    },
+    {
+      "slug": "great-brak-river",
+      "name": "Great Brak River",
+      "region": "Garden Route",
+      "regionSlug": "garden-route",
+      "province": "Western Cape",
+      "nearbyTowns": ["mossel-bay", "george", "hartenbos", "wilderness"],
+      "localAreas": ["Glentana", "Tergniet", "Great Brak Village"],
+      "description": "Quiet village at the mouth of the Great Brak River, known for its tranquil lagoon."
+    },
+    {
+      "slug": "riversdale",
+      "name": "Riversdale",
+      "region": "Garden Route",
+      "regionSlug": "garden-route",
+      "province": "Western Cape",
+      "nearbyTowns": ["mossel-bay", "albertinia", "heidelberg", "still-bay"],
+      "localAreas": ["Riversdale Town", "Garcia"],
+      "description": "Agricultural town on the N2, serving the surrounding farming communities."
+    },
+    {
+      "slug": "albertinia",
+      "name": "Albertinia",
+      "region": "Garden Route",
+      "regionSlug": "garden-route",
+      "province": "Western Cape",
+      "nearbyTowns": ["riversdale", "mossel-bay", "still-bay", "heidelberg"],
+      "localAreas": ["Albertinia Village"],
+      "description": "Known as the 'Aloe Capital' of South Africa, small agricultural town with aloe processing industry."
+    },
+    {
+      "slug": "stillbaai",
+      "name": "Still Bay",
+      "region": "Garden Route",
+      "regionSlug": "garden-route",
+      "province": "Western Cape",
+      "nearbyTowns": ["riversdale", "albertinia", "heidelberg", "mossel-bay"],
+      "localAreas": ["Jongensfontein", "Melkhoutfontein", "Still Bay West", "Still Bay East"],
+      "description": "Coastal holiday town known for fishing, surfing, and the ancient fish traps."
+    },
+    {
+      "slug": "natures-valley",
+      "name": "Nature's Valley",
+      "region": "Garden Route",
+      "regionSlug": "garden-route",
+      "province": "Western Cape",
+      "nearbyTowns": ["plettenberg-bay", "storms-river", "knysna"],
+      "localAreas": ["Nature's Valley Village"],
+      "description": "Tiny coastal village nestled in the Tsitsikamma forest, surrounded by nature reserve."
+    },
+    {
+      "slug": "oudtshoorn",
+      "name": "Oudtshoorn",
+      "region": "Klein Karoo",
+      "regionSlug": "klein-karoo",
+      "province": "Western Cape",
+      "nearbyTowns": ["george", "calitzdorp", "de-rust", "mossel-bay", "dysselsdorp"],
+      "localAreas": ["Oudtshoorn CBD", "Bongolethu", "Bridgton", "Dysselsdorp"],
+      "description": "Capital of the Klein Karoo, famous for ostrich farming, Cango Caves, and Route 62."
+    },
+    {
+      "slug": "calitzdorp",
+      "name": "Calitzdorp",
+      "region": "Klein Karoo",
+      "regionSlug": "klein-karoo",
+      "province": "Western Cape",
+      "nearbyTowns": ["oudtshoorn", "ladismith", "de-rust", "prince-albert"],
+      "localAreas": ["Calitzdorp Village"],
+      "description": "The port wine capital of South Africa, small Karoo town on Route 62."
+    },
+    {
+      "slug": "de-rust",
+      "name": "De Rust",
+      "region": "Klein Karoo",
+      "regionSlug": "klein-karoo",
+      "province": "Western Cape",
+      "nearbyTowns": ["oudtshoorn", "prince-albert", "calitzdorp", "uniondale"],
+      "localAreas": ["De Rust Village", "Meiringspoort"],
+      "description": "Gateway to Meiringspoort pass, charming village with Victorian architecture."
+    },
+    {
+      "slug": "ladismith",
+      "name": "Ladismith",
+      "region": "Klein Karoo",
+      "regionSlug": "klein-karoo",
+      "province": "Western Cape",
+      "nearbyTowns": ["calitzdorp", "barrydale", "montagu", "oudtshoorn"],
+      "localAreas": ["Ladismith Town", "Hoeko"],
+      "description": "Agricultural town known for cheese production and the dramatic Towerkop mountain."
+    },
+    {
+      "slug": "barrydale",
+      "name": "Barrydale",
+      "region": "Klein Karoo",
+      "regionSlug": "klein-karoo",
+      "province": "Western Cape",
+      "nearbyTowns": ["ladismith", "montagu", "swellendam", "calitzdorp"],
+      "localAreas": ["Barrydale Village", "Warmwaterberg"],
+      "description": "Artistic Klein Karoo village on Route 62, known for its creative community."
+    },
+    {
+      "slug": "uniondale",
+      "name": "Uniondale",
+      "region": "Klein Karoo",
+      "regionSlug": "klein-karoo",
+      "province": "Western Cape",
+      "nearbyTowns": ["de-rust", "oudtshoorn", "knysna", "george"],
+      "localAreas": ["Uniondale Town"],
+      "description": "Historic farming town connecting the Garden Route to the Karoo interior."
+    },
+    {
+      "slug": "prince-albert",
+      "name": "Prince Albert",
+      "region": "Klein Karoo",
+      "regionSlug": "klein-karoo",
+      "province": "Western Cape",
+      "nearbyTowns": ["de-rust", "oudtshoorn", "graaff-reinet", "beaufort-west"],
+      "localAreas": ["Prince Albert Village", "Klaarstroom"],
+      "description": "Picturesque Karoo town known for figs, olives, and the dramatic Swartberg Pass."
+    }
+  ],
+  "regions": [
+    {
+      "slug": "garden-route",
+      "name": "Garden Route",
+      "description": "Scenic coastal stretch along South Africa's southern coast, known for lush forests, lagoons, and beaches.",
+      "province": "Western Cape"
+    },
+    {
+      "slug": "klein-karoo",
+      "name": "Klein Karoo",
+      "description": "Semi-arid valley region inland from the Garden Route, famous for Route 62, ostriches, and wine.",
+      "province": "Western Cape"
+    }
+  ]
+}

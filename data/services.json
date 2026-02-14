@@ -1,0 +1,940 @@
+{
+  "services": [
+    {
+      "slug": "plumber",
+      "name": "Plumber",
+      "namePlural": "Plumbers",
+      "category": "Home Services",
+      "icon": "wrench",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified {namePlural} in {town}. Get up to 5 free quotes, compare prices, and hire with confidence. Fast, free, trusted.",
+      "heroTitle": "Find Trusted {namePlural} in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local {namePlural}. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Burst pipe repair", "range": "R350 – R1,200" },
+        { "service": "Blocked drain", "range": "R400 – R1,500" },
+        { "service": "Geyser installation", "range": "R8,000 – R15,000" },
+        { "service": "Leak detection & repair", "range": "R500 – R2,000" },
+        { "service": "Bathroom renovation", "range": "R15,000 – R60,000" },
+        { "service": "Emergency callout", "range": "R500 – R1,500" }
+      ],
+      "diyVsPro": [
+        { "task": "Replacing tap washers", "description": "Stop dripping taps", "diy": "yes", "pro": "optional" },
+        { "task": "Unclogging slow drains", "description": "Plunger or drain cleaner", "diy": "yes", "pro": "if-persistent" },
+        { "task": "Burst pipes", "description": "Water gushing, damage risk", "diy": "no", "pro": "urgent" },
+        { "task": "Geyser installation", "description": "Electric or solar systems", "diy": "no", "pro": "required" },
+        { "task": "Blocked sewer line", "description": "Main drainage issues", "diy": "no", "pro": "required" },
+        { "task": "Bathroom renovation", "description": "Full refit with new fixtures", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "plumber-hero.jpg",
+        "gallery": [
+          { "src": "plumber-work-1.jpg", "alt": "Professional pipe repairs", "caption": "Quality pipe repair workmanship" },
+          { "src": "plumber-work-2.jpg", "alt": "Geyser installation", "caption": "Professional geyser installation services" },
+          { "src": "plumber-work-3.jpg", "alt": "Verified plumber at work", "caption": "Verified local plumbing experts" }
+        ]
+      },
+      "relatedServices": ["electrician", "handyman", "geyser-service", "waterproofing", "pool-service", "building-renovation"]
+    },
+    {
+      "slug": "electrician",
+      "name": "Electrician",
+      "namePlural": "Electricians",
+      "category": "Home Services",
+      "icon": "zap",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified {namePlural} in {town}. Get up to 5 free quotes, compare prices, and hire with confidence. Fast, free, trusted.",
+      "heroTitle": "Find Trusted {namePlural} in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local {namePlural}. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Fault finding", "range": "R400 – R1,000" },
+        { "service": "DB board upgrade", "range": "R3,500 – R8,000" },
+        { "service": "Light fitting installation", "range": "R150 – R500 per fitting" },
+        { "service": "Rewiring (per room)", "range": "R2,500 – R6,000" },
+        { "service": "Solar panel installation", "range": "R35,000 – R120,000" },
+        { "service": "Certificate of Compliance", "range": "R1,500 – R3,500" }
+      ],
+      "diyVsPro": [
+        { "task": "Changing light bulbs", "description": "Standard bulb replacement", "diy": "yes", "pro": "optional" },
+        { "task": "Resetting tripped breaker", "description": "DB board reset", "diy": "yes", "pro": "if-persistent" },
+        { "task": "Installing new plugs", "description": "Adding wall sockets", "diy": "no", "pro": "required" },
+        { "task": "DB board work", "description": "Upgrades or repairs", "diy": "no", "pro": "required" },
+        { "task": "Solar installation", "description": "Panels and inverters", "diy": "no", "pro": "required" },
+        { "task": "Any wiring work", "description": "New circuits or rewiring", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "electrician-hero.jpg",
+        "gallery": [
+          { "src": "electrician-work-1.jpg", "alt": "Professional electrical work", "caption": "Quality electrical installations" },
+          { "src": "electrician-work-2.jpg", "alt": "DB board installation", "caption": "Professional DB board services" },
+          { "src": "electrician-work-3.jpg", "alt": "Verified electrician at work", "caption": "Verified local electrical experts" }
+        ]
+      },
+      "relatedServices": ["plumber", "solar-installer", "aircon", "security", "geyser-service", "gate-motor-repair"]
+    },
+    {
+      "slug": "pest-control",
+      "name": "Pest Control",
+      "namePlural": "Pest Control Services",
+      "category": "Home Services",
+      "icon": "bug",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified {namePlural} in {town}. Get up to 5 free quotes, compare prices, and hire with confidence. Fast, free, trusted.",
+      "heroTitle": "Find Trusted {namePlural} in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local pest control experts. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "General pest spray", "range": "R450 – R900" },
+        { "service": "Cockroach treatment", "range": "R400 – R800" },
+        { "service": "Rodent control", "range": "R600 – R1,500" },
+        { "service": "Termite inspection", "range": "R500 – R1,200" },
+        { "service": "Termite treatment", "range": "R3,000 – R15,000" },
+        { "service": "Fumigation", "range": "R2,500 – R8,000" }
+      ],
+      "diyVsPro": [
+        { "task": "Ant traps", "description": "Small ant problems", "diy": "yes", "pro": "optional" },
+        { "task": "Bug spray", "description": "Occasional flying insects", "diy": "yes", "pro": "if-persistent" },
+        { "task": "Cockroach infestation", "description": "Recurring problem", "diy": "no", "pro": "required" },
+        { "task": "Rodent infestation", "description": "Rats or mice", "diy": "no", "pro": "required" },
+        { "task": "Termites", "description": "Wood damage visible", "diy": "no", "pro": "urgent" },
+        { "task": "Bed bugs", "description": "Bites appearing", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "pest-control-hero.jpg",
+        "gallery": [
+          { "src": "pest-control-work-1.jpg", "alt": "Professional pest treatment", "caption": "Thorough pest control treatment" },
+          { "src": "pest-control-work-2.jpg", "alt": "Termite inspection", "caption": "Professional termite inspection" },
+          { "src": "pest-control-work-3.jpg", "alt": "Verified pest controller", "caption": "Verified local pest control experts" }
+        ]
+      },
+      "relatedServices": ["cleaning-service", "garden-service", "handyman", "waterproofing", "roofing", "building-renovation"]
+    },
+    {
+      "slug": "handyman",
+      "name": "Handyman",
+      "namePlural": "Handyman Services",
+      "category": "Home Services",
+      "icon": "hammer",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified handymen in {town}. Get up to 5 free quotes for odd jobs, repairs, and maintenance. Fast, free, trusted.",
+      "heroTitle": "Find Trusted Handymen in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local handymen. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Hourly rate", "range": "R200 – R450" },
+        { "service": "Furniture assembly", "range": "R150 – R500" },
+        { "service": "Door/window repairs", "range": "R300 – R1,200" },
+        { "service": "Shelf installation", "range": "R200 – R600" },
+        { "service": "Minor repairs (half day)", "range": "R800 – R1,500" },
+        { "service": "General maintenance (full day)", "range": "R1,200 – R2,500" }
+      ],
+      "diyVsPro": [
+        { "task": "Hanging pictures", "description": "Basic wall mounting", "diy": "yes", "pro": "optional" },
+        { "task": "Tightening loose handles", "description": "Doors, cabinets", "diy": "yes", "pro": "optional" },
+        { "task": "Furniture assembly", "description": "Flatpack furniture", "diy": "yes", "pro": "if-complex" },
+        { "task": "Door repairs", "description": "Hinges, locks, frames", "diy": "no", "pro": "required" },
+        { "task": "Window repairs", "description": "Broken panes, frames", "diy": "no", "pro": "required" },
+        { "task": "Structural repairs", "description": "Walls, floors, ceilings", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "handyman-hero.jpg",
+        "gallery": [
+          { "src": "handyman-work-1.jpg", "alt": "Professional repairs", "caption": "Quality repair workmanship" },
+          { "src": "handyman-work-2.jpg", "alt": "Furniture assembly", "caption": "Expert furniture assembly" },
+          { "src": "handyman-work-3.jpg", "alt": "Verified handyman at work", "caption": "Verified local handyman services" }
+        ]
+      },
+      "relatedServices": ["plumber", "electrician", "painter", "furniture-repair", "locksmith", "building-renovation"]
+    },
+    {
+      "slug": "painter",
+      "name": "Painter",
+      "namePlural": "Painters",
+      "category": "Home Services",
+      "icon": "paintbrush",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified {namePlural} in {town}. Get up to 5 free quotes for interior and exterior painting. Fast, free, trusted.",
+      "heroTitle": "Find Trusted {namePlural} in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local {namePlural}. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Interior (per room)", "range": "R1,500 – R4,000" },
+        { "service": "Exterior (small house)", "range": "R8,000 – R15,000" },
+        { "service": "Exterior (large house)", "range": "R15,000 – R35,000" },
+        { "service": "Feature wall", "range": "R800 – R2,000" },
+        { "service": "Ceiling (per room)", "range": "R1,000 – R2,500" },
+        { "service": "Roof painting", "range": "R6,000 – R20,000" }
+      ],
+      "diyVsPro": [
+        { "task": "Touch-ups", "description": "Small patches", "diy": "yes", "pro": "optional" },
+        { "task": "Single feature wall", "description": "Accent colours", "diy": "yes", "pro": "optional" },
+        { "task": "Full room interior", "description": "Walls and ceiling", "diy": "no", "pro": "recommended" },
+        { "task": "Exterior walls", "description": "Weatherproofing needed", "diy": "no", "pro": "required" },
+        { "task": "High ceilings/stairwells", "description": "Safety equipment needed", "diy": "no", "pro": "required" },
+        { "task": "Roof painting", "description": "Specialised coatings", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "painter-hero.jpg",
+        "gallery": [
+          { "src": "painter-work-1.jpg", "alt": "Professional interior painting", "caption": "Quality interior painting" },
+          { "src": "painter-work-2.jpg", "alt": "Exterior painting", "caption": "Professional exterior painting" },
+          { "src": "painter-work-3.jpg", "alt": "Verified painter at work", "caption": "Verified local painting experts" }
+        ]
+      },
+      "relatedServices": ["handyman", "building-renovation", "waterproofing", "roofing", "ceilings-partitions", "damp-proofing"]
+    },
+    {
+      "slug": "garden-service",
+      "name": "Garden Service",
+      "namePlural": "Garden Services",
+      "category": "Home Services",
+      "icon": "tree-pine",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified {namePlural} in {town}. Get up to 5 free quotes for lawn care, landscaping, and garden maintenance.",
+      "heroTitle": "Find Trusted {namePlural} in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local garden services. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Weekly maintenance (small)", "range": "R400 – R800/month" },
+        { "service": "Weekly maintenance (large)", "range": "R800 – R2,000/month" },
+        { "service": "Once-off cleanup", "range": "R500 – R2,000" },
+        { "service": "Tree trimming", "range": "R500 – R3,000" },
+        { "service": "Tree removal", "range": "R1,500 – R8,000" },
+        { "service": "Landscaping", "range": "R5,000 – R50,000" }
+      ],
+      "diyVsPro": [
+        { "task": "Mowing lawn", "description": "Regular maintenance", "diy": "yes", "pro": "optional" },
+        { "task": "Weeding beds", "description": "Basic garden care", "diy": "yes", "pro": "optional" },
+        { "task": "Hedge trimming", "description": "Small hedges", "diy": "yes", "pro": "if-large" },
+        { "task": "Tree trimming", "description": "Large trees", "diy": "no", "pro": "required" },
+        { "task": "Tree removal", "description": "Stump and all", "diy": "no", "pro": "required" },
+        { "task": "Landscaping design", "description": "Major garden renovation", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "garden-service-hero.jpg",
+        "gallery": [
+          { "src": "garden-service-work-1.jpg", "alt": "Professional lawn care", "caption": "Quality lawn maintenance" },
+          { "src": "garden-service-work-2.jpg", "alt": "Landscaping work", "caption": "Professional landscaping" },
+          { "src": "garden-service-work-3.jpg", "alt": "Garden maintenance", "caption": "Verified local garden experts" }
+        ]
+      },
+      "relatedServices": ["pool-service", "pest-control", "paving", "electric-fencing", "building-renovation", "handyman"]
+    },
+    {
+      "slug": "cleaning-service",
+      "name": "Cleaning Service",
+      "namePlural": "Cleaning Services",
+      "category": "Home Services",
+      "icon": "sparkles",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified {namePlural} in {town}. Get up to 5 free quotes for domestic, office, and deep cleaning.",
+      "heroTitle": "Find Trusted {namePlural} in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local cleaning services. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Regular clean (small home)", "range": "R300 – R600" },
+        { "service": "Regular clean (large home)", "range": "R500 – R1,200" },
+        { "service": "Deep clean", "range": "R800 – R2,500" },
+        { "service": "Move-in/out clean", "range": "R1,000 – R3,000" },
+        { "service": "Carpet cleaning", "range": "R25 – R50/sqm" },
+        { "service": "Window cleaning", "range": "R15 – R40/window" }
+      ],
+      "diyVsPro": [
+        { "task": "Daily tidying", "description": "Basic housekeeping", "diy": "yes", "pro": "optional" },
+        { "task": "Weekly clean", "description": "Regular maintenance", "diy": "yes", "pro": "optional" },
+        { "task": "Deep clean", "description": "Thorough scrubbing", "diy": "yes", "pro": "recommended" },
+        { "task": "Carpet deep clean", "description": "Professional equipment", "diy": "no", "pro": "required" },
+        { "task": "Post-construction clean", "description": "Heavy duty", "diy": "no", "pro": "required" },
+        { "task": "High windows", "description": "Safety equipment needed", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "cleaning-service-hero.jpg",
+        "gallery": [
+          { "src": "cleaning-service-work-1.jpg", "alt": "Professional home cleaning", "caption": "Quality domestic cleaning" },
+          { "src": "cleaning-service-work-2.jpg", "alt": "Deep cleaning service", "caption": "Professional deep cleaning" },
+          { "src": "cleaning-service-work-3.jpg", "alt": "Verified cleaner at work", "caption": "Verified local cleaning experts" }
+        ]
+      },
+      "relatedServices": ["pest-control", "carpet-cleaning", "handyman", "moving-service", "garden-service", "pool-service"]
+    },
+    {
+      "slug": "security",
+      "name": "Security",
+      "namePlural": "Security Services",
+      "category": "Home Services",
+      "icon": "shield",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified {namePlural} in {town}. Get up to 5 free quotes for alarms, CCTV, and security systems.",
+      "heroTitle": "Find Trusted {namePlural} in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local security companies. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Alarm system installation", "range": "R3,500 – R12,000" },
+        { "service": "CCTV (4 cameras)", "range": "R5,000 – R15,000" },
+        { "service": "CCTV (8 cameras)", "range": "R10,000 – R30,000" },
+        { "service": "Armed response (monthly)", "range": "R300 – R800" },
+        { "service": "Intercom system", "range": "R2,500 – R8,000" },
+        { "service": "Beam installation", "range": "R1,500 – R5,000" }
+      ],
+      "diyVsPro": [
+        { "task": "Basic security lights", "description": "Motion sensors", "diy": "yes", "pro": "optional" },
+        { "task": "Simple IP cameras", "description": "Plug and play", "diy": "yes", "pro": "optional" },
+        { "task": "Alarm system", "description": "Professional monitoring", "diy": "no", "pro": "required" },
+        { "task": "Wired CCTV", "description": "Complex installation", "diy": "no", "pro": "required" },
+        { "task": "Electric fencing", "description": "High voltage", "diy": "no", "pro": "required" },
+        { "task": "Access control", "description": "Gates and intercoms", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "security-hero.jpg",
+        "gallery": [
+          { "src": "security-work-1.jpg", "alt": "Professional CCTV installation", "caption": "Quality CCTV systems" },
+          { "src": "security-work-2.jpg", "alt": "Alarm installation", "caption": "Professional alarm systems" },
+          { "src": "security-work-3.jpg", "alt": "Security system setup", "caption": "Verified local security experts" }
+        ]
+      },
+      "relatedServices": ["electric-fencing", "gate-motor-repair", "locksmith", "electrician", "intercom", "building-renovation"]
+    },
+    {
+      "slug": "locksmith",
+      "name": "Locksmith",
+      "namePlural": "Locksmiths",
+      "category": "Home Services",
+      "icon": "key",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified {namePlural} in {town}. Get up to 5 free quotes for lock repairs, key cutting, and emergency lockouts.",
+      "heroTitle": "Find Trusted {namePlural} in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local {namePlural}. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Emergency lockout", "range": "R400 – R1,200" },
+        { "service": "Lock replacement", "range": "R350 – R1,500" },
+        { "service": "Key cutting (standard)", "range": "R50 – R150" },
+        { "service": "Key cutting (security)", "range": "R150 – R500" },
+        { "service": "Safe opening", "range": "R800 – R3,000" },
+        { "service": "Lock rekeying", "range": "R250 – R600" }
+      ],
+      "diyVsPro": [
+        { "task": "Lubricating locks", "description": "Basic maintenance", "diy": "yes", "pro": "optional" },
+        { "task": "Tightening loose locks", "description": "Simple adjustment", "diy": "yes", "pro": "optional" },
+        { "task": "Lock replacement", "description": "Security locks", "diy": "no", "pro": "required" },
+        { "task": "Emergency lockout", "description": "Locked out of home", "diy": "no", "pro": "urgent" },
+        { "task": "Safe work", "description": "Opening or repairs", "diy": "no", "pro": "required" },
+        { "task": "Master key systems", "description": "Commercial locks", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "locksmith-hero.jpg",
+        "gallery": [
+          { "src": "locksmith-work-1.jpg", "alt": "Professional lock repair", "caption": "Quality lock services" },
+          { "src": "locksmith-work-2.jpg", "alt": "Key cutting", "caption": "Professional key services" },
+          { "src": "locksmith-work-3.jpg", "alt": "Verified locksmith at work", "caption": "Verified local locksmith experts" }
+        ]
+      },
+      "relatedServices": ["security", "handyman", "gate-motor-repair", "electrician", "building-renovation", "garage-door"]
+    },
+    {
+      "slug": "electric-fencing",
+      "name": "Electric Fencing",
+      "namePlural": "Electric Fencing Services",
+      "category": "Home Services",
+      "icon": "fence",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified electric fence installers in {town}. Get up to 5 free quotes for installation and repairs.",
+      "heroTitle": "Find Trusted Electric Fencing Installers in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local electric fencing companies. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "New installation (per meter)", "range": "R150 – R350" },
+        { "service": "Energizer replacement", "range": "R2,500 – R8,000" },
+        { "service": "Repairs (call out)", "range": "R500 – R1,500" },
+        { "service": "Certificate of Compliance", "range": "R800 – R1,500" },
+        { "service": "Full system (small property)", "range": "R8,000 – R18,000" },
+        { "service": "Full system (large property)", "range": "R18,000 – R45,000" }
+      ],
+      "diyVsPro": [
+        { "task": "Vegetation clearing", "description": "Keeping fence clear", "diy": "yes", "pro": "optional" },
+        { "task": "Visual inspection", "description": "Checking for damage", "diy": "yes", "pro": "optional" },
+        { "task": "Wire repairs", "description": "Broken strands", "diy": "no", "pro": "required" },
+        { "task": "Energizer work", "description": "High voltage", "diy": "no", "pro": "required" },
+        { "task": "New installation", "description": "Full system", "diy": "no", "pro": "required" },
+        { "task": "Compliance certificate", "description": "Legal requirement", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "electric-fencing-hero.jpg",
+        "gallery": [
+          { "src": "electric-fencing-work-1.jpg", "alt": "Professional electric fence installation", "caption": "Quality electric fencing" },
+          { "src": "electric-fencing-work-2.jpg", "alt": "Fence maintenance", "caption": "Professional fence maintenance" },
+          { "src": "electric-fencing-work-3.jpg", "alt": "Electric fence system", "caption": "Verified local fencing experts" }
+        ]
+      },
+      "relatedServices": ["security", "gate-motor-repair", "electrician", "building-renovation", "garden-service", "handyman"]
+    },
+    {
+      "slug": "solar-installer",
+      "name": "Solar Installer",
+      "namePlural": "Solar Installers",
+      "category": "Home Services",
+      "icon": "sun",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified {namePlural} in {town}. Get up to 5 free quotes for solar panels, inverters, and battery systems.",
+      "heroTitle": "Find Trusted {namePlural} in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local {namePlural}. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Solar geyser (flat panel)", "range": "R12,000 – R25,000" },
+        { "service": "Solar geyser (tube)", "range": "R15,000 – R35,000" },
+        { "service": "3kW solar system", "range": "R45,000 – R80,000" },
+        { "service": "5kW solar system", "range": "R80,000 – R130,000" },
+        { "service": "10kW solar system", "range": "R150,000 – R250,000" },
+        { "service": "Battery (per kWh)", "range": "R8,000 – R15,000" }
+      ],
+      "diyVsPro": [
+        { "task": "Panel cleaning", "description": "Basic maintenance", "diy": "yes", "pro": "optional" },
+        { "task": "Monitoring check", "description": "App-based systems", "diy": "yes", "pro": "optional" },
+        { "task": "Panel installation", "description": "Roof mounting", "diy": "no", "pro": "required" },
+        { "task": "Inverter setup", "description": "Electrical work", "diy": "no", "pro": "required" },
+        { "task": "Battery installation", "description": "High voltage", "diy": "no", "pro": "required" },
+        { "task": "Grid tie-in", "description": "Eskom compliance", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "solar-installer-hero.jpg",
+        "gallery": [
+          { "src": "solar-installer-work-1.jpg", "alt": "Professional solar installation", "caption": "Quality solar panel installation" },
+          { "src": "solar-installer-work-2.jpg", "alt": "Battery system", "caption": "Professional battery systems" },
+          { "src": "solar-installer-work-3.jpg", "alt": "Solar system setup", "caption": "Verified local solar experts" }
+        ]
+      },
+      "relatedServices": ["electrician", "geyser-service", "roofing", "building-renovation", "aircon", "pool-service"]
+    },
+    {
+      "slug": "aircon",
+      "name": "Air Conditioning",
+      "namePlural": "Air Conditioning Services",
+      "category": "Home Services",
+      "icon": "wind",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified aircon installers in {town}. Get up to 5 free quotes for installation, repairs, and servicing.",
+      "heroTitle": "Find Trusted Aircon Services in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local aircon specialists. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Split unit installation", "range": "R4,000 – R12,000" },
+        { "service": "Aircon service/regas", "range": "R600 – R1,500" },
+        { "service": "New split unit (9000 BTU)", "range": "R8,000 – R15,000" },
+        { "service": "New split unit (18000 BTU)", "range": "R15,000 – R28,000" },
+        { "service": "Ducted system", "range": "R40,000 – R120,000" },
+        { "service": "Repairs", "range": "R500 – R3,000" }
+      ],
+      "diyVsPro": [
+        { "task": "Filter cleaning", "description": "Regular maintenance", "diy": "yes", "pro": "optional" },
+        { "task": "Remote troubleshooting", "description": "Basic issues", "diy": "yes", "pro": "optional" },
+        { "task": "Regas service", "description": "Refrigerant handling", "diy": "no", "pro": "required" },
+        { "task": "Installation", "description": "Electrical and piping", "diy": "no", "pro": "required" },
+        { "task": "Compressor repair", "description": "Technical work", "diy": "no", "pro": "required" },
+        { "task": "Ducted systems", "description": "Complex installation", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "aircon-hero.jpg",
+        "gallery": [
+          { "src": "aircon-work-1.jpg", "alt": "Professional aircon installation", "caption": "Quality aircon installation" },
+          { "src": "aircon-work-2.jpg", "alt": "Aircon service", "caption": "Professional aircon servicing" },
+          { "src": "aircon-work-3.jpg", "alt": "Split unit installation", "caption": "Verified local aircon experts" }
+        ]
+      },
+      "relatedServices": ["electrician", "plumber", "solar-installer", "building-renovation", "appliance-repair", "handyman"]
+    },
+    {
+      "slug": "geyser-service",
+      "name": "Geyser Service",
+      "namePlural": "Geyser Services",
+      "category": "Home Services",
+      "icon": "flame",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified geyser installers in {town}. Get up to 5 free quotes for installation, repairs, and replacements.",
+      "heroTitle": "Find Trusted Geyser Services in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local geyser specialists. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Geyser replacement (150L)", "range": "R8,000 – R14,000" },
+        { "service": "Geyser replacement (200L)", "range": "R10,000 – R18,000" },
+        { "service": "Element replacement", "range": "R800 – R2,000" },
+        { "service": "Thermostat replacement", "range": "R500 – R1,200" },
+        { "service": "Solar geyser conversion", "range": "R15,000 – R35,000" },
+        { "service": "Leak repair", "range": "R500 – R2,500" }
+      ],
+      "diyVsPro": [
+        { "task": "Temperature adjustment", "description": "Thermostat dial", "diy": "yes", "pro": "optional" },
+        { "task": "Drip tray check", "description": "Visual inspection", "diy": "yes", "pro": "optional" },
+        { "task": "Element replacement", "description": "Electrical work", "diy": "no", "pro": "required" },
+        { "task": "Geyser replacement", "description": "Heavy and technical", "diy": "no", "pro": "required" },
+        { "task": "Burst geyser", "description": "Emergency", "diy": "no", "pro": "urgent" },
+        { "task": "Solar conversion", "description": "Complex system", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "geyser-service-hero.jpg",
+        "gallery": [
+          { "src": "geyser-service-work-1.jpg", "alt": "Professional geyser installation", "caption": "Quality geyser installation" },
+          { "src": "geyser-service-work-2.jpg", "alt": "Geyser repair", "caption": "Professional geyser repairs" },
+          { "src": "geyser-service-work-3.jpg", "alt": "Solar geyser", "caption": "Verified local geyser experts" }
+        ]
+      },
+      "relatedServices": ["plumber", "electrician", "solar-installer", "building-renovation", "roofing", "waterproofing"]
+    },
+    {
+      "slug": "garage-door",
+      "name": "Garage Door",
+      "namePlural": "Garage Door Services",
+      "category": "Home Services",
+      "icon": "car",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified garage door installers in {town}. Get up to 5 free quotes for installation, motors, and repairs.",
+      "heroTitle": "Find Trusted Garage Door Services in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local garage door specialists. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Motor installation", "range": "R3,500 – R8,000" },
+        { "service": "Motor replacement", "range": "R4,000 – R10,000" },
+        { "service": "New sectional door", "range": "R12,000 – R35,000" },
+        { "service": "New roll-up door", "range": "R8,000 – R20,000" },
+        { "service": "Spring replacement", "range": "R800 – R2,500" },
+        { "service": "General repairs", "range": "R500 – R2,000" }
+      ],
+      "diyVsPro": [
+        { "task": "Lubrication", "description": "Tracks and hinges", "diy": "yes", "pro": "optional" },
+        { "task": "Remote programming", "description": "Basic setup", "diy": "yes", "pro": "optional" },
+        { "task": "Spring adjustment", "description": "High tension", "diy": "no", "pro": "required" },
+        { "task": "Motor installation", "description": "Electrical work", "diy": "no", "pro": "required" },
+        { "task": "Door replacement", "description": "Heavy lifting", "diy": "no", "pro": "required" },
+        { "task": "Track alignment", "description": "Precision work", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "garage-door-hero.jpg",
+        "gallery": [
+          { "src": "garage-door-work-1.jpg", "alt": "Professional garage door installation", "caption": "Quality garage door installation" },
+          { "src": "garage-door-work-2.jpg", "alt": "Motor installation", "caption": "Professional motor installation" },
+          { "src": "garage-door-work-3.jpg", "alt": "Garage door repair", "caption": "Verified local garage door experts" }
+        ]
+      },
+      "relatedServices": ["gate-motor-repair", "electrician", "security", "handyman", "building-renovation", "locksmith"]
+    },
+    {
+      "slug": "building-renovation",
+      "name": "Building & Renovation",
+      "namePlural": "Building & Renovation Services",
+      "category": "Home Services",
+      "icon": "building",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified builders in {town}. Get up to 5 free quotes for renovations, extensions, and new builds.",
+      "heroTitle": "Find Trusted Builders in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local builders. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Basic renovation (per sqm)", "range": "R3,500 – R7,000" },
+        { "service": "Kitchen renovation", "range": "R35,000 – R150,000" },
+        { "service": "Bathroom renovation", "range": "R25,000 – R80,000" },
+        { "service": "Room addition", "range": "R8,000 – R15,000/sqm" },
+        { "service": "New build (per sqm)", "range": "R10,000 – R20,000" },
+        { "service": "Boundary wall", "range": "R1,500 – R3,500/m" }
+      ],
+      "diyVsPro": [
+        { "task": "Painting", "description": "Interior touch-ups", "diy": "yes", "pro": "optional" },
+        { "task": "Minor tiling", "description": "Small areas", "diy": "yes", "pro": "if-complex" },
+        { "task": "Structural work", "description": "Load-bearing walls", "diy": "no", "pro": "required" },
+        { "task": "Extensions", "description": "Building plans needed", "diy": "no", "pro": "required" },
+        { "task": "Plumbing rough-in", "description": "New pipes", "diy": "no", "pro": "required" },
+        { "task": "Electrical work", "description": "Wiring and circuits", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "building-renovation-hero.jpg",
+        "gallery": [
+          { "src": "building-renovation-work-1.jpg", "alt": "Professional renovation", "caption": "Quality renovation work" },
+          { "src": "building-renovation-work-2.jpg", "alt": "Kitchen renovation", "caption": "Professional kitchen renovations" },
+          { "src": "building-renovation-work-3.jpg", "alt": "Building extension", "caption": "Verified local builders" }
+        ]
+      },
+      "relatedServices": ["plumber", "electrician", "tiling", "painter", "roofing", "ceilings-partitions"]
+    },
+    {
+      "slug": "roofing",
+      "name": "Roofing",
+      "namePlural": "Roofing Services",
+      "category": "Home Services",
+      "icon": "home",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified roofers in {town}. Get up to 5 free quotes for repairs, replacements, and waterproofing.",
+      "heroTitle": "Find Trusted Roofers in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local roofing specialists. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Leak repair", "range": "R500 – R3,000" },
+        { "service": "Tile replacement (per tile)", "range": "R80 – R250" },
+        { "service": "Full re-roof (tiles)", "range": "R350 – R600/sqm" },
+        { "service": "Full re-roof (IBR)", "range": "R250 – R450/sqm" },
+        { "service": "Waterproofing", "range": "R150 – R350/sqm" },
+        { "service": "Gutter replacement", "range": "R150 – R350/m" }
+      ],
+      "diyVsPro": [
+        { "task": "Gutter cleaning", "description": "Ground level", "diy": "yes", "pro": "optional" },
+        { "task": "Minor sealant", "description": "Small gaps", "diy": "yes", "pro": "optional" },
+        { "task": "Tile replacement", "description": "Working at height", "diy": "no", "pro": "required" },
+        { "task": "Leak detection", "description": "Finding source", "diy": "no", "pro": "required" },
+        { "task": "Structural repairs", "description": "Trusses and beams", "diy": "no", "pro": "required" },
+        { "task": "Full replacement", "description": "Major project", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "roofing-hero.jpg",
+        "gallery": [
+          { "src": "roofing-work-1.jpg", "alt": "Professional roof repair", "caption": "Quality roof repairs" },
+          { "src": "roofing-work-2.jpg", "alt": "Roof installation", "caption": "Professional roofing installation" },
+          { "src": "roofing-work-3.jpg", "alt": "Roofer at work", "caption": "Verified local roofing experts" }
+        ]
+      },
+      "relatedServices": ["waterproofing", "gutter-service", "painter", "solar-installer", "building-renovation", "ceilings-partitions"]
+    },
+    {
+      "slug": "tiling",
+      "name": "Tiling",
+      "namePlural": "Tiling Services",
+      "category": "Home Services",
+      "icon": "grid",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified tilers in {town}. Get up to 5 free quotes for floor, wall, and bathroom tiling.",
+      "heroTitle": "Find Trusted Tilers in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local tilers. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Floor tiling (per sqm)", "range": "R180 – R400" },
+        { "service": "Wall tiling (per sqm)", "range": "R200 – R450" },
+        { "service": "Bathroom full tile", "range": "R8,000 – R25,000" },
+        { "service": "Kitchen splashback", "range": "R2,500 – R8,000" },
+        { "service": "Outdoor/patio", "range": "R200 – R450/sqm" },
+        { "service": "Tile removal", "range": "R80 – R150/sqm" }
+      ],
+      "diyVsPro": [
+        { "task": "Regrouting", "description": "Refreshing joints", "diy": "yes", "pro": "optional" },
+        { "task": "Single tile replacement", "description": "Matching existing", "diy": "yes", "pro": "if-complex" },
+        { "task": "Full floor tiling", "description": "Level and layout", "diy": "no", "pro": "required" },
+        { "task": "Bathroom tiling", "description": "Waterproofing needed", "diy": "no", "pro": "required" },
+        { "task": "Large format tiles", "description": "Special equipment", "diy": "no", "pro": "required" },
+        { "task": "Pattern layouts", "description": "Precision cutting", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "tiling-hero.jpg",
+        "gallery": [
+          { "src": "tiling-work-1.jpg", "alt": "Professional floor tiling", "caption": "Quality floor tiling" },
+          { "src": "tiling-work-2.jpg", "alt": "Bathroom tiling", "caption": "Professional bathroom tiling" },
+          { "src": "tiling-work-3.jpg", "alt": "Tiler at work", "caption": "Verified local tiling experts" }
+        ]
+      },
+      "relatedServices": ["building-renovation", "plumber", "waterproofing", "paving", "painter", "handyman"]
+    },
+    {
+      "slug": "paving",
+      "name": "Paving",
+      "namePlural": "Paving Services",
+      "category": "Home Services",
+      "icon": "layers",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified paving contractors in {town}. Get up to 5 free quotes for driveways, patios, and walkways.",
+      "heroTitle": "Find Trusted Paving Contractors in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local paving specialists. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Interlock paving (per sqm)", "range": "R250 – R500" },
+        { "service": "Cobble paving (per sqm)", "range": "R350 – R700" },
+        { "service": "Concrete paving (per sqm)", "range": "R200 – R400" },
+        { "service": "Driveway (typical)", "range": "R15,000 – R45,000" },
+        { "service": "Patio area", "range": "R8,000 – R25,000" },
+        { "service": "Repairs (per sqm)", "range": "R150 – R350" }
+      ],
+      "diyVsPro": [
+        { "task": "Weed removal", "description": "Between pavers", "diy": "yes", "pro": "optional" },
+        { "task": "Re-sanding joints", "description": "Maintenance", "diy": "yes", "pro": "optional" },
+        { "task": "New driveway", "description": "Base preparation", "diy": "no", "pro": "required" },
+        { "task": "Large patio", "description": "Drainage design", "diy": "no", "pro": "required" },
+        { "task": "Sloped areas", "description": "Retaining needed", "diy": "no", "pro": "required" },
+        { "task": "Pattern designs", "description": "Complex layouts", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "paving-hero.jpg",
+        "gallery": [
+          { "src": "paving-work-1.jpg", "alt": "Professional driveway paving", "caption": "Quality driveway paving" },
+          { "src": "paving-work-2.jpg", "alt": "Patio paving", "caption": "Professional patio installation" },
+          { "src": "paving-work-3.jpg", "alt": "Paving contractor", "caption": "Verified local paving experts" }
+        ]
+      },
+      "relatedServices": ["building-renovation", "garden-service", "tiling", "pool-service", "waterproofing", "electric-fencing"]
+    },
+    {
+      "slug": "ceilings-partitions",
+      "name": "Ceilings & Partitions",
+      "namePlural": "Ceiling & Partition Services",
+      "category": "Home Services",
+      "icon": "layout-grid",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified ceiling installers in {town}. Get up to 5 free quotes for ceilings, drywalling, and partitions.",
+      "heroTitle": "Find Trusted Ceiling Installers in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local ceiling and partition specialists. Compare prices before you hire.",
+      "pricing": [
+        { "service": "Ceiling (per sqm)", "range": "R150 – R350" },
+        { "service": "Brandering + ceiling", "range": "R200 – R450/sqm" },
+        { "service": "Partition wall (per sqm)", "range": "R350 – R700" },
+        { "service": "Bulkhead installation", "range": "R400 – R800/m" },
+        { "service": "Ceiling repairs", "range": "R500 – R2,500" },
+        { "service": "Cornices (per m)", "range": "R50 – R150" }
+      ],
+      "diyVsPro": [
+        { "task": "Small patch repairs", "description": "Minor damage", "diy": "yes", "pro": "optional" },
+        { "task": "Painting ceilings", "description": "After installation", "diy": "yes", "pro": "optional" },
+        { "task": "New ceiling installation", "description": "Framework needed", "diy": "no", "pro": "required" },
+        { "task": "Partition walls", "description": "Structural support", "diy": "no", "pro": "required" },
+        { "task": "Bulkheads", "description": "Precision work", "diy": "no", "pro": "required" },
+        { "task": "Large repairs", "description": "Sagging or damaged", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "ceilings-partitions-hero.jpg",
+        "gallery": [
+          { "src": "ceilings-partitions-work-1.jpg", "alt": "Professional ceiling installation", "caption": "Quality ceiling installation" },
+          { "src": "ceilings-partitions-work-2.jpg", "alt": "Partition wall", "caption": "Professional partition walls" },
+          { "src": "ceilings-partitions-work-3.jpg", "alt": "Ceiling work", "caption": "Verified local ceiling experts" }
+        ]
+      },
+      "relatedServices": ["building-renovation", "painter", "electrician", "roofing", "tiling", "handyman"]
+    },
+    {
+      "slug": "pool-service",
+      "name": "Pool Service",
+      "namePlural": "Pool Services",
+      "category": "Home Services",
+      "icon": "waves",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified pool services in {town}. Get up to 5 free quotes for maintenance, repairs, and installations.",
+      "heroTitle": "Find Trusted Pool Services in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local pool specialists. Compare prices and reviews before you hire.",
+      "pricing": [
+        { "service": "Monthly maintenance", "range": "R800 – R2,000" },
+        { "service": "Once-off clean", "range": "R500 – R1,500" },
+        { "service": "Green pool recovery", "range": "R1,500 – R4,000" },
+        { "service": "Pump replacement", "range": "R3,500 – R12,000" },
+        { "service": "Filter sand change", "range": "R1,200 – R3,000" },
+        { "service": "Acid wash/resurface", "range": "R8,000 – R35,000" }
+      ],
+      "diyVsPro": [
+        { "task": "Skimming debris", "description": "Daily maintenance", "diy": "yes", "pro": "optional" },
+        { "task": "Chemical testing", "description": "Test strips", "diy": "yes", "pro": "optional" },
+        { "task": "Green pool treatment", "description": "Heavy algae", "diy": "no", "pro": "required" },
+        { "task": "Pump repairs", "description": "Electrical work", "diy": "no", "pro": "required" },
+        { "task": "Leak detection", "description": "Underground pipes", "diy": "no", "pro": "required" },
+        { "task": "Resurfacing", "description": "Major renovation", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "pool-service-hero.jpg",
+        "gallery": [
+          { "src": "pool-service-work-1.jpg", "alt": "Professional pool cleaning", "caption": "Quality pool maintenance" },
+          { "src": "pool-service-work-2.jpg", "alt": "Pool repairs", "caption": "Professional pool repairs" },
+          { "src": "pool-service-work-3.jpg", "alt": "Pool technician", "caption": "Verified local pool experts" }
+        ]
+      },
+      "relatedServices": ["garden-service", "electrician", "paving", "solar-installer", "plumber", "building-renovation"]
+    },
+    {
+      "slug": "waterproofing",
+      "name": "Waterproofing",
+      "namePlural": "Waterproofing Services",
+      "category": "Home Services",
+      "icon": "droplets",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified waterproofing specialists in {town}. Get up to 5 free quotes for roofs, walls, and foundations.",
+      "heroTitle": "Find Trusted Waterproofing Services in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local waterproofing specialists. Compare prices before you hire.",
+      "pricing": [
+        { "service": "Roof waterproofing (per sqm)", "range": "R150 – R350" },
+        { "service": "Balcony/deck", "range": "R200 – R450/sqm" },
+        { "service": "Bathroom waterproofing", "range": "R3,000 – R8,000" },
+        { "service": "Foundation treatment", "range": "R250 – R500/sqm" },
+        { "service": "Wall treatment (per sqm)", "range": "R100 – R250" },
+        { "service": "Leak repair (call out)", "range": "R800 – R2,500" }
+      ],
+      "diyVsPro": [
+        { "task": "Sealant touch-ups", "description": "Minor gaps", "diy": "yes", "pro": "optional" },
+        { "task": "Gutter sealing", "description": "Small leaks", "diy": "yes", "pro": "optional" },
+        { "task": "Roof waterproofing", "description": "Full membrane", "diy": "no", "pro": "required" },
+        { "task": "Bathroom waterproofing", "description": "Behind tiles", "diy": "no", "pro": "required" },
+        { "task": "Foundation work", "description": "Below ground", "diy": "no", "pro": "required" },
+        { "task": "Structural damp", "description": "Rising damp", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "waterproofing-hero.jpg",
+        "gallery": [
+          { "src": "waterproofing-work-1.jpg", "alt": "Professional roof waterproofing", "caption": "Quality roof waterproofing" },
+          { "src": "waterproofing-work-2.jpg", "alt": "Bathroom waterproofing", "caption": "Professional bathroom waterproofing" },
+          { "src": "waterproofing-work-3.jpg", "alt": "Waterproofing specialist", "caption": "Verified local waterproofing experts" }
+        ]
+      },
+      "relatedServices": ["roofing", "damp-proofing", "plumber", "tiling", "building-renovation", "painter"]
+    },
+    {
+      "slug": "damp-proofing",
+      "name": "Damp Proofing",
+      "namePlural": "Damp Proofing Services",
+      "category": "Home Services",
+      "icon": "droplet",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified damp proofing specialists in {town}. Get up to 5 free quotes for rising damp and wall treatment.",
+      "heroTitle": "Find Trusted Damp Proofing Services in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local damp proofing specialists. Compare prices before you hire.",
+      "pricing": [
+        { "service": "Rising damp treatment (per m)", "range": "R500 – R1,200" },
+        { "service": "Wall injection (per m)", "range": "R400 – R900" },
+        { "service": "Full wall treatment", "range": "R8,000 – R25,000" },
+        { "service": "Inspection & report", "range": "R500 – R1,500" },
+        { "service": "Plastering after treatment", "range": "R200 – R400/sqm" },
+        { "service": "Membrane installation", "range": "R300 – R600/sqm" }
+      ],
+      "diyVsPro": [
+        { "task": "Ventilation improvement", "description": "Air flow", "diy": "yes", "pro": "optional" },
+        { "task": "Surface sealers", "description": "Temporary fix", "diy": "yes", "pro": "optional" },
+        { "task": "Rising damp diagnosis", "description": "Finding cause", "diy": "no", "pro": "required" },
+        { "task": "Chemical injection", "description": "Specialist equipment", "diy": "no", "pro": "required" },
+        { "task": "Membrane installation", "description": "Behind walls", "diy": "no", "pro": "required" },
+        { "task": "Structural repairs", "description": "Damaged walls", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "damp-proofing-hero.jpg",
+        "gallery": [
+          { "src": "damp-proofing-work-1.jpg", "alt": "Professional damp treatment", "caption": "Quality damp proofing treatment" },
+          { "src": "damp-proofing-work-2.jpg", "alt": "Wall injection", "caption": "Professional rising damp treatment" },
+          { "src": "damp-proofing-work-3.jpg", "alt": "Damp specialist", "caption": "Verified local damp proofing experts" }
+        ]
+      },
+      "relatedServices": ["waterproofing", "painter", "building-renovation", "roofing", "plumber", "ventilation"]
+    },
+    {
+      "slug": "appliance-repair",
+      "name": "Appliance Repair",
+      "namePlural": "Appliance Repair Services",
+      "category": "Home Services",
+      "icon": "refrigerator",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified appliance repair technicians in {town}. Get up to 5 free quotes for fridges, washing machines, and more.",
+      "heroTitle": "Find Trusted Appliance Repair Services in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local appliance technicians. Compare prices before you hire.",
+      "pricing": [
+        { "service": "Diagnostic call out", "range": "R350 – R700" },
+        { "service": "Washing machine repair", "range": "R500 – R2,500" },
+        { "service": "Fridge/freezer repair", "range": "R600 – R3,000" },
+        { "service": "Dishwasher repair", "range": "R500 – R2,000" },
+        { "service": "Oven/stove repair", "range": "R400 – R2,500" },
+        { "service": "Tumble dryer repair", "range": "R500 – R2,000" }
+      ],
+      "diyVsPro": [
+        { "task": "Cleaning filters", "description": "Regular maintenance", "diy": "yes", "pro": "optional" },
+        { "task": "Resetting appliances", "description": "Basic troubleshooting", "diy": "yes", "pro": "optional" },
+        { "task": "Motor repairs", "description": "Technical work", "diy": "no", "pro": "required" },
+        { "task": "Compressor issues", "description": "Fridge/freezer", "diy": "no", "pro": "required" },
+        { "task": "Electrical faults", "description": "Safety risk", "diy": "no", "pro": "required" },
+        { "task": "Gas appliances", "description": "Certification needed", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "appliance-repair-hero.jpg",
+        "gallery": [
+          { "src": "appliance-repair-work-1.jpg", "alt": "Professional appliance repair", "caption": "Quality appliance repairs" },
+          { "src": "appliance-repair-work-2.jpg", "alt": "Washing machine repair", "caption": "Professional washing machine repairs" },
+          { "src": "appliance-repair-work-3.jpg", "alt": "Appliance technician", "caption": "Verified local appliance experts" }
+        ]
+      },
+      "relatedServices": ["electrician", "plumber", "aircon", "handyman", "geyser-service", "furniture-repair"]
+    },
+    {
+      "slug": "furniture-repair",
+      "name": "Furniture Repair",
+      "namePlural": "Furniture Repair Services",
+      "category": "Home Services",
+      "icon": "sofa",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified furniture repair specialists in {town}. Get up to 5 free quotes for restoration and upholstery.",
+      "heroTitle": "Find Trusted Furniture Repair Services in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local furniture specialists. Compare prices before you hire.",
+      "pricing": [
+        { "service": "Chair reupholstery", "range": "R800 – R3,000" },
+        { "service": "Sofa reupholstery", "range": "R4,000 – R15,000" },
+        { "service": "Wood furniture repair", "range": "R500 – R3,000" },
+        { "service": "Antique restoration", "range": "R2,000 – R15,000" },
+        { "service": "Leather repair", "range": "R500 – R2,500" },
+        { "service": "Spring replacement", "range": "R800 – R2,500" }
+      ],
+      "diyVsPro": [
+        { "task": "Tightening screws", "description": "Loose joints", "diy": "yes", "pro": "optional" },
+        { "task": "Minor scratches", "description": "Wood touch-up", "diy": "yes", "pro": "optional" },
+        { "task": "Reupholstery", "description": "Fabric replacement", "diy": "no", "pro": "required" },
+        { "task": "Structural repairs", "description": "Frame damage", "diy": "no", "pro": "required" },
+        { "task": "Antique restoration", "description": "Specialist work", "diy": "no", "pro": "required" },
+        { "task": "Leather work", "description": "Specialist materials", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "furniture-repair-hero.jpg",
+        "gallery": [
+          { "src": "furniture-repair-work-1.jpg", "alt": "Professional upholstery", "caption": "Quality furniture upholstery" },
+          { "src": "furniture-repair-work-2.jpg", "alt": "Wood restoration", "caption": "Professional furniture restoration" },
+          { "src": "furniture-repair-work-3.jpg", "alt": "Furniture craftsman", "caption": "Verified local furniture experts" }
+        ]
+      },
+      "relatedServices": ["handyman", "moving-service", "cleaning-service", "painter", "appliance-repair", "locksmith"]
+    },
+    {
+      "slug": "moving-service",
+      "name": "Moving Service",
+      "namePlural": "Moving Services",
+      "category": "Home Services",
+      "icon": "truck",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified movers in {town}. Get up to 5 free quotes for home and office relocations.",
+      "heroTitle": "Find Trusted Movers in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local moving companies. Compare prices before you hire.",
+      "pricing": [
+        { "service": "1-bed flat (local)", "range": "R1,500 – R4,000" },
+        { "service": "2-bed house (local)", "range": "R3,000 – R7,000" },
+        { "service": "3-bed house (local)", "range": "R5,000 – R12,000" },
+        { "service": "Office move (small)", "range": "R3,000 – R8,000" },
+        { "service": "Long distance (per km)", "range": "R15 – R35" },
+        { "service": "Packing service", "range": "R500 – R2,000" }
+      ],
+      "diyVsPro": [
+        { "task": "Packing boxes", "description": "Small items", "diy": "yes", "pro": "optional" },
+        { "task": "Small furniture", "description": "Light items", "diy": "yes", "pro": "optional" },
+        { "task": "Heavy appliances", "description": "Fridges, washing machines", "diy": "no", "pro": "required" },
+        { "task": "Piano moving", "description": "Specialist equipment", "diy": "no", "pro": "required" },
+        { "task": "Long distance", "description": "Insurance needed", "diy": "no", "pro": "required" },
+        { "task": "Office relocation", "description": "Coordination needed", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "moving-service-hero.jpg",
+        "gallery": [
+          { "src": "moving-service-work-1.jpg", "alt": "Professional movers", "caption": "Quality moving services" },
+          { "src": "moving-service-work-2.jpg", "alt": "Furniture loading", "caption": "Professional furniture handling" },
+          { "src": "moving-service-work-3.jpg", "alt": "Moving truck", "caption": "Verified local moving experts" }
+        ]
+      },
+      "relatedServices": ["cleaning-service", "handyman", "furniture-repair", "storage", "appliance-repair", "locksmith"]
+    },
+    {
+      "slug": "gate-motor-repair",
+      "name": "Gate & Motor Repair",
+      "namePlural": "Gate & Motor Repair Services",
+      "category": "Home Services",
+      "icon": "lock",
+      "metaTitle": "Best {namePlural} in {town} — Get Free Quotes | ProHub",
+      "metaDescription": "Find verified gate motor technicians in {town}. Get up to 5 free quotes for installation and repairs.",
+      "heroTitle": "Find Trusted Gate Motor Services in {town}",
+      "heroSubtitle": "Get up to 5 free quotes from verified local gate motor specialists. Compare prices before you hire.",
+      "pricing": [
+        { "service": "Motor installation", "range": "R4,500 – R12,000" },
+        { "service": "Motor replacement", "range": "R5,000 – R15,000" },
+        { "service": "Repairs (call out)", "range": "R500 – R1,500" },
+        { "service": "New sliding gate", "range": "R8,000 – R25,000" },
+        { "service": "New swing gate", "range": "R10,000 – R35,000" },
+        { "service": "Intercom integration", "range": "R1,500 – R5,000" }
+      ],
+      "diyVsPro": [
+        { "task": "Remote programming", "description": "Basic setup", "diy": "yes", "pro": "optional" },
+        { "task": "Lubrication", "description": "Track and wheels", "diy": "yes", "pro": "optional" },
+        { "task": "Motor replacement", "description": "Electrical work", "diy": "no", "pro": "required" },
+        { "task": "Track alignment", "description": "Heavy gate work", "diy": "no", "pro": "required" },
+        { "task": "New installation", "description": "Full system", "diy": "no", "pro": "required" },
+        { "task": "Intercom wiring", "description": "Complex integration", "diy": "no", "pro": "required" }
+      ],
+      "images": {
+        "hero": "gate-motor-repair-hero.jpg",
+        "gallery": [
+          { "src": "gate-motor-repair-work-1.jpg", "alt": "Professional gate motor installation", "caption": "Quality gate motor installation" },
+          { "src": "gate-motor-repair-work-2.jpg", "alt": "Gate repair", "caption": "Professional gate repairs" },
+          { "src": "gate-motor-repair-work-3.jpg", "alt": "Gate technician", "caption": "Verified local gate motor experts" }
+        ]
+      },
+      "relatedServices": ["security", "electric-fencing", "electrician", "garage-door", "locksmith", "building-renovation"]
+    }
+  ]
+}
