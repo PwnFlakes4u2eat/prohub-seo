@@ -26,6 +26,8 @@
     .status-live { background: #10b981; }
     .status-pending { background: #f59e0b; }
     .status-none { background: #d1d5db; }
+    .collapsed .section-content { display: none; }
+    .collapsed .chevron { transform: rotate(-90deg); }
   </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
@@ -44,6 +46,8 @@
         </div>
       </div>
       <div class="flex items-center gap-4">
+        <button onclick="expandAll()" class="text-sm text-white/70 hover:text-white transition">Expand All</button>
+        <button onclick="collapseAll()" class="text-sm text-white/70 hover:text-white transition">Collapse All</button>
         <a href="https://prohub.co.za" target="_blank" class="text-sm text-white/70 hover:text-white transition">Live Site →</a>
         <a href="https://vercel.com/dashboard" target="_blank" class="text-sm text-white/70 hover:text-white transition">Vercel →</a>
       </div>
@@ -98,15 +102,30 @@
     </div>
 
     <!-- Service Sections -->
-    <div id="services-container" class="space-y-8">
+    <div id="services-container" class="space-y-4">
       <!-- Populated by JS -->
     </div>
   </main>
 
+  <!-- Page Detail Modal -->
+  <div id="modal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-auto shadow-2xl">
+      <div class="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+        <h3 class="font-bold text-foreground text-lg" id="modal-title">Page Details</h3>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="p-6 space-y-4" id="modal-content">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
   <script>
     // Data - Services
     const services = [
-      { slug: 'plumber', name: 'Plumbers', namePlural: 'Plumbers' },
+      { slug: 'plumber', name: 'Plumber', namePlural: 'Plumbers' },
       { slug: 'electrician', name: 'Electrician', namePlural: 'Electricians' },
       { slug: 'pest-control', name: 'Pest Control', namePlural: 'Pest Control' },
       { slug: 'cleaning-service', name: 'Cleaning Service', namePlural: 'Cleaning Services' },
@@ -157,15 +176,101 @@
       { slug: 'prince-albert', name: 'Prince Albert', region: 'Klein Karoo' },
     ];
 
-    // Content status - UPDATE THIS AS YOU CREATE CONTENT
+    // Content data with titles and descriptions - UPDATE AS YOU CREATE CONTENT
+    const contentData = {
+      'electrician/george': {
+        title: 'Best Electricians in George | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in George. Compare quotes from local professionals for electrical repairs, installations, solar systems and more.',
+      },
+      'electrician/knysna': {
+        title: 'Best Electricians in Knysna | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Knysna. Compare quotes from local professionals for electrical repairs, installations, solar systems and more.',
+      },
+      'electrician/mossel-bay': {
+        title: 'Best Electricians in Mossel Bay | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Mossel Bay. Compare quotes from local professionals for electrical repairs, installations, and more.',
+      },
+      'electrician/plettenberg-bay': {
+        title: 'Best Electricians in Plettenberg Bay | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Plettenberg Bay. Compare quotes from local professionals for electrical work.',
+      },
+      'electrician/sedgefield': {
+        title: 'Best Electricians in Sedgefield | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Sedgefield. Compare quotes from local professionals.',
+      },
+      'electrician/wilderness': {
+        title: 'Best Electricians in Wilderness | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Wilderness. Compare quotes from local professionals.',
+      },
+      'electrician/hartenbos': {
+        title: 'Best Electricians in Hartenbos | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Hartenbos. Compare quotes from local professionals.',
+      },
+      'electrician/great-brak-river': {
+        title: 'Best Electricians in Great Brak River | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Great Brak River. Compare quotes from local professionals.',
+      },
+      'electrician/riversdale': {
+        title: 'Best Electricians in Riversdale | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Riversdale. Compare quotes from local professionals.',
+      },
+      'electrician/stillbaai': {
+        title: 'Best Electricians in Stillbaai | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Stillbaai. Compare quotes from local professionals.',
+      },
+      'electrician/albertinia': {
+        title: 'Best Electricians in Albertinia | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Albertinia. Compare quotes from local professionals.',
+      },
+      'electrician/natures-valley': {
+        title: 'Best Electricians in Natures Valley | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Natures Valley. Compare quotes from local professionals.',
+      },
+      'electrician/oudtshoorn': {
+        title: 'Best Electricians in Oudtshoorn | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Oudtshoorn. Compare quotes from local professionals.',
+      },
+      'electrician/de-rust': {
+        title: 'Best Electricians in De Rust | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in De Rust. Compare quotes from local professionals.',
+      },
+      'electrician/calitzdorp': {
+        title: 'Best Electricians in Calitzdorp | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Calitzdorp. Compare quotes from local professionals.',
+      },
+      'electrician/ladismith': {
+        title: 'Best Electricians in Ladismith | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Ladismith. Compare quotes from local professionals.',
+      },
+      'electrician/barrydale': {
+        title: 'Best Electricians in Barrydale | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Barrydale. Compare quotes from local professionals.',
+      },
+      'electrician/uniondale': {
+        title: 'Best Electricians in Uniondale | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Uniondale. Compare quotes from local professionals.',
+      },
+      'electrician/prince-albert': {
+        title: 'Best Electricians in Prince Albert | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified electricians in Prince Albert. Compare quotes from local professionals.',
+      },
+      'plumber/george': {
+        title: 'Best Plumbers in George | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified plumbers in George. Compare quotes from local professionals for burst pipes, geyser installations, drain cleaning and more. Free quotes in minutes.',
+      },
+      'plumber/knysna': {
+        title: 'Best Plumbers in Knysna | Get Free Quotes | ProHub',
+        description: 'Find trusted, verified plumbers in Knysna. Compare quotes from local professionals for burst pipes, geyser installations, drain cleaning and more. Free quotes in minutes.',
+      },
+    };
+
+    // Status tracking
     const liveContent = {
       'electrician': ['george', 'knysna', 'mossel-bay', 'plettenberg-bay', 'sedgefield', 'wilderness', 'hartenbos', 'great-brak-river', 'riversdale', 'stillbaai', 'albertinia', 'natures-valley', 'oudtshoorn', 'de-rust', 'calitzdorp', 'ladismith', 'barrydale', 'uniondale', 'prince-albert'],
       'plumber': ['george', 'knysna'],
     };
 
-    const pendingContent = {
-      // Add pending content here as: 'service': ['town1', 'town2']
-    };
+    const pendingContent = {};
 
     const baseUrl = 'https://prohub.co.za';
 
@@ -173,6 +278,94 @@
       if (liveContent[service]?.includes(town)) return 'live';
       if (pendingContent[service]?.includes(town)) return 'pending';
       return 'none';
+    }
+
+    function getPageData(service, town) {
+      const key = `${service.slug}/${town.slug}`;
+      const data = contentData[key];
+      const url = `${baseUrl}/${service.slug}/${town.slug}`;
+      
+      if (data) {
+        return { ...data, url, status: 'live' };
+      }
+      
+      // Default/auto-generated
+      return {
+        title: `Best ${service.namePlural} in ${town.name} | Get Free Quotes | ProHub`,
+        description: `Find trusted, verified ${service.namePlural.toLowerCase()} in ${town.name}. Compare quotes from local professionals. Free quotes in minutes.`,
+        url,
+        status: getStatus(service.slug, town.slug)
+      };
+    }
+
+    function showModal(serviceSlug, townSlug) {
+      const service = services.find(s => s.slug === serviceSlug);
+      const town = towns.find(t => t.slug === townSlug);
+      const data = getPageData(service, town);
+      
+      document.getElementById('modal-title').textContent = `${service.namePlural} in ${town.name}`;
+      
+      const statusLabel = data.status === 'live' ? 'Unique Content' : data.status === 'pending' ? 'Pending Review' : 'Default Content';
+      const statusClass = data.status === 'live' ? 'bg-green-100 text-green-700' : data.status === 'pending' ? 'bg-amber-100 text-amber-700' : 'bg-gray-100 text-gray-600';
+      
+      document.getElementById('modal-content').innerHTML = `
+        <div class="flex items-center gap-2 mb-4">
+          <span class="px-3 py-1 rounded-full text-xs font-medium ${statusClass}">${statusLabel}</span>
+        </div>
+        
+        <div class="space-y-4">
+          <div>
+            <label class="block text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">URL</label>
+            <div class="flex items-center gap-2">
+              <code class="flex-1 bg-gray-100 px-3 py-2 rounded-lg text-sm text-foreground break-all">${data.url}</code>
+              <a href="${data.url}" target="_blank" class="px-3 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary/90 transition">Open →</a>
+            </div>
+          </div>
+          
+          <div>
+            <label class="block text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">Page Title</label>
+            <div class="bg-gray-100 px-3 py-2 rounded-lg text-sm text-foreground">${data.title}</div>
+            <div class="text-xs text-gray-400 mt-1">${data.title.length} characters</div>
+          </div>
+          
+          <div>
+            <label class="block text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">Meta Description</label>
+            <div class="bg-gray-100 px-3 py-2 rounded-lg text-sm text-foreground">${data.description}</div>
+            <div class="text-xs text-gray-400 mt-1">${data.description.length} characters ${data.description.length > 160 ? '(⚠️ over 160)' : '(✓ good length)'}</div>
+          </div>
+        </div>
+      `;
+      
+      document.getElementById('modal').classList.remove('hidden');
+      document.getElementById('modal').classList.add('flex');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+      document.getElementById('modal').classList.remove('flex');
+    }
+
+    // Close modal on backdrop click
+    document.getElementById('modal').addEventListener('click', (e) => {
+      if (e.target.id === 'modal') closeModal();
+    });
+
+    // Close modal on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    function toggleSection(slug) {
+      const section = document.getElementById(`section-${slug}`);
+      section.classList.toggle('collapsed');
+    }
+
+    function expandAll() {
+      document.querySelectorAll('[id^="section-"]').forEach(el => el.classList.remove('collapsed'));
+    }
+
+    function collapseAll() {
+      document.querySelectorAll('[id^="section-"]').forEach(el => el.classList.add('collapsed'));
     }
 
     function render(filter = '') {
@@ -199,23 +392,29 @@
         if (filteredTowns.length === 0 && !matchesService) return;
 
         const townsToShow = matchesService || !filter ? towns : filteredTowns;
+        
+        // Count live pages for this service
+        const liveCount = townsToShow.filter(t => getStatus(service.slug, t.slug) === 'live').length;
 
         html += `
-          <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
-            <div class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between">
-              <div>
-                <h2 class="font-bold text-foreground text-lg">${service.namePlural}</h2>
-                <p class="text-sm text-gray-500">${townsToShow.length} towns</p>
+          <div id="section-${service.slug}" class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+            <button onclick="toggleSection('${service.slug}')" class="w-full bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between hover:bg-gray-100 transition">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-gray-400 transition-transform chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                <div class="text-left">
+                  <h2 class="font-bold text-foreground text-lg">${service.namePlural}</h2>
+                  <p class="text-sm text-gray-500">${liveCount}/${townsToShow.length} with unique content</p>
+                </div>
               </div>
-              <a href="${baseUrl}/${service.slug}" target="_blank" class="text-sm text-primary hover:underline">View Index →</a>
-            </div>
-            <div class="p-4">
-              <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+              <a href="${baseUrl}/${service.slug}" target="_blank" onclick="event.stopPropagation()" class="text-sm text-primary hover:underline">View Index →</a>
+            </button>
+            <div class="section-content p-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         `;
 
         townsToShow.forEach(town => {
           const status = getStatus(service.slug, town.slug);
-          const url = `${baseUrl}/${service.slug}/${town.slug}`;
+          const data = getPageData(service, town);
           
           totalPages++;
           if (status === 'live') livePages++;
@@ -223,11 +422,18 @@
           else defaultPages++;
 
           html += `
-            <a href="${url}" target="_blank" 
-               class="group flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-100 hover:border-primary/30 hover:bg-primary/5 transition-all">
-              <span class="w-2 h-2 rounded-full status-${status} flex-shrink-0"></span>
-              <span class="text-sm text-gray-700 group-hover:text-foreground truncate">${town.name}</span>
-            </a>
+            <div onclick="showModal('${service.slug}', '${town.slug}')"
+               class="group cursor-pointer p-4 rounded-xl border border-gray-100 hover:border-primary/30 hover:bg-primary/5 transition-all">
+              <div class="flex items-start justify-between mb-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full status-${status} flex-shrink-0"></span>
+                  <span class="font-medium text-foreground">${town.name}</span>
+                </div>
+                <a href="${data.url}" target="_blank" onclick="event.stopPropagation()" class="text-xs text-primary hover:underline">Open →</a>
+              </div>
+              <p class="text-xs text-gray-500 line-clamp-2">${data.title}</p>
+              <p class="text-xs text-gray-400 mt-1 truncate">${data.url}</p>
+            </div>
           `;
         });
 
