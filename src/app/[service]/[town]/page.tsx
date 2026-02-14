@@ -113,12 +113,27 @@ export default async function ServiceTownPage({ params }: PageProps) {
   };
   const heroImage = heroImages[serviceSlug] || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1600&h=900&fit=crop&q=80';
 
-  // Gallery images (3 per service type)
-  const galleryImages = service.images?.gallery || [
-    { src: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&h=400&fit=crop&q=80', alt: `Professional ${service.name.toLowerCase()} work`, caption: 'Quality workmanship' },
-    { src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop&q=80', alt: `${service.name} installation`, caption: 'Professional installations' },
-    { src: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=400&fit=crop&q=80', alt: `Verified ${service.name.toLowerCase()}`, caption: 'Verified local experts' },
+  // Gallery images per service type (working Unsplash URLs)
+  const serviceGalleryImages: Record<string, Array<{src: string, alt: string, caption: string, description: string}>> = {
+    'plumber': [
+      { src: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&h=400&fit=crop&q=80', alt: `Plumber repairing pipes in ${town.name}`, caption: 'Emergency Pipe Repairs', description: `Burst pipes and leaks don't wait. Our ${town.name} plumbers respond within 30–60 minutes for emergencies.` },
+      { src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop&q=80', alt: `Geyser installation in ${town.name}`, caption: 'Solar & Electric Geysers', description: `With ${town.name}'s excellent sunshine, solar geysers can cut your electricity bill by up to 40%.` },
+      { src: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=400&fit=crop&q=80', alt: `Verified plumber in ${town.name}`, caption: 'Verified & Trusted', description: 'Every plumber on ProHub is ID-verified with real customer reviews you can trust.' },
+    ],
+    'electrician': [
+      { src: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop&q=80', alt: `Electrician working in ${town.name}`, caption: 'Professional Electrical Work', description: 'From fault-finding to full rewiring, our verified electricians handle it all.' },
+      { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&q=80', alt: `DB board installation in ${town.name}`, caption: 'DB Board & Compliance', description: 'Safe, compliant installations with Certificates of Compliance included.' },
+      { src: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop&q=80', alt: `Solar installation in ${town.name}`, caption: 'Solar Installations', description: 'Beat load shedding with professional solar panel and inverter installations.' },
+    ],
+  };
+  
+  const defaultGallery = [
+    { src: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop&q=80', alt: `Professional ${service.name.toLowerCase()} work in ${town.name}`, caption: 'Quality Workmanship', description: `Professional ${service.name.toLowerCase()} services from verified providers in ${town.name}.` },
+    { src: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop&q=80', alt: `${service.name} service in ${town.name}`, caption: 'Professional Service', description: `Trusted ${service.name.toLowerCase()} experts serving the ${town.region} area.` },
+    { src: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&q=80', alt: `Verified ${service.name.toLowerCase()} in ${town.name}`, caption: 'Verified Professionals', description: 'Every provider is ID-verified with tracked reviews and job completion rates.' },
   ];
+  
+  const galleryImages = serviceGalleryImages[serviceSlug] || defaultGallery;
 
   return (
     <>
@@ -408,7 +423,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
                 </figure>
                 <div className="p-5">
                   <h3 className="font-display font-bold text-foreground text-lg mb-2">{img.caption}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">Professional {service.name.toLowerCase()} services from verified providers in {town.name}.</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{img.description}</p>
                 </div>
               </div>
             ))}
@@ -676,21 +691,27 @@ export default async function ServiceTownPage({ params }: PageProps) {
         townName={town.name} 
       />
 
-      {/* Related Services */}
+      {/* Related Services - Tile Grid with Icons */}
       {relatedServices.length > 0 && (
         <section id="other-services" className="py-16 bg-background border-t border-border">
           <div className="container mx-auto px-4">
-            <h2 className="text-xl font-display font-bold text-foreground mb-6">
-              Related Services in {town.name}
-            </h2>
-            <div className="flex flex-wrap gap-3">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-display font-bold text-foreground">Other Home Services in {town.name}</h2>
+              <p className="mt-2 text-muted-foreground">Find trusted local service providers for your home</p>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
               {relatedServices.map(related => (
                 <a
                   key={related.slug}
                   href={`/${related.slug}/${townSlug}`}
-                  className="px-4 py-2 bg-muted rounded-lg text-sm text-foreground hover:bg-primary hover:text-white transition-colors"
+                  className="group flex flex-col items-center gap-3 p-5 rounded-xl bg-card border border-border hover:border-primary/30 hover:shadow-card transition-all duration-200"
                 >
-                  {related.namePlural}
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <svg className="w-[22px] h-[22px] text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/>
+                    </svg>
+                  </div>
+                  <span className="text-sm font-medium text-foreground text-center">{related.namePlural}</span>
                 </a>
               ))}
             </div>
@@ -698,23 +719,32 @@ export default async function ServiceTownPage({ params }: PageProps) {
         </section>
       )}
 
-      {/* Nearby Towns */}
+      {/* Nearby Towns - Tile Grid with Location Pins */}
       {nearbyTowns.length > 0 && (
         <section className="py-16 bg-muted/50 border-t border-border">
           <div className="container mx-auto px-4">
-            <h2 className="text-xl font-display font-bold text-foreground mb-6">
-              {service.namePlural} in Nearby Towns
-            </h2>
-            <div className="flex flex-wrap gap-3">
+            <div className="text-center mb-10">
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">{town.region}</span>
+              <h2 className="mt-3 text-2xl sm:text-3xl font-display font-bold text-foreground">Find {service.namePlural} in Nearby Towns</h2>
+              <p className="mt-2 text-muted-foreground">ProHub connects you with verified {service.namePlural.toLowerCase()} across the region</p>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
               {nearbyTowns.map(nearby => (
                 <a
                   key={nearby.slug}
                   href={`/${serviceSlug}/${nearby.slug}`}
-                  className="px-4 py-2 bg-white border border-border rounded-lg text-sm text-foreground hover:border-primary hover:text-primary transition-colors"
+                  className="group flex items-center gap-2 bg-card rounded-lg px-4 py-3 border border-border hover:border-primary/30 hover:shadow-card transition-all duration-200"
                 >
-                  {service.namePlural} in {nearby.name}
+                  <svg className="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                  <span className="text-sm font-medium text-foreground group-hover:text-primary transition truncate">{nearby.name}</span>
                 </a>
               ))}
+            </div>
+            <div className="text-center mt-8">
+              <a href={`/${serviceSlug}`} className="text-primary hover:text-primary/80 font-semibold transition-colors">View all {service.namePlural.toLowerCase()} locations →</a>
             </div>
           </div>
         </section>
