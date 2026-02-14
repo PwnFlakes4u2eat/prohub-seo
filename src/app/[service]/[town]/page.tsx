@@ -12,7 +12,6 @@ import {
 import { getProviders, getReviews, getBlogPosts, getStats } from '@/lib/supabase';
 import ProviderCard, { NoProvidersCard } from '@/components/ProviderCard';
 import ReviewSection from '@/components/ReviewSection';
-import StatsAtGlance from '@/components/StatsAtGlance';
 import BlogSection from '@/components/BlogSection';
 
 interface PageProps {
@@ -22,7 +21,6 @@ interface PageProps {
   }>;
 }
 
-// Generate static paths for all service/town combinations
 export async function generateStaticParams() {
   const paths = getAllPagePaths();
   return paths.map(({ service, town }) => ({
@@ -31,7 +29,6 @@ export async function generateStaticParams() {
   }));
 }
 
-// Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { service: serviceSlug, town: townSlug } = await params;
   
@@ -71,7 +68,6 @@ export default async function ServiceTownPage({ params }: PageProps) {
     notFound();
   }
   
-  // Get dynamic data
   const [providers, reviews, blogPosts, stats] = await Promise.all([
     getProviders(serviceSlug, townSlug),
     getReviews(serviceSlug, townSlug),
@@ -79,10 +75,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
     getStats(serviceSlug, townSlug),
   ]);
   
-  // Get content (custom or default)
   const content = getPageContent(serviceSlug, townSlug) || generateDefaultContent(service, town);
-  
-  // Get related links
   const nearbyTowns = getNearbyTowns(townSlug);
   const relatedServices = getRelatedServices(serviceSlug);
   
@@ -119,7 +112,14 @@ export default async function ServiceTownPage({ params }: PageProps) {
     'electric-fencing': 'https://images.unsplash.com/photo-1558002038-1055907df827?w=1600&h=900&fit=crop&q=80',
   };
   const heroImage = heroImages[serviceSlug] || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1600&h=900&fit=crop&q=80';
-  
+
+  // Gallery images (3 per service type)
+  const galleryImages = service.images?.gallery || [
+    { src: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&h=400&fit=crop&q=80', alt: `Professional ${service.name.toLowerCase()} work`, caption: 'Quality workmanship' },
+    { src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop&q=80', alt: `${service.name} installation`, caption: 'Professional installations' },
+    { src: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=400&fit=crop&q=80', alt: `Verified ${service.name.toLowerCase()}`, caption: 'Verified local experts' },
+  ];
+
   return (
     <>
       {/* Schema.org markup */}
@@ -133,21 +133,13 @@ export default async function ServiceTownPage({ params }: PageProps) {
             "areaServed": {
               "@type": "City",
               "name": town.name,
-              "containedInPlace": {
-                "@type": "State",
-                "name": town.province
-              }
+              "containedInPlace": { "@type": "State", "name": town.province }
             },
-            "provider": {
-              "@type": "Organization",
-              "name": "ProHub",
-              "url": "https://prohub.co.za"
-            }
+            "provider": { "@type": "Organization", "name": "ProHub", "url": "https://prohub.co.za" }
           })
         }}
       />
       
-      {/* Breadcrumb Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -167,7 +159,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
       <div className="pt-20 bg-muted/50">
         <div className="container mx-auto px-4 py-3">
           <nav className="flex text-sm text-muted-foreground" aria-label="Breadcrumb">
-            <a href="/" className="hover:text-primary transition-colors">Home</a>
+            <a href="https://app.prohub.co.za" className="hover:text-primary transition-colors">Home</a>
             <svg className="w-4 h-4 mx-2 text-border" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/></svg>
             <a href={`/${serviceSlug}`} className="hover:text-primary transition-colors">{service.namePlural}</a>
             <svg className="w-4 h-4 mx-2 text-border" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/></svg>
@@ -178,7 +170,6 @@ export default async function ServiceTownPage({ params }: PageProps) {
 
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
-        {/* Background image */}
         <div className="absolute inset-0">
           <img 
             src={heroImage} 
@@ -232,12 +223,45 @@ export default async function ServiceTownPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Stats At Glance */}
-      <StatsAtGlance 
-        serviceName={service.name} 
-        townName={town.name} 
-        stats={stats} 
-      />
+      {/* Table of Contents */}
+      <section className="py-10 bg-background border-b border-border">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-card rounded-xl border border-border p-6 shadow-card">
+              <h2 className="font-display font-bold text-foreground text-lg mb-4 flex items-center gap-2">
+                <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+                On This Page
+              </h2>
+              <nav className="grid sm:grid-cols-2 gap-2">
+                <a href="#how-it-works" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>How ProHub Works
+                </a>
+                <a href="#providers" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>Top {service.namePlural} in {town.name}
+                </a>
+                <a href="#services" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>{service.name} Services
+                </a>
+                <a href="#reviews" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>Customer Reviews
+                </a>
+                <a href="#compare" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>DIY vs Professional
+                </a>
+                <a href="#guide" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>Complete Guide
+                </a>
+                <a href="#pricing" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>Pricing Guide
+                </a>
+                <a href="#faq" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>FAQ
+                </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* How It Works */}
       <section id="how-it-works" className="py-20 md:py-28 bg-muted/50">
@@ -276,64 +300,16 @@ export default async function ServiceTownPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Table of Contents */}
-      <section className="py-10 bg-background border-b border-border">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-card rounded-xl border border-border p-6 shadow-card">
-              <h2 className="font-display font-bold text-foreground text-lg mb-4 flex items-center gap-2">
-                <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
-                On This Page
-              </h2>
-              <nav className="grid sm:grid-cols-2 gap-2">
-                <a href="#how-it-works" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
-                  How ProHub Works
-                </a>
-                <a href="#providers" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
-                  Top {service.namePlural} in {town.name}
-                </a>
-                <a href="#pricing" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
-                  Pricing Guide
-                </a>
-                <a href="#reviews" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
-                  Customer Reviews
-                </a>
-                <a href="#guide" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
-                  Complete Guide
-                </a>
-                <a href="#faq" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
-                  FAQ
-                </a>
-                <a href="#other-services" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
-                  Other Services
-                </a>
-                <a href="#get-quotes" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
-                  Get Free Quotes
-                </a>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Providers Section */}
       <section id="providers" className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Local Experts</span>
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Top Rated</span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-foreground">
               {service.namePlural} in {town.name}
             </h2>
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-              Verified and reviewed {service.namePlural.toLowerCase()} ready to help with your project
+              Verified professionals ready to help with your project
             </p>
           </div>
           
@@ -367,73 +343,90 @@ export default async function ServiceTownPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 md:py-28 bg-muted/50">
+      {/* Dynamic Stats */}
+      <section className="py-12 bg-foreground text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">Pricing Guide</span>
-              <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-foreground">
-                How Much Does a {service.name} Cost in {town.name}?
-              </h2>
-              <p className="mt-4 text-muted-foreground">
-                Average pricing for common {service.name.toLowerCase()} jobs in the {town.name} area (2026)
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-xl border border-border overflow-hidden shadow-card">
-              <div className="grid grid-cols-2 bg-foreground text-white px-6 py-4">
-                <span className="font-semibold text-sm font-display">Service</span>
-                <span className="font-semibold text-sm text-right font-display">Price Range</span>
+          <div className="relative overflow-hidden rounded-2xl p-8 md:p-10">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+            <div className="relative z-10">
+              <div className="flex items-center justify-center gap-2 mb-8">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/30"></div>
+                <h2 className="text-xl md:text-2xl font-display font-bold text-white text-center px-4">{service.name} in {town.name} at a Glance</h2>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/30"></div>
               </div>
-              {service.pricing.map((item, index) => (
-                <div 
-                  key={item.service}
-                  className={`grid grid-cols-2 px-6 py-4 border-b border-border last:border-0 ${
-                    index % 2 === 1 ? 'bg-muted/30' : ''
-                  }`}
-                >
-                  <span className="text-muted-foreground">{item.service}</span>
-                  <span className="text-right font-semibold text-foreground">{item.range}</span>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 text-center hover:bg-white/10 transition">
+                  <div className="text-3xl md:text-4xl font-bold text-primary">{stats.avgResponseTime || '< 30 mins'}</div>
+                  <p className="text-sm text-white/40 mt-2">Avg. Response Time</p>
                 </div>
-              ))}
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 text-center hover:bg-white/10 transition">
+                  <div className="text-3xl md:text-4xl font-bold text-primary">{stats.avgRating ? `${stats.avgRating}/5` : '–'}</div>
+                  <p className="text-sm text-white/40 mt-2">Avg. Provider Rating</p>
+                </div>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 text-center hover:bg-white/10 transition">
+                  <div className="text-3xl md:text-4xl font-bold text-primary">{stats.jobsThisMonth || '–'}</div>
+                  <p className="text-sm text-white/40 mt-2">Jobs This Month</p>
+                </div>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 text-center hover:bg-white/10 transition">
+                  <div className="text-3xl md:text-4xl font-bold text-primary">{stats.providerCount || '–'}</div>
+                  <p className="text-sm text-white/40 mt-2">Verified {service.namePlural}</p>
+                </div>
+              </div>
+              <p className="text-xs text-white/30 text-center mt-6">Stats update automatically based on real platform activity</p>
             </div>
-            
-            <p className="mt-4 text-sm text-muted-foreground text-center">
-              Prices are estimates based on local market data. Get exact quotes for your specific job.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Guide Section */}
-      <section id="guide" className="py-20 md:py-28 bg-background">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="mb-12">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Local Expert Guide</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-foreground">
-              Your Complete Guide to {service.name} Services in {town.name}
-            </h2>
-            <p className="mt-4 text-muted-foreground text-lg">
-              Everything you need to know before hiring a {service.name.toLowerCase()} in the {town.region}
-            </p>
-          </div>
+      {/* Reviews Section */}
+      <ReviewSection 
+        reviews={reviews} 
+        serviceName={service.name} 
+        townName={town.name} 
+      />
 
-          <div className="prose prose-lg max-w-none">
-            <p className="text-muted-foreground leading-relaxed">{content.guideIntro}</p>
+      {/* Service Image Gallery */}
+      <section id="services" className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Quality Work</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-foreground">{service.name} Services in {town.name}</h2>
+            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">See the quality of work from our verified local {service.namePlural.toLowerCase()} in the {town.region}</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {galleryImages.map((img, index) => (
+              <div key={index} className="bg-card rounded-xl overflow-hidden shadow-card border border-border">
+                <figure className="group relative overflow-hidden">
+                  <img 
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </figure>
+                <div className="p-5">
+                  <h3 className="font-display font-bold text-foreground text-lg mb-2">{img.caption}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Professional {service.name.toLowerCase()} services from verified providers in {town.name}.</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DIY vs Professional */}
+      <section id="compare" className="py-20 md:py-28 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">Make the Right Choice</span>
+              <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-foreground">DIY vs Professional {service.name}</h2>
+              <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Not sure whether to tackle it yourself or call a pro? This guide helps you decide.</p>
+            </div>
             
-            <h3 className="text-xl font-display font-bold text-foreground mt-10 mb-4">
-              Types of {service.name} Services Available in {town.name}
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">{content.guideServiceTypes}</p>
-            
-            <h3 className="text-xl font-display font-bold text-foreground mt-10 mb-4">
-              When to Call a {service.name} vs DIY
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">{content.guideDiyVsPro}</p>
-            
-            {/* DIY vs Pro Table */}
-            <div className="my-8 bg-white rounded-xl border border-border overflow-hidden shadow-card">
+            <div className="bg-card rounded-xl border border-border overflow-hidden shadow-card">
               <div className="grid grid-cols-3 bg-foreground text-white">
                 <div className="px-4 py-4 font-semibold font-display text-sm">Task</div>
                 <div className="px-4 py-4 font-semibold font-display text-sm text-center border-l border-white/20">DIY?</div>
@@ -477,25 +470,150 @@ export default async function ServiceTownPage({ params }: PageProps) {
               ))}
             </div>
             
-            <h3 className="text-xl font-display font-bold text-foreground mt-10 mb-4">
-              What to Expect During a {service.name} Job
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">{content.guideWhatToExpect}</p>
-            
-            <h3 className="text-xl font-display font-bold text-foreground mt-10 mb-4">
-              How to Choose the Right {service.name} in {town.name}
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">{content.guideChoosingProvider}</p>
+            <p className="text-center text-sm text-muted-foreground mt-6">
+              <strong className="text-foreground">Pro tip:</strong> When in doubt, get a professional quote — it&apos;s free on ProHub and takes under 2 minutes.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Reviews Section */}
-      <ReviewSection 
-        reviews={reviews} 
-        serviceName={service.name} 
-        townName={town.name} 
-      />
+      {/* Guide Section */}
+      <section id="guide" className="py-20 md:py-28 bg-background">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="mb-12">
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Local Expert Guide</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-foreground">
+              Your Complete Guide to {service.name} Services in {town.name}
+            </h2>
+            <p className="mt-4 text-muted-foreground text-lg">
+              Everything you need to know before hiring a {service.name.toLowerCase()} in the {town.region}
+            </p>
+          </div>
+
+          <div className="space-y-10">
+            <div>
+              <h3 className="text-xl font-display font-bold text-foreground mb-3">Types of {service.name} Services Available in {town.name}</h3>
+              <p className="text-muted-foreground leading-relaxed">{content.guideServiceTypes}</p>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-display font-bold text-foreground mb-3">When to Call a {service.name} vs DIY</h3>
+              <p className="text-muted-foreground leading-relaxed">{content.guideDiyVsPro}</p>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-display font-bold text-foreground mb-3">What to Expect During a {service.name} Job</h3>
+              <p className="text-muted-foreground leading-relaxed">{content.guideWhatToExpect}</p>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-display font-bold text-foreground mb-3">How to Choose the Right {service.name} in {town.name}</h3>
+              <p className="text-muted-foreground leading-relaxed">{content.guideChoosingProvider}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 md:py-28 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">Pricing Guide</span>
+              <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-foreground">
+                How Much Does a {service.name} Cost in {town.name}?
+              </h2>
+              <p className="mt-4 text-muted-foreground">
+                Average pricing for common {service.name.toLowerCase()} jobs in the {town.name} area (2026)
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl border border-border overflow-hidden shadow-card">
+              <div className="grid grid-cols-2 bg-foreground text-white px-6 py-4">
+                <span className="font-semibold text-sm font-display">Service</span>
+                <span className="font-semibold text-sm text-right font-display">Price Range</span>
+              </div>
+              {service.pricing.map((item, index) => (
+                <div 
+                  key={item.service}
+                  className={`grid grid-cols-2 px-6 py-4 border-b border-border last:border-0 ${
+                    index % 2 === 1 ? 'bg-muted/30' : ''
+                  }`}
+                >
+                  <span className="text-muted-foreground">{item.service}</span>
+                  <span className="text-right font-semibold text-foreground">{item.range}</span>
+                </div>
+              ))}
+            </div>
+            
+            <p className="mt-4 text-sm text-muted-foreground text-center">
+              Prices are estimates based on local market data. Get exact quotes for your specific job.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why ProHub */}
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Why Choose Us</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-foreground">Why ProHub?</h2>
+            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Join thousands of South Africans who trust ProHub to connect them with verified local service providers</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-primary shadow-card hover:-translate-y-1 transition-transform">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <h3 className="font-display font-bold text-foreground mb-2">Verified Providers</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">Every provider is ID-verified with tracked reviews and job completion rates.</p>
+            </div>
+            <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-primary shadow-card hover:-translate-y-1 transition-transform">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h3 className="font-display font-bold text-foreground mb-2">Instant WhatsApp Alerts</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">Providers are notified immediately. Get your first quote in under 30 minutes.</p>
+            </div>
+            <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-primary shadow-card hover:-translate-y-1 transition-transform">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+              </div>
+              <h3 className="font-display font-bold text-foreground mb-2">Compare &amp; Save</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">Receive up to 5 quotes side by side. Choose the best price and fit for your job.</p>
+            </div>
+            <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-primary shadow-card hover:-translate-y-1 transition-transform">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h3 className="font-display font-bold text-foreground mb-2">100% Free for You</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">Customers never pay. Submitting requests and receiving quotes is completely free.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas */}
+      {town.localAreas && town.localAreas.length > 0 && (
+        <section className="py-16 bg-muted/50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-10">
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">Service Areas</span>
+              <h2 className="mt-3 text-2xl sm:text-3xl font-display font-bold text-foreground">Areas We Cover in {town.name}</h2>
+              <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">ProHub connects you with verified {service.namePlural.toLowerCase()} across all {town.name} suburbs</p>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+              {town.localAreas.map((area: string) => (
+                <div key={area} className="flex items-center gap-2 bg-card rounded-lg px-4 py-3 border border-border shadow-sm">
+                  <svg className="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  <span className="text-sm font-medium text-foreground truncate">{area}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* FAQ Section */}
       <section id="faq" className="py-20 md:py-28 bg-background">
@@ -545,10 +663,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
             "mainEntity": content.faqs.map(faq => ({
               "@type": "Question",
               "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
+              "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
             }))
           })
         }}
@@ -563,7 +678,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
 
       {/* Related Services */}
       {relatedServices.length > 0 && (
-        <section className="py-16 bg-background border-t border-border">
+        <section id="other-services" className="py-16 bg-background border-t border-border">
           <div className="container mx-auto px-4">
             <h2 className="text-xl font-display font-bold text-foreground mb-6">
               Related Services in {town.name}
@@ -606,7 +721,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
       )}
 
       {/* Final CTA */}
-      <section className="py-20 md:py-28 bg-foreground text-white">
+      <section id="get-quotes" className="py-20 md:py-28 bg-foreground text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-display font-bold">
             Ready to Find a {service.name} in {town.name}?
@@ -633,5 +748,4 @@ export default async function ServiceTownPage({ params }: PageProps) {
   );
 }
 
-// Enable ISR - rebuild pages every 24 hours
 export const revalidate = 86400;
