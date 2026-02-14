@@ -34,40 +34,40 @@
   ],
   "gallery": [
     {
-      "url": "/images/sedgefield-plumber-rainwater-harvesting.png",
-      "alt": "Rainwater harvesting system installation in Sedgefield",
-      "caption": "Rainwater Harvesting",
-      "description": "Sustainable plumbing solutions for eco-conscious homes near the lagoon, including rainwater harvesting systems."
+      "url": "/images/plumber-burst-pipe-repair.png",
+      "alt": "Emergency plumber repairing burst pipe with water leak",
+      "caption": "Burst Pipe Repair",
+      "description": "24/7 emergency burst pipe repairs. Our plumbers respond fast to stop water damage and fix copper, PVC, or galvanised pipes."
     },
     {
-      "url": "/images/sedgefield-plumber-geyser-replacement.png",
-      "alt": "Geyser replacement in Sedgefield home",
-      "caption": "Geyser Replacement",
-      "description": "Reliable geyser repair and replacement services, ensuring hot water for homes across Sedgefield."
+      "url": "/images/plumber-drain-unblocking.png",
+      "alt": "Professional drain unblocking with high-pressure jetter",
+      "caption": "Blocked Drain Cleaning",
+      "description": "Fast drain unblocking for sinks, showers, and sewer lines. We use high-pressure jetters to clear even the toughest blockages."
     },
     {
-      "url": "/images/sedgefield-plumber-blocked-drain.png",
-      "alt": "High-pressure drain jetting in Sedgefield",
-      "caption": "Drain Unblocking",
-      "description": "Efficient drain unblocking using advanced jetting technology, suitable for environmentally sensitive areas."
+      "url": "/images/plumber-geyser-installation.png",
+      "alt": "Plumber installing electric geyser hot water system",
+      "caption": "Geyser Installation & Repair",
+      "description": "Expert geyser installations, replacements, and repairs. Electric and solar systems fitted with full compliance certificates."
     },
     {
-      "url": "/images/sedgefield-plumber-bath-reno.png",
-      "alt": "Bathroom renovation plumbing in Sedgefield timber home",
-      "caption": "Bathroom Renovations",
-      "description": "Quality plumbing installations for bathroom renovations, expertly integrating pipework into timber-frame structures."
+      "url": "/images/plumber-tap-repair.png",
+      "alt": "Plumber fixing leaking tap faucet in kitchen",
+      "caption": "Leaking Tap Repairs",
+      "description": "Stop dripping taps wasting water and money. Quick repairs for kitchen, bathroom, and garden taps — all brands serviced."
     },
     {
-      "url": "/images/sedgefield-plumber-timber-leak.png",
-      "alt": "Leak repair in Sedgefield timber-frame home",
-      "caption": "Timber Home Leak Repair",
-      "description": "Specialised leak repair for Sedgefield's distinctive timber-frame homes, preserving structural integrity."
+      "url": "/images/plumber-toilet-repair.png",
+      "alt": "Plumber repairing toilet cistern and flush mechanism",
+      "caption": "Toilet Repairs",
+      "description": "Running toilets, weak flushes, and cistern problems fixed fast. We repair and replace all toilet components and fittings."
     },
     {
-      "url": "/images/sedgefield-plumber-eco-fixture.png",
-      "alt": "Low-flow toilet installation in Sedgefield",
-      "caption": "Eco-Friendly Fixtures",
-      "description": "Installation of water-saving fixtures like low-flow toilets and eco-friendly taps for sustainable bathrooms."
+      "url": "/images/plumber-pressure-testing.png",
+      "alt": "Plumber testing water pressure with diagnostic gauge",
+      "caption": "Water Pressure Issues",
+      "description": "Diagnose and fix low water pressure problems. We test your system, find the cause, and restore proper flow throughout your home."
     }
   ]
 }

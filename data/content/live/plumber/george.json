@@ -38,40 +38,40 @@
   ],
   "gallery": [
     {
-      "url": "/images/george-plumber-burst-pipe.png",
-      "alt": "Plumber repairing burst copper pipe in George home",
-      "caption": "Emergency Burst Pipe Repair",
-      "description": "Swift emergency response to burst pipes in George, expertly handled by certified plumbers to protect your home from water damage."
+      "url": "/images/plumber-burst-pipe-repair.png",
+      "alt": "Emergency plumber repairing burst pipe with water leak",
+      "caption": "Burst Pipe Repair",
+      "description": "24/7 emergency burst pipe repairs. Our plumbers respond fast to stop water damage and fix copper, PVC, or galvanised pipes."
     },
     {
-      "url": "/images/george-plumber-geyser-install.png",
-      "alt": "Solar geyser installation on George rooftop",
-      "caption": "Solar Geyser Installation",
-      "description": "Certified plumbers specializing in efficient solar geyser installations, leveraging renewable energy and the Garden Route sunshine."
+      "url": "/images/plumber-drain-unblocking.png",
+      "alt": "Professional drain unblocking with high-pressure jetter",
+      "caption": "Blocked Drain Cleaning",
+      "description": "Fast drain unblocking for sinks, showers, and sewer lines. We use high-pressure jetters to clear even the toughest blockages."
     },
     {
-      "url": "/images/george-plumber-drain-unblock.png",
-      "alt": "Plumber using CCTV camera for drain inspection in George",
-      "caption": "Drain Unblocking & Inspection",
-      "description": "Advanced drain unblocking using modern CCTV camera technology to identify and clear blockages effectively."
+      "url": "/images/plumber-geyser-installation.png",
+      "alt": "Plumber installing electric geyser hot water system",
+      "caption": "Geyser Installation & Repair",
+      "description": "Expert geyser installations, replacements, and repairs. Electric and solar systems fitted with full compliance certificates."
     },
     {
-      "url": "/images/george-plumber-leak-detection.png",
-      "alt": "Thermal imaging leak detection in George home",
-      "caption": "Leak Detection Services",
-      "description": "Accurate leak detection using thermal cameras and specialised tools to locate hidden water leaks with minimal disruption."
+      "url": "/images/plumber-tap-repair.png",
+      "alt": "Plumber fixing leaking tap faucet in kitchen",
+      "caption": "Leaking Tap Repairs",
+      "description": "Stop dripping taps wasting water and money. Quick repairs for kitchen, bathroom, and garden taps — all brands serviced."
     },
     {
-      "url": "/images/george-plumber-bath-reno.png",
-      "alt": "Bathroom renovation plumbing work in George",
-      "caption": "Bathroom Renovations",
-      "description": "Expert plumbing installations for modern bathroom renovations, delivering high-quality and reliable systems."
+      "url": "/images/plumber-toilet-repair.png",
+      "alt": "Plumber repairing toilet cistern and flush mechanism",
+      "caption": "Toilet Repairs",
+      "description": "Running toilets, weak flushes, and cistern problems fixed fast. We repair and replace all toilet components and fittings."
     },
     {
-      "url": "/images/george-plumber-water-tank.png",
-      "alt": "Rainwater tank installation in George",
-      "caption": "Water Tank Installation",
-      "description": "Water-wise solutions including rainwater harvesting tanks for sustainable water management during restrictions."
+      "url": "/images/plumber-pressure-testing.png",
+      "alt": "Plumber testing water pressure with diagnostic gauge",
+      "caption": "Water Pressure Issues",
+      "description": "Diagnose and fix low water pressure problems. We test your system, find the cause, and restore proper flow throughout your home."
     }
   ],
   "status": "live",
