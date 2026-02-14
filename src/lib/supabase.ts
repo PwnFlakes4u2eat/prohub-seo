@@ -14,13 +14,14 @@ export interface Provider {
   bio: string | null;
   years_experience: number | null;
   is_verified: boolean;
-  subscription_tier: string | null;
-  featured_until: string | null;
+  isFeatured: boolean;
   created_at: string;
-  // Computed from reviews
-  rating?: number;
-  review_count?: number;
-  response_time?: string;
+  // Rating data
+  avg_rating: number | null;
+  total_reviews: number | null;
+  // Categories and regions for display
+  categories: string[];
+  regions: string[];
 }
 
 export interface Review {
@@ -147,6 +148,8 @@ export async function getProviders(serviceSlug: string, townSlug: string): Promi
       description,
       years_experience,
       status,
+      avg_rating,
+      total_reviews,
       created_at
     `)
     .in('id', matchingProviderIds)
@@ -158,8 +161,45 @@ export async function getProviders(serviceSlug: string, townSlug: string): Promi
     return [];
   }
 
+  if (!data || data.length === 0) {
+    return [];
+  }
+
+  // Get featured listings for these providers
+  const { data: featuredData } = await supabase
+    .from('featured_listings')
+    .select('provider_id')
+    .in('provider_id', data.map(p => p.id))
+    .eq('status', 'active');
+  
+  const featuredIds = new Set(featuredData?.map(f => f.provider_id) || []);
+
+  // Get all categories for display
+  const { data: allCategories } = await supabase
+    .from('categories')
+    .select('id, name');
+  const catMap = new Map(allCategories?.map(c => [c.id, c.name]) || []);
+
+  // Get all regions for display
+  const { data: allRegions } = await supabase
+    .from('regions')
+    .select('id, name');
+  const regMap = new Map(allRegions?.map(r => [r.id, r.name]) || []);
+
+  // Get provider categories
+  const { data: provCats } = await supabase
+    .from('provider_categories')
+    .select('provider_id, category_id')
+    .in('provider_id', data.map(p => p.id));
+
+  // Get provider regions
+  const { data: provRegs } = await supabase
+    .from('provider_regions')
+    .select('provider_id, region_id')
+    .in('provider_id', data.map(p => p.id));
+
   // Map to expected interface
-  return (data || []).map(p => ({
+  const providers: Provider[] = data.map(p => ({
     id: p.id,
     business_name: p.business_name,
     avatar_url: p.avatar_url,
@@ -167,10 +207,28 @@ export async function getProviders(serviceSlug: string, townSlug: string): Promi
     bio: p.description,
     years_experience: p.years_experience,
     is_verified: p.status === 'verified',
-    subscription_tier: null,
-    featured_until: null,
+    isFeatured: featuredIds.has(p.id),
     created_at: p.created_at,
+    avg_rating: p.avg_rating,
+    total_reviews: p.total_reviews,
+    categories: (provCats || [])
+      .filter(pc => pc.provider_id === p.id)
+      .map(pc => catMap.get(pc.category_id) || '')
+      .filter(Boolean),
+    regions: (provRegs || [])
+      .filter(pr => pr.provider_id === p.id)
+      .map(pr => regMap.get(pr.region_id) || '')
+      .filter(Boolean),
   }));
+
+  // Sort: featured first, then by rating
+  providers.sort((a, b) => {
+    if (a.isFeatured && !b.isFeatured) return -1;
+    if (!a.isFeatured && b.isFeatured) return 1;
+    return (b.avg_rating || 0) - (a.avg_rating || 0);
+  });
+
+  return providers;
 }
 
 // Fetch reviews for a service and town
