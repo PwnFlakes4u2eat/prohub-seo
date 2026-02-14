@@ -728,7 +728,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
               <h2 className="mt-3 text-2xl sm:text-3xl font-display font-bold text-foreground">Find {service.namePlural} in Nearby Towns</h2>
               <p className="mt-2 text-muted-foreground">ProHub connects you with verified {service.namePlural.toLowerCase()} across the region</p>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            <div className="flex flex-wrap justify-center gap-3">
               {nearbyTowns.map(nearby => (
                 <a
                   key={nearby.slug}
