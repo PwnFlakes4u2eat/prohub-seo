@@ -133,7 +133,15 @@ export default async function ServiceTownPage({ params }: PageProps) {
     { src: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&q=80', alt: `Verified ${service.name.toLowerCase()} in ${town.name}`, caption: 'Verified Professionals', description: 'Every provider is ID-verified with tracked reviews and job completion rates.' },
   ];
   
-  const galleryImages = serviceGalleryImages[serviceSlug] || defaultGallery;
+  // Use content.gallery if available (town-specific), otherwise fall back to service-level or default
+  const galleryImages = content.gallery 
+    ? content.gallery.map((img: { url: string; alt: string; caption: string }) => ({
+        src: img.url,
+        alt: img.alt,
+        caption: img.caption,
+        description: img.caption // Use caption as description for consistency
+      }))
+    : (serviceGalleryImages[serviceSlug] || defaultGallery);
 
   return (
     <>
