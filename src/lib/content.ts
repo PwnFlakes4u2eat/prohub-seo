@@ -53,7 +53,7 @@ export interface PageContent {
   faqs: { question: string; answer: string }[];
   
   // Gallery images (optional, town-specific)
-  gallery?: { url: string; alt: string; caption: string }[];
+  gallery?: { url: string; alt: string; caption: string; description?: string }[];
   
   // Status
   status: 'pending' | 'live';

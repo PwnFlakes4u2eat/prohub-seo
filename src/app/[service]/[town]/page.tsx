@@ -135,11 +135,11 @@ export default async function ServiceTownPage({ params }: PageProps) {
   
   // Use content.gallery if available (town-specific), otherwise fall back to service-level or default
   const galleryImages = content.gallery 
-    ? content.gallery.map((img: { url: string; alt: string; caption: string }) => ({
+    ? content.gallery.map((img: { url: string; alt: string; caption: string; description?: string }) => ({
         src: img.url,
         alt: img.alt,
         caption: img.caption,
-        description: img.caption // Use caption as description for consistency
+        description: img.description || img.caption
       }))
     : (serviceGalleryImages[serviceSlug] || defaultGallery);
 

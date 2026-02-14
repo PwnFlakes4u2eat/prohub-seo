@@ -39,33 +39,39 @@
   "gallery": [
     {
       "url": "/images/george-plumber-burst-pipe.png",
-      "alt": "Expert female plumber in George quickly fixing a burst copper pipe under a kitchen sink, preventing water damage with tools.",
-      "caption": "Swift emergency response to burst pipes in George, expertly handled by certified plumbers to protect your home from water damage."
+      "alt": "Plumber repairing burst copper pipe in George home",
+      "caption": "Emergency Burst Pipe Repair",
+      "description": "Swift emergency response to burst pipes in George, expertly handled by certified plumbers to protect your home from water damage."
     },
     {
       "url": "/images/george-plumber-geyser-install.png",
-      "alt": "Professional plumber in George installing a new solar geyser on a residential rooftop with scenic Outeniqua Mountains backdrop.",
-      "caption": "Certified plumbers in George specializing in efficient solar geyser installations, leveraging renewable energy for your home."
+      "alt": "Solar geyser installation on George rooftop",
+      "caption": "Solar Geyser Installation",
+      "description": "Certified plumbers specializing in efficient solar geyser installations, leveraging renewable energy and the Garden Route sunshine."
     },
     {
       "url": "/images/george-plumber-drain-unblock.png",
-      "alt": "George plumber using a CCTV camera for advanced drain inspection, diagnosing blockages in a bathroom with water spraying.",
-      "caption": "Advanced drain unblocking and inspection services in George, utilizing modern camera technology to identify and clear blockages effectively."
+      "alt": "Plumber using CCTV camera for drain inspection in George",
+      "caption": "Drain Unblocking & Inspection",
+      "description": "Advanced drain unblocking using modern CCTV camera technology to identify and clear blockages effectively."
     },
     {
       "url": "/images/george-plumber-leak-detection.png",
-      "alt": "George plumber employing thermal imaging technology for precise non-invasive leak detection behind a wall in a living room.",
-      "caption": "Accurate leak detection in George, using thermal cameras and specialized tools to locate hidden water leaks with minimal disruption."
+      "alt": "Thermal imaging leak detection in George home",
+      "caption": "Leak Detection Services",
+      "description": "Accurate leak detection using thermal cameras and specialised tools to locate hidden water leaks with minimal disruption."
     },
     {
       "url": "/images/george-plumber-bath-reno.png",
-      "alt": "Skilled plumber in George installing new copper piping for a modern bathroom renovation, ensuring quality fixtures.",
-      "caption": "Expert plumbing installations for contemporary bathroom renovations in George, delivering high-quality and reliable systems."
+      "alt": "Bathroom renovation plumbing work in George",
+      "caption": "Bathroom Renovations",
+      "description": "Expert plumbing installations for modern bathroom renovations, delivering high-quality and reliable systems."
     },
     {
       "url": "/images/george-plumber-water-tank.png",
-      "alt": "Professional plumber in George connecting a large Outeniqua Water Solutions rainwater harvesting tank to a residential property.",
-      "caption": "Installation of water-wise solutions in George, including rainwater harvesting tanks for sustainable water management."
+      "alt": "Rainwater tank installation in George",
+      "caption": "Water Tank Installation",
+      "description": "Water-wise solutions including rainwater harvesting tanks for sustainable water management during restrictions."
     }
   ],
   "status": "live",
