@@ -52,6 +52,9 @@ export interface PageContent {
   // FAQ (unique answers per page)
   faqs: { question: string; answer: string }[];
   
+  // Gallery images (optional, town-specific)
+  gallery?: { url: string; alt: string; caption: string }[];
+  
   // Status
   status: 'pending' | 'live';
   lastUpdated: string;
