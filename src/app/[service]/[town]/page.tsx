@@ -89,6 +89,37 @@ export default async function ServiceTownPage({ params }: PageProps) {
   const appUrl = 'https://app.prohub.co.za';
   const requestUrl = `${appUrl}/request?service=${serviceSlug}&location=${townSlug}`;
   
+  // Hero images per service
+  const heroImages: Record<string, string> = {
+    'plumber': 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1600&h=900&fit=crop&q=80',
+    'electrician': 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1600&h=900&fit=crop&q=80',
+    'pest-control': 'https://images.unsplash.com/photo-1632935190508-1e96ba5e8f78?w=1600&h=900&fit=crop&q=80',
+    'cleaning-service': 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1600&h=900&fit=crop&q=80',
+    'garden-service': 'https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&h=900&fit=crop&q=80',
+    'handyman': 'https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=1600&h=900&fit=crop&q=80',
+    'painter': 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1600&h=900&fit=crop&q=80',
+    'roofing': 'https://images.unsplash.com/photo-1632759145355-5fbd69dc5750?w=1600&h=900&fit=crop&q=80',
+    'solar-installer': 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600&h=900&fit=crop&q=80',
+    'security': 'https://images.unsplash.com/photo-1558002038-1055907df827?w=1600&h=900&fit=crop&q=80',
+    'aircon': 'https://images.unsplash.com/photo-1631545806609-76ce8c775e40?w=1600&h=900&fit=crop&q=80',
+    'geyser-service': 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&h=900&fit=crop&q=80',
+    'pool-service': 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=1600&h=900&fit=crop&q=80',
+    'locksmith': 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1600&h=900&fit=crop&q=80',
+    'building-renovation': 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&h=900&fit=crop&q=80',
+    'tiling': 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1600&h=900&fit=crop&q=80',
+    'waterproofing': 'https://images.unsplash.com/photo-1607400201889-565b1ee75f8e?w=1600&h=900&fit=crop&q=80',
+    'damp-proofing': 'https://images.unsplash.com/photo-1607400201889-565b1ee75f8e?w=1600&h=900&fit=crop&q=80',
+    'paving': 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1600&h=900&fit=crop&q=80',
+    'gate-motor-repair': 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1600&h=900&fit=crop&q=80',
+    'garage-door': 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1600&h=900&fit=crop&q=80',
+    'moving-service': 'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=1600&h=900&fit=crop&q=80',
+    'appliance-repair': 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1600&h=900&fit=crop&q=80',
+    'furniture-repair': 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&h=900&fit=crop&q=80',
+    'ceilings-partitions': 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&h=900&fit=crop&q=80',
+    'electric-fencing': 'https://images.unsplash.com/photo-1558002038-1055907df827?w=1600&h=900&fit=crop&q=80',
+  };
+  const heroImage = heroImages[serviceSlug] || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1600&h=900&fit=crop&q=80';
+  
   return (
     <>
       {/* Schema.org markup */}
@@ -132,44 +163,70 @@ export default async function ServiceTownPage({ params }: PageProps) {
         }}
       />
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-foreground via-foreground to-foreground/95 text-white py-20 md:py-28">
-        <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] opacity-5" />
-        <div className="container mx-auto px-4 relative">
-          {/* Breadcrumbs */}
-          <nav className="mb-6 text-sm">
-            <ol className="flex items-center gap-2 text-white/60">
-              <li><a href="/" className="hover:text-white">Home</a></li>
-              <li>/</li>
-              <li><a href={`/${serviceSlug}`} className="hover:text-white">{service.namePlural}</a></li>
-              <li>/</li>
-              <li className="text-white">{town.name}</li>
-            </ol>
+      {/* Breadcrumbs */}
+      <div className="pt-20 bg-muted/50">
+        <div className="container mx-auto px-4 py-3">
+          <nav className="flex text-sm text-muted-foreground" aria-label="Breadcrumb">
+            <a href="/" className="hover:text-primary transition-colors">Home</a>
+            <svg className="w-4 h-4 mx-2 text-border" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/></svg>
+            <a href={`/${serviceSlug}`} className="hover:text-primary transition-colors">{service.namePlural}</a>
+            <svg className="w-4 h-4 mx-2 text-border" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/></svg>
+            <span className="text-foreground font-medium">{town.name}</span>
           </nav>
-          
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroImage} 
+            alt={`Professional ${service.name.toLowerCase()} at work`}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0" style={{ background: 'hsla(200, 25%, 12%, 0.65)' }} />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10 pt-20 pb-16">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight">
-              {content.heroTitle}
+            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm border" style={{ background: 'hsla(38, 95%, 50%, 0.2)', color: 'hsl(38, 95%, 50%)', borderColor: 'hsla(38, 95%, 50%, 0.3)' }}>
+              🇿🇦 Verified {service.namePlural.toLowerCase()} available in {town.name}
+            </span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight mb-6">
+              Find the Best<br />
+              <span className="text-primary">{service.namePlural} in {town.name}</span>
             </h1>
-            <p className="mt-6 text-xl text-white/80 leading-relaxed">
+            <p className="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl">
               {content.heroSubtitle}
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a 
                 href={requestUrl}
-                className="inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold px-8 py-4 rounded-xl hover:bg-primary/90 transition-colors text-lg"
+                className="inline-flex items-center justify-center h-14 rounded-xl px-10 text-base font-semibold font-display bg-primary text-white hover:bg-primary/90 shadow-elevated transition-all duration-200 text-center"
               >
                 Get Free Quotes
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
               </a>
               <a 
                 href="#providers"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/20 transition-colors text-lg"
+                className="inline-flex items-center justify-center h-14 rounded-xl px-10 text-base font-semibold font-display border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 transition-all duration-200 text-center"
               >
-                View {service.namePlural}
+                View Top {service.namePlural}
               </a>
+            </div>
+            <div className="mt-10 flex flex-wrap gap-8">
+              <div className="flex items-center gap-2 text-white/70">
+                <svg className="w-[18px] h-[18px] text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path strokeLinecap="round" d="m21 21-4.35-4.35"/></svg>
+                <span className="text-sm font-medium">3–5 Quotes per request</span>
+              </div>
+              <div className="flex items-center gap-2 text-white/70">
+                <svg className="w-[18px] h-[18px] text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span className="text-sm font-medium">Verified providers</span>
+              </div>
+              <div className="flex items-center gap-2 text-white/70">
+                <svg className="w-[18px] h-[18px] text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span className="text-sm font-medium">Instant WhatsApp alerts</span>
+              </div>
             </div>
           </div>
         </div>
@@ -182,22 +239,88 @@ export default async function ServiceTownPage({ params }: PageProps) {
         stats={stats} 
       />
 
-      {/* Table of Contents */}
-      <section className="py-8 bg-muted/50 border-b border-border">
+      {/* How It Works */}
+      <section id="how-it-works" className="py-20 md:py-28 bg-muted/50">
         <div className="container mx-auto px-4">
-          <nav className="flex flex-wrap justify-center gap-4 text-sm">
-            <a href="#providers" className="text-muted-foreground hover:text-primary transition-colors">Providers</a>
-            <span className="text-border">•</span>
-            <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</a>
-            <span className="text-border">•</span>
-            <a href="#guide" className="text-muted-foreground hover:text-primary transition-colors">Guide</a>
-            <span className="text-border">•</span>
-            <a href="#reviews" className="text-muted-foreground hover:text-primary transition-colors">Reviews</a>
-            <span className="text-border">•</span>
-            <a href="#faq" className="text-muted-foreground hover:text-primary transition-colors">FAQ</a>
-            <span className="text-border">•</span>
-            <a href="#blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</a>
-          </nav>
+          <div className="text-center mb-16">
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Simple Process</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-foreground">How ProHub Works</h2>
+            <p className="mt-4 text-muted-foreground text-lg max-w-xl mx-auto">Three simple steps to finding the right {service.name.toLowerCase()} in {town.name}</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+              </div>
+              <div className="text-sm font-semibold text-primary mb-2">Step 1</div>
+              <h3 className="text-xl font-display font-semibold text-foreground mb-3">Tell Us What You Need</h3>
+              <p className="text-muted-foreground leading-relaxed">Describe your job, add photos, and set your budget. Takes under 2 minutes.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              </div>
+              <div className="text-sm font-semibold text-primary mb-2">Step 2</div>
+              <h3 className="text-xl font-display font-semibold text-foreground mb-3">Get Matched Instantly</h3>
+              <p className="text-muted-foreground leading-relaxed">We match you with up to 5 verified {service.namePlural.toLowerCase()} in {town.name}. They&apos;re notified via WhatsApp immediately.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+              </div>
+              <div className="text-sm font-semibold text-primary mb-2">Step 3</div>
+              <h3 className="text-xl font-display font-semibold text-foreground mb-3">Compare &amp; Hire</h3>
+              <p className="text-muted-foreground leading-relaxed">Review quotes, check ratings, and choose the {service.name.toLowerCase()} that&apos;s right for you. Simple.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Table of Contents */}
+      <section className="py-10 bg-background border-b border-border">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-card rounded-xl border border-border p-6 shadow-card">
+              <h2 className="font-display font-bold text-foreground text-lg mb-4 flex items-center gap-2">
+                <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+                On This Page
+              </h2>
+              <nav className="grid sm:grid-cols-2 gap-2">
+                <a href="#how-it-works" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                  How ProHub Works
+                </a>
+                <a href="#providers" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                  Top {service.namePlural} in {town.name}
+                </a>
+                <a href="#pricing" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                  Pricing Guide
+                </a>
+                <a href="#reviews" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                  Customer Reviews
+                </a>
+                <a href="#guide" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                  Complete Guide
+                </a>
+                <a href="#faq" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                  FAQ
+                </a>
+                <a href="#other-services" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                  Other Services
+                </a>
+                <a href="#get-quotes" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                  Get Free Quotes
+                </a>
+              </nav>
+            </div>
+          </div>
         </div>
       </section>
 
