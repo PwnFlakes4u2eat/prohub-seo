@@ -31,5 +31,37 @@
       "question": "Do plumbers work on Sedgefield's Saturday Wild Oats Market days?",
       "answer": "Most plumbers are available on Saturdays, though some may prefer morning appointments before the market traffic peaks. For emergencies, plumbers remain on call throughout the weekend."
     }
+  ],
+  "gallery": [
+    {
+      "url": "/images/sedgefield-plumber-rainwater-harvesting.png",
+      "alt": "Sedgefield plumber installing a rainwater harvesting system for a modern home, with the tranquil lagoon in the background.",
+      "caption": "Sustainable plumbing solutions in Sedgefield, including rainwater harvesting systems for eco-conscious homes near the lagoon."
+    },
+    {
+      "url": "/images/sedgefield-plumber-geyser-replacement.png",
+      "alt": "Experienced Sedgefield plumber replacing an electric geyser in an attic, with a window overlooking the coastline.",
+      "caption": "Reliable geyser repair and replacement services in Sedgefield, ensuring hot water with a view of the beautiful coastal landscape."
+    },
+    {
+      "url": "/images/sedgefield-plumber-blocked-drain.png",
+      "alt": "Sedgefield plumber using a high-pressure jetter to clear a blocked outdoor drain, with coastal vegetation in the background.",
+      "caption": "Efficient drain unblocking in Sedgefield using advanced jetting technology, suitable for homes in environmentally sensitive areas."
+    },
+    {
+      "url": "/images/sedgefield-plumber-bath-reno.png",
+      "alt": "Skilled Sedgefield plumber installing new pipework for a modern bathroom renovation in a timber-frame house.",
+      "caption": "Quality plumbing installations for bathroom renovations in Sedgefield, expertly integrating new pipework into timber-frame structures."
+    },
+    {
+      "url": "/images/sedgefield-plumber-timber-leak.png",
+      "alt": "Sedgefield plumber carefully repairing a leak within a timber-frame wall, minimizing damage to the unique structure.",
+      "caption": "Specialized leak repair services for Sedgefield's distinctive timber-frame homes, with attention to preserving structural integrity."
+    },
+    {
+      "url": "/images/sedgefield-plumber-eco-fixture.png",
+      "alt": "Sedgefield plumber installing a new low-flow toilet in a modern, eco-friendly bathroom, promoting water conservation.",
+      "caption": "Installation of water-saving fixtures like low-flow toilets and eco-friendly taps, promoting sustainability in Sedgefield bathrooms."
+    }
   ]
 }

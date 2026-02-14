@@ -36,7 +36,38 @@
       "answer": "ProHub plumbers cover all George areas including the CBD, Blanco, Denneoord, Heatherlands, Pacaltsdorp, Thembalethu, Herolds Bay, Wilderness, and Victoria Bay. Many also service nearby towns like Sedgefield, Knysna, and Mossel Bay. Confirm coverage and any travel fees when requesting quotes."
     }
   ],
-  
+  "gallery": [
+    {
+      "url": "/images/george-plumber-burst-pipe.png",
+      "alt": "Expert female plumber in George quickly fixing a burst copper pipe under a kitchen sink, preventing water damage with tools.",
+      "caption": "Swift emergency response to burst pipes in George, expertly handled by certified plumbers to protect your home from water damage."
+    },
+    {
+      "url": "/images/george-plumber-geyser-install.png",
+      "alt": "Professional plumber in George installing a new solar geyser on a residential rooftop with scenic Outeniqua Mountains backdrop.",
+      "caption": "Certified plumbers in George specializing in efficient solar geyser installations, leveraging renewable energy for your home."
+    },
+    {
+      "url": "/images/george-plumber-drain-unblock.png",
+      "alt": "George plumber using a CCTV camera for advanced drain inspection, diagnosing blockages in a bathroom with water spraying.",
+      "caption": "Advanced drain unblocking and inspection services in George, utilizing modern camera technology to identify and clear blockages effectively."
+    },
+    {
+      "url": "/images/george-plumber-leak-detection.png",
+      "alt": "George plumber employing thermal imaging technology for precise non-invasive leak detection behind a wall in a living room.",
+      "caption": "Accurate leak detection in George, using thermal cameras and specialized tools to locate hidden water leaks with minimal disruption."
+    },
+    {
+      "url": "/images/george-plumber-bath-reno.png",
+      "alt": "Skilled plumber in George installing new copper piping for a modern bathroom renovation, ensuring quality fixtures.",
+      "caption": "Expert plumbing installations for contemporary bathroom renovations in George, delivering high-quality and reliable systems."
+    },
+    {
+      "url": "/images/george-plumber-water-tank.png",
+      "alt": "Professional plumber in George connecting a large Outeniqua Water Solutions rainwater harvesting tank to a residential property.",
+      "caption": "Installation of water-wise solutions in George, including rainwater harvesting tanks for sustainable water management."
+    }
+  ],
   "status": "live",
   "lastUpdated": "2026-02-14T13:25:00.000Z"
 }
