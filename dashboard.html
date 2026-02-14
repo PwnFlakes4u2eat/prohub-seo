@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProHub SEO Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: 'hsl(38, 95%, 50%)',
+            foreground: 'hsl(200, 25%, 12%)',
+            muted: 'hsl(200, 10%, 96%)',
+            border: 'hsl(200, 10%, 90%)',
+          },
+          fontFamily: {
+            display: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .status-live { background: #10b981; }
+    .status-pending { background: #f59e0b; }
+    .status-none { background: #d1d5db; }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <!-- Header -->
+  <header class="bg-foreground text-white py-6 px-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold">ProHub SEO Dashboard</h1>
+          <p class="text-white/60 text-sm">Content & Page Management</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://prohub.co.za" target="_blank" class="text-sm text-white/70 hover:text-white transition">Live Site →</a>
+        <a href="https://vercel.com/dashboard" target="_blank" class="text-sm text-white/70 hover:text-white transition">Vercel →</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <!-- Stats -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+        <div class="text-3xl font-bold text-foreground" id="stat-total">–</div>
+        <div class="text-sm text-gray-500 mt-1">Total Pages</div>
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+        <div class="text-3xl font-bold text-green-600" id="stat-live">–</div>
+        <div class="text-sm text-gray-500 mt-1">Live Content</div>
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+        <div class="text-3xl font-bold text-amber-500" id="stat-pending">–</div>
+        <div class="text-sm text-gray-500 mt-1">Pending Review</div>
+      </div>
+      <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+        <div class="text-3xl font-bold text-gray-400" id="stat-default">–</div>
+        <div class="text-sm text-gray-500 mt-1">Default Content</div>
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="flex items-center gap-6 mb-6 text-sm">
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full status-live"></span>
+        <span class="text-gray-600">Unique Content</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full status-pending"></span>
+        <span class="text-gray-600">Pending Review</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full status-none"></span>
+        <span class="text-gray-600">Default/Auto</span>
+      </div>
+    </div>
+
+    <!-- Filter -->
+    <div class="mb-6">
+      <input 
+        type="text" 
+        id="search" 
+        placeholder="Filter by service or town..." 
+        class="w-full max-w-md px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary"
+      >
+    </div>
+
+    <!-- Service Sections -->
+    <div id="services-container" class="space-y-8">
+      <!-- Populated by JS -->
+    </div>
+  </main>
+
+  <script>
+    // Data - Services
+    const services = [
+      { slug: 'plumber', name: 'Plumbers', namePlural: 'Plumbers' },
+      { slug: 'electrician', name: 'Electrician', namePlural: 'Electricians' },
+      { slug: 'pest-control', name: 'Pest Control', namePlural: 'Pest Control' },
+      { slug: 'cleaning-service', name: 'Cleaning Service', namePlural: 'Cleaning Services' },
+      { slug: 'garden-service', name: 'Garden Service', namePlural: 'Garden Services' },
+      { slug: 'handyman', name: 'Handyman', namePlural: 'Handymen' },
+      { slug: 'painter', name: 'Painter', namePlural: 'Painters' },
+      { slug: 'roofing', name: 'Roofing', namePlural: 'Roofers' },
+      { slug: 'solar-installer', name: 'Solar Installer', namePlural: 'Solar Installers' },
+      { slug: 'security', name: 'Security', namePlural: 'Security' },
+      { slug: 'aircon', name: 'Air Conditioning', namePlural: 'Aircon Services' },
+      { slug: 'geyser-service', name: 'Geyser Service', namePlural: 'Geyser Services' },
+      { slug: 'pool-service', name: 'Pool Service', namePlural: 'Pool Services' },
+      { slug: 'locksmith', name: 'Locksmith', namePlural: 'Locksmiths' },
+      { slug: 'building-renovation', name: 'Building & Renovation', namePlural: 'Builders' },
+      { slug: 'tiling', name: 'Tiling', namePlural: 'Tilers' },
+      { slug: 'waterproofing', name: 'Waterproofing', namePlural: 'Waterproofing' },
+      { slug: 'damp-proofing', name: 'Damp Proofing', namePlural: 'Damp Proofing' },
+      { slug: 'paving', name: 'Paving', namePlural: 'Paving' },
+      { slug: 'gate-motor-repair', name: 'Gate Motor Repair', namePlural: 'Gate Motors' },
+      { slug: 'garage-door', name: 'Garage Door', namePlural: 'Garage Doors' },
+      { slug: 'moving-service', name: 'Moving Service', namePlural: 'Movers' },
+      { slug: 'appliance-repair', name: 'Appliance Repair', namePlural: 'Appliance Repair' },
+      { slug: 'furniture-repair', name: 'Furniture Repair', namePlural: 'Furniture Repair' },
+      { slug: 'ceilings-partitions', name: 'Ceilings & Partitions', namePlural: 'Ceilings' },
+      { slug: 'electric-fencing', name: 'Electric Fencing', namePlural: 'Electric Fencing' },
+    ];
+
+    // Data - Towns
+    const towns = [
+      { slug: 'george', name: 'George', region: 'Garden Route' },
+      { slug: 'knysna', name: 'Knysna', region: 'Garden Route' },
+      { slug: 'mossel-bay', name: 'Mossel Bay', region: 'Garden Route' },
+      { slug: 'plettenberg-bay', name: 'Plettenberg Bay', region: 'Garden Route' },
+      { slug: 'sedgefield', name: 'Sedgefield', region: 'Garden Route' },
+      { slug: 'wilderness', name: 'Wilderness', region: 'Garden Route' },
+      { slug: 'hartenbos', name: 'Hartenbos', region: 'Garden Route' },
+      { slug: 'great-brak-river', name: 'Great Brak River', region: 'Garden Route' },
+      { slug: 'riversdale', name: 'Riversdale', region: 'Garden Route' },
+      { slug: 'stillbaai', name: 'Stillbaai', region: 'Garden Route' },
+      { slug: 'albertinia', name: 'Albertinia', region: 'Garden Route' },
+      { slug: 'natures-valley', name: 'Natures Valley', region: 'Garden Route' },
+      { slug: 'oudtshoorn', name: 'Oudtshoorn', region: 'Klein Karoo' },
+      { slug: 'de-rust', name: 'De Rust', region: 'Klein Karoo' },
+      { slug: 'calitzdorp', name: 'Calitzdorp', region: 'Klein Karoo' },
+      { slug: 'ladismith', name: 'Ladismith', region: 'Klein Karoo' },
+      { slug: 'barrydale', name: 'Barrydale', region: 'Klein Karoo' },
+      { slug: 'uniondale', name: 'Uniondale', region: 'Klein Karoo' },
+      { slug: 'prince-albert', name: 'Prince Albert', region: 'Klein Karoo' },
+    ];
+
+    // Content status - UPDATE THIS AS YOU CREATE CONTENT
+    const liveContent = {
+      'electrician': ['george', 'knysna', 'mossel-bay', 'plettenberg-bay', 'sedgefield', 'wilderness', 'hartenbos', 'great-brak-river', 'riversdale', 'stillbaai', 'albertinia', 'natures-valley', 'oudtshoorn', 'de-rust', 'calitzdorp', 'ladismith', 'barrydale', 'uniondale', 'prince-albert'],
+      'plumber': ['george', 'knysna'],
+    };
+
+    const pendingContent = {
+      // Add pending content here as: 'service': ['town1', 'town2']
+    };
+
+    const baseUrl = 'https://prohub.co.za';
+
+    function getStatus(service, town) {
+      if (liveContent[service]?.includes(town)) return 'live';
+      if (pendingContent[service]?.includes(town)) return 'pending';
+      return 'none';
+    }
+
+    function render(filter = '') {
+      const container = document.getElementById('services-container');
+      const filterLower = filter.toLowerCase();
+      
+      let totalPages = 0;
+      let livePages = 0;
+      let pendingPages = 0;
+      let defaultPages = 0;
+
+      let html = '';
+
+      services.forEach(service => {
+        const matchesService = service.name.toLowerCase().includes(filterLower) || 
+                               service.slug.toLowerCase().includes(filterLower);
+        
+        const filteredTowns = towns.filter(town => {
+          const matchesTown = town.name.toLowerCase().includes(filterLower) ||
+                              town.slug.toLowerCase().includes(filterLower);
+          return matchesService || matchesTown || !filter;
+        });
+
+        if (filteredTowns.length === 0 && !matchesService) return;
+
+        const townsToShow = matchesService || !filter ? towns : filteredTowns;
+
+        html += `
+          <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+            <div class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+              <div>
+                <h2 class="font-bold text-foreground text-lg">${service.namePlural}</h2>
+                <p class="text-sm text-gray-500">${townsToShow.length} towns</p>
+              </div>
+              <a href="${baseUrl}/${service.slug}" target="_blank" class="text-sm text-primary hover:underline">View Index →</a>
+            </div>
+            <div class="p-4">
+              <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+        `;
+
+        townsToShow.forEach(town => {
+          const status = getStatus(service.slug, town.slug);
+          const url = `${baseUrl}/${service.slug}/${town.slug}`;
+          
+          totalPages++;
+          if (status === 'live') livePages++;
+          else if (status === 'pending') pendingPages++;
+          else defaultPages++;
+
+          html += `
+            <a href="${url}" target="_blank" 
+               class="group flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-100 hover:border-primary/30 hover:bg-primary/5 transition-all">
+              <span class="w-2 h-2 rounded-full status-${status} flex-shrink-0"></span>
+              <span class="text-sm text-gray-700 group-hover:text-foreground truncate">${town.name}</span>
+            </a>
+          `;
+        });
+
+        html += `
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+
+      // Update stats
+      document.getElementById('stat-total').textContent = totalPages;
+      document.getElementById('stat-live').textContent = livePages;
+      document.getElementById('stat-pending').textContent = pendingPages;
+      document.getElementById('stat-default').textContent = defaultPages;
+    }
+
+    // Initial render
+    render();
+
+    // Search filter
+    document.getElementById('search').addEventListener('input', (e) => {
+      render(e.target.value);
+    });
+  </script>
+</body>
+</html>
