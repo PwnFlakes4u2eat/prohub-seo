@@ -44,47 +44,58 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jakarta.variable} ${inter.variable}`}>
       <body className="font-body bg-background text-foreground antialiased">
-        {/* Header */}
-        <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
-          <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="/" className="flex items-center gap-2">
-              <img 
-                src="/logo.png" 
-                alt="ProHub" 
-                className="h-8 w-auto"
-              />
+        {/* Header - Matches ProHub App Navbar */}
+        <header className="fixed top-0 left-0 right-0 z-50 border-b border-border" style={{ background: 'hsla(0, 0%, 100%, 0.8)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
+          <div className="container mx-auto flex items-center justify-between h-16 px-4">
+            <a href="https://app.prohub.co.za" className="flex items-center gap-2">
+              <img src="/logo.png" alt="ProHub" className="w-8 h-8 rounded-lg object-cover" />
               <span className="font-display font-bold text-xl">
                 <span className="text-primary">Pro</span>
                 <span className="text-foreground">Hub</span>
               </span>
             </a>
-            
-            <nav className="hidden md:flex items-center gap-6">
-              <a href="/plumber" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Plumbers
+
+            {/* Desktop nav */}
+            <nav className="hidden md:flex items-center gap-8">
+              <a href="https://app.prohub.co.za" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                Home
               </a>
-              <a href="/electrician" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Electricians
+              <a href="https://app.prohub.co.za/directory" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                Find Providers
               </a>
-              <a href="/pest-control" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Pest Control
+              <a href="https://app.prohub.co.za/request" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                Get Quotes
+              </a>
+              <a href="https://app.prohub.co.za/providers" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                For Providers
+              </a>
+              <a href="https://app.prohub.co.za/pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                Pricing
               </a>
             </nav>
-            
-            <div className="flex items-center gap-3">
+
+            <div className="hidden md:flex items-center gap-3">
               <a 
-                href="https://app.prohub.co.za/auth?mode=provider"
-                className="hidden sm:inline-flex text-sm font-medium text-foreground hover:text-primary transition-colors"
+                href="https://app.prohub.co.za/auth"
+                className="inline-flex items-center justify-center h-9 rounded-lg px-4 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-200"
               >
-                For Providers
+                Provider Login
               </a>
               <a 
                 href="https://app.prohub.co.za/request"
-                className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors text-sm"
+                className="inline-flex items-center justify-center h-9 rounded-lg px-4 text-sm font-medium font-display bg-primary text-white hover:bg-primary/90 shadow-sm transition-all duration-200"
               >
-                Get Quotes
+                Get Free Quotes
               </a>
             </div>
+
+            {/* Mobile toggle - simplified for static site */}
+            <a 
+              href="https://app.prohub.co.za/request"
+              className="md:hidden inline-flex items-center justify-center h-9 rounded-lg px-4 text-sm font-medium font-display bg-primary text-white hover:bg-primary/90 shadow-sm transition-all duration-200"
+            >
+              Get Quotes
+            </a>
           </div>
         </header>
 
