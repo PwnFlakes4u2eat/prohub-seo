@@ -1,0 +1,79 @@
+{
+  "title": "Pest Control in Uniondale — Get Free Quotes | ProHub",
+  "description": "Professional pest control services in Uniondale, Western Cape. Get up to 5 free quotes for rodents, insects, termites, wood borer certificates & bird proofing. Verified local experts.",
+  "heroTitle": "Professional Pest Control in Uniondale",
+  "heroSubtitle": "Get up to 5 free quotes from verified pest control experts. Protect your home or business from unwanted pests.",
+  
+  "guideIntro": "Uniondale sits at a crossroads between the Garden Route and the Klein Karoo, a historic farming town that serves the surrounding agricultural communities. This quiet village experiences pest pressures influenced by its transitional location — the climate shifts between coastal moisture and Karoo dryness depending on the season and which side of the mountains weather systems come from. The town's agricultural heritage means grain storage and farming activities attract rodents, while older buildings require vigilant wood borer monitoring. The famous Uniondale ghost legend might be the town's best-known story, but real pest problems are what keep local residents reaching for professional help. ProHub connects Uniondale residents with verified pest controllers who understand this gateway community.",
+
+  "guideServiceTypes": "Uniondale pest control companies provide services suited to this farming community at the Karoo-coast transition. Core offerings include rodent control essential for agricultural storage and farming operations; comprehensive insect treatments for cockroaches, ants, and various insects influenced by the area's variable climate; wood borer inspections and fumigation for the town's older buildings; termite assessments and treatments; and bee and wasp removal. Many providers serve the broader region including De Rust, Oudtshoorn, and sometimes the coastal towns. Agricultural clients can access farm-specific pest programmes.",
+
+  "guideDiyVsPro": "Hardware store sprays might knock down a few visible insects, but they won't solve an infestation. Pests like German cockroaches breed rapidly in hidden areas — behind fridges, inside wall cavities, under sinks — where surface sprays don't reach. DIY rodent control often fails because rats are neophobic and will avoid poorly placed traps — particularly problematic near agricultural storage. Wood borer and termite treatments require specialised detection equipment and registered pesticides. Professional pest controllers use commercial-grade products, know where pests hide, and provide certificates and guarantees.",
+
+  "guideWhatToExpect": "When you submit a pest control request through ProHub, verified pest controllers serving Uniondale receive your details. Given the town's location, providers may come from Oudtshoorn, De Rust, or George. Response times are typically within hours. Expect questions about the type of pest, severity of the problem, property type, and any agricultural connections. For wood borer certificates and termite inspections, companies will conduct a physical inspection before providing final pricing.",
+
+  "guideChoosingProvider": "Look beyond price when selecting a pest controller. Check that they're registered with the Department of Agriculture and hold valid pesticide applicator certifications. For agricultural properties, ask about experience with farming operations. Read ProHub reviews for comments about effectiveness and professionalism. Ask about their guarantee policy: reputable companies offer free follow-up treatments if pests return. For wood borer certificates, ensure they're qualified to issue certificates recognised by conveyancing attorneys.",
+
+  "faqs": [
+    {
+      "question": "How much does pest control cost in Uniondale?",
+      "answer": "Uniondale pest control prices include travel costs given its location. General insect spray for a 3-bedroom home typically costs R700-R1,300. Rodent control programmes run R600-R1,100 initially plus R300-R450 for follow-ups. Wood borer certificates cost R1,400-R3,200 including treatment if required. Agricultural and farm treatments vary based on facility size. Get multiple ProHub quotes to compare."
+    },
+    {
+      "question": "What pests are common in Uniondale?",
+      "answer": "Uniondale's transitional climate between coast and Karoo influences its pest populations. Most common are rodents (attracted to grain storage and farming activities), cockroaches, ants, and general household insects. Depending on the season, the town may experience more Karoo-type pests (scorpions, spiders) or coastal-type pests. Wood borers affect older buildings. Fly activity increases during summer months around agricultural areas."
+    },
+    {
+      "question": "Do I need a wood borer certificate when selling my house in Uniondale?",
+      "answer": "Yes, most conveyancing attorneys require a wood borer and beetle-free certificate before property transfer. A qualified pest inspector examines roof timbers, wooden floors, door frames, and furniture for signs of active infestation or previous damage. If treatment is needed, the property is fumigated and a clearance certificate issued. Budget R1,400-R3,200 depending on property size and whether treatment is required."
+    },
+    {
+      "question": "How do I control rodents at my Uniondale farm or storage facility?",
+      "answer": "Agricultural operations require comprehensive rodent management. Store grain and feed in sealed containers or rodent-proof structures. Eliminate hiding places by keeping areas tidy and vegetation trimmed. Professional pest controllers can install monitored bait station networks around storage facilities. Regular inspections catch problems before populations explode. Documentation of pest management may be required for certain agricultural certifications."
+    },
+    {
+      "question": "Do Uniondale pest controllers offer emergency callouts?",
+      "answer": "Yes, pest control companies serving Uniondale offer emergency services, typically responding from Oudtshoorn, De Rust, or George. Same-day service is usually available for urgent situations like severe infestations. Weekend and after-hours callouts typically carry a premium of R200-R500. Mark your ProHub request as urgent for faster responses."
+    }
+  ],
+  "gallery": [
+    {
+      "url": "/images/pest-control-rodent.png",
+      "alt": "Professional rodent control service setting bait stations in Uniondale property",
+      "caption": "Rodent Control",
+      "description": "Effective rat and mouse control using tamper-proof bait stations, traps, and exclusion methods. We eliminate infestations and prevent rodents returning to your property."
+    },
+    {
+      "url": "/images/pest-control-insect.png",
+      "alt": "Pest control technician treating home for cockroaches and insects in Uniondale",
+      "caption": "Insect Control",
+      "description": "Comprehensive treatment for cockroaches, ants, fleas, bedbugs, and household insects. Professional-grade products that reach where DIY sprays can't."
+    },
+    {
+      "url": "/images/pest-control-woodborer.png",
+      "alt": "Wood borer inspection for compliance certificate in Uniondale home",
+      "caption": "Wood Borer Certificates",
+      "description": "Professional wood borer inspections and fumigation with compliance certificates for property sales. Required by conveyancing attorneys for property transfer."
+    },
+    {
+      "url": "/images/pest-control-termite.png",
+      "alt": "Termite treatment and soil poisoning around Uniondale property foundation",
+      "caption": "Termite Control",
+      "description": "Protect your property from costly termite damage. We provide inspections, soil treatments, and ongoing monitoring to keep termites away."
+    },
+    {
+      "url": "/images/pest-control-proofing.png",
+      "alt": "Bird spikes and rodent proofing installation on Uniondale building",
+      "caption": "Bird & Rodent Proofing",
+      "description": "Stop pests getting in with professional proofing. We install bird spikes, mesh barriers, and seal entry points to prevent infestations."
+    },
+    {
+      "url": "/images/pest-control-bee-wasp.png",
+      "alt": "Safe bee and wasp nest removal from Uniondale residential property",
+      "caption": "Bee & Wasp Removal",
+      "description": "Safe removal of bee hives and wasp nests by trained professionals. We offer honeybee relocation where possible and eliminate aggressive wasp colonies."
+    }
+  ],
+  "status": "live",
+  "lastUpdated": "2026-02-15T09:50:00.000Z"
+}
