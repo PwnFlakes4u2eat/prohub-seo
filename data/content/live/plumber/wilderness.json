@@ -1,35 +1,79 @@
 {
-  "title": "Best Plumbers in Wilderness | Get Free Quotes | ProHub",
-  "description": "Find trusted, verified plumbers in Wilderness. Compare quotes from local professionals for burst pipes, geyser installations, drain cleaning and more. Free quotes in minutes.",
-  "heroSubtitle": "Connect with Wilderness's top-rated plumbers in minutes. Whether you need emergency repairs in the village, a geyser upgrade in Wilderness Heights, or plumbing for your Hoekwil smallholding — get up to 5 free quotes from verified local professionals.",
-  "guideServiceTypes": "Wilderness plumbers handle everything from emergency leak repairs to complete bathroom renovations. Popular services include geyser replacements, blocked drain clearing, leak detection, and rainwater tank installations. The area's lush, high-rainfall environment means plumbers here are experienced with drainage challenges, damp-related issues, and protecting plumbing from the elements. Many specialise in solutions for the area's steep, forested properties.",
-  "guideDiyVsPro": "Simple tasks like washer replacements and basic drain clearing are DIY-friendly. However, Wilderness properties often have unique challenges — steep access, older plumbing in established homes, and proximity to the river and lagoon system. For anything beyond basic maintenance, a professional who knows the area's specific requirements is recommended. Licensed plumbers are legally required for geyser installations and mains work.",
-  "guideWhatToExpect": "Wilderness plumbers understand this tranquil community's character. Expect professional, unhurried service focused on getting the job done right. They're experienced with access challenges in the Heights and surrounding areas. For holiday properties, plumbers can advise on systems that handle periods of vacancy well.",
-  "guideChoosingProvider": "Choose a plumber familiar with Wilderness's terrain and climate — the high rainfall, forested environment, and mix of village cottages and larger Heights properties all present specific challenges. Check ProHub reviews, verify PIRB registration, and ask about experience with drainage and damp-related plumbing issues.",
+  "title": "Best Plumbers in Wilderness — Get Free Quotes | ProHub",
+  "description": "Find verified plumbers in Wilderness, Western Cape. Get up to 5 free quotes for burst pipes, geyser repairs, drain unblocking & bathroom renovations. Trusted local pros.",
+  "heroTitle": "Find Trusted Plumbers in Wilderness",
+  "heroSubtitle": "Get up to 5 free quotes from verified local plumbers. Compare prices and reviews before you hire.",
+  
+  "guideIntro": "Wilderness is the Garden Route's most scenic coastal village, where the Touw River meets the Indian Ocean amidst indigenous forest and pristine lakes. The area's natural beauty comes with specific plumbing challenges — high humidity accelerates corrosion, the lakes and wetlands affect drainage and water tables, and many properties are holiday homes that need attention only seasonally. From the beachfront cottages along the main strip to the hillside homes with sea views and the properties tucked into the forest above the lakes, Wilderness demands plumbers who understand its unique environment. Add the reality that this is a national park area with environmental regulations to consider, and local expertise becomes essential. ProHub connects Wilderness residents with verified plumbers who know the village intimately.",
+
+  "guideServiceTypes": "Wilderness plumbers handle the specific needs of this coastal forest environment. Services include geyser installations designed for high-humidity conditions, drain systems that work with the area's high water table, leak detection in properties where moisture is constant, and corrosion-resistant fixture installations. Holiday home services are essential — many Wilderness properties need seasonal checks, pre-arrival inspections, and rapid response when owners discover problems on arrival. For properties near the lakes and in the flood-prone areas, sump pump installations and backflow prevention are specialties. Eco-friendly options like rainwater harvesting and greywater systems suit the environmentally-conscious community.",
+
+  "guideDiyVsPro": "Wilderness's humid, coastal environment makes DIY plumbing particularly risky. The constant moisture means corrosion is always advancing — what appears to be a simple fix might reveal extensive hidden damage. The village's environmental sensitivity also matters: improper drainage or sewage work can affect the protected wetlands and lakes, potentially resulting in fines. For properties in flood-risk areas, incorrect plumbing can lead to sewage backup during heavy rains. Professional plumbers understand both the technical and environmental requirements of working in this unique location.",
+
+  "guideWhatToExpect": "When you request quotes through ProHub, up to 5 verified plumbers serving Wilderness receive your job details. For emergencies, expect responses from George-based plumbers (10 minutes away) and local specialists. Standard quotes typically arrive within hours. Given that many Wilderness properties are holiday homes, good plumbers here understand the urgency when owners arrive to find problems. For larger projects, expect site visits that assess the specific conditions — proximity to water features, humidity exposure, flood risk, and existing infrastructure.",
+
+  "guideChoosingProvider": "Wilderness requires plumbers who understand both coastal conditions and environmental sensitivity. When reviewing ProHub quotes, ask about experience in the village specifically — familiarity with the lakes area, the heights, and the beachfront. Check reviews for work quality in humid environments and responsiveness for holiday homeowners. Environmental awareness matters here more than in most towns. For ongoing peace of mind, find plumbers who offer maintenance contracts for properties that sit empty between visits.",
+
   "faqs": [
     {
       "question": "How much does a plumber cost in Wilderness?",
-      "answer": "Wilderness plumber rates typically range from R350–R500 for a callout, with hourly rates of R400–R550. Properties in Wilderness Heights or Hoekwil may incur additional travel fees. Geyser replacements range from R7,500–R16,000."
+      "answer": "Wilderness plumber rates typically range from R450-R700 per hour. Callout fees average R350-R550, with some plumbers charging travel from George. Common job prices: geyser replacement R9,000-R19,000, drain unblocking R650-R1,500, tap replacement R400-R900. Properties in difficult-to-access locations (forest hillsides, heights) may incur additional charges."
     },
     {
-      "question": "Do Wilderness plumbers cover the Heights and Hoekwil?",
-      "answer": "Yes, ProHub plumbers in Wilderness serve the entire area including the Village, Wilderness Heights, Kleinkrantz, Hoekwil, Touwsranten, and surrounds. Most also service nearby George and Sedgefield."
+      "question": "Do plumbers offer holiday home services in Wilderness?",
+      "answer": "Yes, many plumbers serving Wilderness specialise in holiday home management. Services include pre-arrival checks (ensuring hot water and all systems work), annual maintenance inspections, and rapid-response agreements for emergencies while you're away. When requesting ProHub quotes, mention if your property is a holiday home and ask about ongoing maintenance packages."
     },
     {
-      "question": "Can I get an emergency plumber in Wilderness?",
-      "answer": "Yes, emergency plumbing services are available in Wilderness. Given the smaller community size, some urgent calls may be handled by plumbers based in nearby George with typical response times of 30–60 minutes."
+      "question": "How does humidity affect plumbing in Wilderness?",
+      "answer": "Wilderness's combination of coastal air and forest humidity accelerates corrosion in metal pipes and fittings. Properties may need more frequent replacement of taps, valves, and exposed pipework. Local plumbers recommend stainless steel or marine-grade fittings in vulnerable areas, regular inspections, and dehumidification in closed-up holiday homes to reduce condensation damage."
     },
     {
-      "question": "Why is drainage important for Wilderness properties?",
-      "answer": "Wilderness receives high rainfall and many properties are on slopes or near the lagoon system. Poor drainage can lead to erosion, damp problems, and even structural issues. A good plumber will ensure your stormwater and wastewater drainage is properly installed and maintained."
+      "question": "Are there environmental restrictions for plumbing work in Wilderness?",
+      "answer": "Wilderness is surrounded by a national park and protected wetlands, so drainage and sewage work must comply with environmental regulations. Greywater systems, septic tanks, and any work near the lakes or river requires proper permits. Local plumbers understand these requirements and can ensure your plumbing meets environmental standards."
     },
     {
-      "question": "What geyser works best in Wilderness's climate?",
-      "answer": "Despite the higher rainfall, solar geysers still work well in Wilderness — the area gets plenty of sunny days. Heat pumps are excellent for the moderate climate. For heavily shaded forest properties, a well-insulated electric geyser may be more practical."
-    },
-    {
-      "question": "Do plumbers work in Wilderness during rainy weather?",
-      "answer": "Yes, most plumbers will work in light to moderate rain. However, heavy storms may delay non-urgent appointments for safety reasons. Emergency services remain available regardless of weather."
+      "question": "Which areas do Wilderness plumbers service?",
+      "answer": "ProHub plumbers cover all Wilderness areas including the beachfront, heights, lakes area, and Wilderness East. Most also service George, Sedgefield, Hoekwil, and surrounding areas. Confirm coverage and any travel fees when requesting quotes, especially for properties on difficult-access forest roads."
     }
-  ]
+  ],
+  "gallery": [
+    {
+      "url": "/images/plumber-burst-pipe-repair.png",
+      "alt": "Emergency plumber repairing burst pipe with water leak",
+      "caption": "Burst Pipe Repair",
+      "description": "24/7 emergency burst pipe repairs. Our plumbers respond fast to stop water damage and fix copper, PVC, or galvanised pipes."
+    },
+    {
+      "url": "/images/plumber-drain-unblocking.png",
+      "alt": "Professional drain unblocking with high-pressure jetter",
+      "caption": "Blocked Drain Cleaning",
+      "description": "Fast drain unblocking for sinks, showers, and sewer lines. We use high-pressure jetters to clear even the toughest blockages."
+    },
+    {
+      "url": "/images/plumber-geyser-installation.png",
+      "alt": "Plumber installing electric geyser hot water system",
+      "caption": "Geyser Installation & Repair",
+      "description": "Expert geyser installations, replacements, and repairs. Electric and solar systems fitted with full compliance certificates."
+    },
+    {
+      "url": "/images/plumber-tap-repair.png",
+      "alt": "Plumber fixing leaking tap faucet in kitchen",
+      "caption": "Leaking Tap Repairs",
+      "description": "Stop dripping taps wasting water and money. Quick repairs for kitchen, bathroom, and garden taps — all brands serviced."
+    },
+    {
+      "url": "/images/plumber-toilet-repair.png",
+      "alt": "Plumber repairing toilet cistern and flush mechanism",
+      "caption": "Toilet Repairs",
+      "description": "Running toilets, weak flushes, and cistern problems fixed fast. We repair and replace all toilet components and fittings."
+    },
+    {
+      "url": "/images/plumber-pressure-testing.png",
+      "alt": "Plumber testing water pressure with diagnostic gauge",
+      "caption": "Water Pressure Issues",
+      "description": "Diagnose and fix low water pressure problems. We test your system, find the cause, and restore proper flow throughout your home."
+    }
+  ],
+  "status": "live",
+  "lastUpdated": "2026-02-15T08:27:00.000Z"
 }

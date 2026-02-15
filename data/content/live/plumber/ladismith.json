@@ -1,35 +1,79 @@
 {
-  "title": "Best Plumbers in Ladismith | Get Free Quotes | ProHub",
-  "description": "Find trusted, verified plumbers in Ladismith. Compare quotes from local professionals for burst pipes, geyser installations, drain cleaning and more. Free quotes in minutes.",
-  "heroSubtitle": "Connect with Ladismith's top-rated plumbers in minutes. Whether you need emergency repairs in town, geyser installation for your farmhouse, or plumbing maintenance beneath the Towerkop — get up to 5 free quotes from verified local professionals.",
-  "guideServiceTypes": "Ladismith plumbers serve this charming Klein Karoo town and surrounding farming district. Common services include geyser installations, leak repairs, blocked drains, and bathroom renovations. Many plumbers also work on agricultural properties, handling borehole systems, irrigation plumbing, and the historic farmhouses found throughout the valley beneath the distinctive Towerkop mountain.",
-  "guideDiyVsPro": "Simple maintenance like tap repairs suits DIY, but Ladismith's older town houses and historic farmsteads often have plumbing that benefits from professional assessment. The Klein Karoo's climate extremes put stress on plumbing systems — professional installation helps avoid seasonal failures. Licensed plumbers are required for geyser and compliance work.",
-  "guideWhatToExpect": "Ladismith has a small pool of local plumbers, supplemented by professionals from Oudtshoorn and Barrydale for busy periods. Expect friendly, community-oriented service. Plumbers know the local properties and can often diagnose issues quickly based on familiarity with the area's plumbing patterns.",
-  "guideChoosingProvider": "Choose a plumber who knows Ladismith and the surrounding Klein Karoo farms. Check ProHub reviews, verify PIRB registration, and ask about experience with your type of property. For farms, ensure they understand borehole and agricultural water systems.",
+  "title": "Best Plumbers in Ladismith — Get Free Quotes | ProHub",
+  "description": "Find verified plumbers in Ladismith, Western Cape. Get up to 5 free quotes for burst pipes, geyser repairs, borehole systems & irrigation plumbing. Trusted local pros.",
+  "heroTitle": "Find Trusted Plumbers in Ladismith",
+  "heroSubtitle": "Get up to 5 free quotes from verified local plumbers. Compare prices and reviews before you hire.",
+  
+  "guideIntro": "Ladismith lies in the Klein Karoo beneath the dramatic Towerkop peak, an agricultural town where farming and cheese production drive the economy. The town's water infrastructure reflects its farming heritage — extensive irrigation systems, multiple boreholes serving farms and the town, and the constant challenge of managing water in a semi-arid region. Properties range from historic village homes to working farms with complex plumbing needs spanning domestic, agricultural, and dairy requirements. The extreme Karoo climate — scorching summers and frosty winters — adds another layer of complexity. ProHub connects Ladismith residents and farmers with verified plumbers who understand both household and agricultural plumbing requirements.",
+
+  "guideServiceTypes": "Ladismith plumbers serve both residential and agricultural needs. Services include borehole pump installation and maintenance, irrigation system plumbing for farms, water storage and reservoir systems, and dairy-compliant plumbing for the town's cheese industry. Residential services cover geyser repairs and solar installations, drain unblocking, leak detection, and bathroom renovations. For the agricultural sector, plumbers handle livestock water systems, wash-down facilities, and the specific requirements of food production environments. Given the climate extremes, frost protection and thermal expansion management are standard considerations.",
+
+  "guideDiyVsPro": "Ladismith's agricultural context means plumbing often involves systems more complex than typical residential work. Borehole pumps, pressure systems, and irrigation networks require specialist knowledge — mistakes can damage expensive equipment or waste precious water. Even residential plumbing in the Klein Karoo faces extreme conditions that demand proper materials and installation. For farms, compliance with health regulations for dairy and food production adds another reason to use qualified professionals. Basic maintenance is fine, but leave significant work to plumbers who know agricultural systems.",
+
+  "guideWhatToExpect": "Submit your request through ProHub and plumbers serving Ladismith receive your job details. The town has local plumbers, with additional coverage from Oudtshoorn and Barrydale. Emergency response is available, though response times vary based on plumber location — typically 30-60 minutes from the nearest centre. For farm work, plumbers often schedule site visits to understand the full scope of irrigation and water systems. Standard residential quotes usually arrive within hours. Agricultural quotes may take longer due to system complexity.",
+
+  "guideChoosingProvider": "Ladismith needs plumbers comfortable with both household and agricultural work. When reviewing ProHub quotes, ask about experience with borehole systems, irrigation plumbing, and if relevant, food-production compliance. Reviews from other Klein Karoo properties indicate relevant experience. For farms, verify understanding of agricultural water systems and livestock requirements. PIRB registration confirms residential competence, while agricultural experience is assessed separately through references and reviews.",
+
   "faqs": [
     {
       "question": "How much does a plumber cost in Ladismith?",
-      "answer": "Ladismith plumber rates typically start at R320–R450 for a callout, with hourly rates of R350–R480. The town's lower cost base keeps rates competitive. Geyser replacements range from R6,000–R13,500. Farm calls may include travel fees."
+      "answer": "Ladismith plumber rates typically range from R350-R550 per hour. Callout fees average R250-R450. Common job prices: geyser replacement R7,000-R15,000, borehole pump service R800-R2,500, irrigation system repairs R500-R3,000 depending on scope. Agricultural work is typically quoted per project. Get multiple ProHub quotes to compare."
     },
     {
-      "question": "Do Ladismith plumbers service the surrounding farms?",
-      "answer": "Yes, local plumbers service the farming district around Ladismith including properties toward Calitzdorp, Barrydale, and into the Gamka valley. Travel fees apply for distant locations."
+      "question": "Do Ladismith plumbers work on farm irrigation systems?",
+      "answer": "Yes, many plumbers serving Ladismith have agricultural experience including irrigation plumbing. Services include installing and repairing drip irrigation, sprinkler systems, main supply lines, and connecting systems to boreholes or reservoirs. When requesting ProHub quotes, describe your irrigation setup and any specific issues for accurate pricing."
     },
     {
-      "question": "Can I get an emergency plumber in Ladismith?",
-      "answer": "Yes, emergency plumbing is available in Ladismith. Town response times are typically 30–45 minutes. For farms, response depends on location. During very busy periods, support from Oudtshoorn may be available."
+      "question": "Can plumbers service dairy facilities in Ladismith?",
+      "answer": "Yes, plumbers serving Ladismith's dairy industry understand food-production plumbing requirements. This includes hot water systems for sterilisation, compliant drainage, and materials approved for food environments. Dairy work requires specific knowledge — confirm experience with dairy or food production when requesting quotes."
     },
     {
-      "question": "What geyser is best for Ladismith's climate?",
-      "answer": "Solar geysers perform exceptionally well in Ladismith's abundant sunshine — expect up to 80% of your hot water from solar in summer. The cold Klein Karoo winters mean a backup heating element is essential for reliable hot water year-round."
+      "question": "How do farmers manage water systems in the Klein Karoo?",
+      "answer": "Klein Karoo farms typically rely on boreholes, rainwater harvesting, and storage dams. Plumbers help design systems that maximise limited water resources — including pump selection for borehole depths, reservoir sizing, and efficient distribution. Water management is critical in this semi-arid region, and experienced plumbers can suggest improvements to existing systems."
     },
     {
-      "question": "Do Ladismith plumbers work on borehole systems?",
-      "answer": "Yes, many local plumbers have experience with borehole installations including pumps, pressure systems, and connections to household plumbing. They can also advise on water treatment for the area's sometimes mineralised groundwater."
-    },
-    {
-      "question": "Can plumbers work on Ladismith's historic buildings?",
-      "answer": "Yes, plumbers serving Ladismith are familiar with the older buildings in town and the historic farmsteads in the district. They can upgrade plumbing systems while being sensitive to heritage features."
+      "question": "Which areas do Ladismith plumbers service?",
+      "answer": "ProHub plumbers cover Ladismith town and surrounding farms toward Seweweekspoort and Garcia Pass. Many also service Barrydale, Calitzdorp, and Zoar. Confirm coverage and travel fees for remote farm locations when requesting quotes."
     }
-  ]
+  ],
+  "gallery": [
+    {
+      "url": "/images/plumber-burst-pipe-repair.png",
+      "alt": "Emergency plumber repairing burst pipe with water leak",
+      "caption": "Burst Pipe Repair",
+      "description": "24/7 emergency burst pipe repairs. Our plumbers respond fast to stop water damage and fix copper, PVC, or galvanised pipes."
+    },
+    {
+      "url": "/images/plumber-drain-unblocking.png",
+      "alt": "Professional drain unblocking with high-pressure jetter",
+      "caption": "Blocked Drain Cleaning",
+      "description": "Fast drain unblocking for sinks, showers, and sewer lines. We use high-pressure jetters to clear even the toughest blockages."
+    },
+    {
+      "url": "/images/plumber-geyser-installation.png",
+      "alt": "Plumber installing electric geyser hot water system",
+      "caption": "Geyser Installation & Repair",
+      "description": "Expert geyser installations, replacements, and repairs. Electric and solar systems fitted with full compliance certificates."
+    },
+    {
+      "url": "/images/plumber-tap-repair.png",
+      "alt": "Plumber fixing leaking tap faucet in kitchen",
+      "caption": "Leaking Tap Repairs",
+      "description": "Stop dripping taps wasting water and money. Quick repairs for kitchen, bathroom, and garden taps — all brands serviced."
+    },
+    {
+      "url": "/images/plumber-toilet-repair.png",
+      "alt": "Plumber repairing toilet cistern and flush mechanism",
+      "caption": "Toilet Repairs",
+      "description": "Running toilets, weak flushes, and cistern problems fixed fast. We repair and replace all toilet components and fittings."
+    },
+    {
+      "url": "/images/plumber-pressure-testing.png",
+      "alt": "Plumber testing water pressure with diagnostic gauge",
+      "caption": "Water Pressure Issues",
+      "description": "Diagnose and fix low water pressure problems. We test your system, find the cause, and restore proper flow throughout your home."
+    }
+  ],
+  "status": "live",
+  "lastUpdated": "2026-02-15T08:27:00.000Z"
 }

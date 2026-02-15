@@ -1,35 +1,79 @@
 {
-  "title": "Best Plumbers in Oudtshoorn | Get Free Quotes | ProHub",
-  "description": "Find trusted, verified plumbers in Oudtshoorn. Compare quotes from local professionals for burst pipes, geyser installations, drain cleaning and more. Free quotes in minutes.",
-  "heroSubtitle": "Connect with Oudtshoorn's top-rated plumbers in minutes. Whether you need emergency repairs in town, geyser installation for your guest house, or plumbing upgrades for your ostrich farm — get up to 5 free quotes from verified local professionals.",
-  "guideServiceTypes": "Oudtshoorn plumbers offer comprehensive services from emergency repairs to complete installations. Popular work includes geyser replacements (solar is excellent here), blocked drains, leak repairs, and bathroom renovations. As the Klein Karoo's main town, plumbers also serve the thriving tourism and hospitality industry — guest houses, B&Bs, and farm stays all require reliable plumbing service.",
-  "guideDiyVsPro": "Basic maintenance like tap repairs is DIY-friendly. However, Oudtshoorn's extreme climate — hot summers and cold winters — puts unique demands on plumbing systems. Pipes can freeze in winter and geysers work overtime in cold snaps. Professional installation and maintenance helps avoid weather-related failures. Licensed plumbers are required for geyser and mains work.",
-  "guideWhatToExpect": "Oudtshoorn plumbers are experienced with both residential and commercial work, given the town's strong hospitality sector. Expect professional service with good availability. They understand the urgency when a guest house has plumbing problems during peak tourist season. For farms and rural properties, plumbers are accustomed to travel and varied working conditions.",
-  "guideChoosingProvider": "Choose a plumber familiar with Oudtshoorn's specific conditions — the temperature extremes, the water quality (often hard), and the needs of tourism businesses. Check ProHub reviews, verify PIRB registration, and ask about experience with guest house and B&B plumbing if relevant.",
+  "title": "Best Plumbers in Oudtshoorn — Get Free Quotes | ProHub",
+  "description": "Find verified plumbers in Oudtshoorn, Western Cape. Get up to 5 free quotes for burst pipes, geyser repairs, drain unblocking & borehole systems. Trusted local pros.",
+  "heroTitle": "Find Trusted Plumbers in Oudtshoorn",
+  "heroSubtitle": "Get up to 5 free quotes from verified local plumbers. Compare prices and reviews before you hire.",
+  
+  "guideIntro": "Oudtshoorn sits in the heart of the Klein Karoo, where extreme temperatures and scarce water create unique plumbing challenges. Summer heat regularly exceeds 40°C, stressing pipes and geysers, while winter nights can drop below freezing — cracking exposed pipes if they're not properly insulated. The town's reliance on the Olifants River and groundwater means borehole systems and water storage are common, unlike the coastal towns. From the historic ostrich feather palaces on the outskirts to modern homes in Bridgton and the guest farms in Schoemanshoek, Oudtshoorn properties need plumbers who understand semi-arid conditions. ProHub connects Oudtshoorn residents with verified professionals experienced in borehole systems, solar geysers (abundant sunshine makes them ideal), and the specific challenges of Karoo plumbing.",
+
+  "guideServiceTypes": "Oudtshoorn plumbers offer services tailored to semi-arid Klein Karoo conditions. Beyond standard repairs, specialties include borehole pump installations and maintenance, water storage tank systems (essential for farms and many residential properties), solar geyser installations maximising the region's 300+ sunshine days, and pipe insulation to prevent winter freeze damage. Hard water from boreholes means scale buildup is common — plumbers handle water softener installations and regular descaling of geysers and pipes. For the town's many guest farms and ostrich farms, larger-scale agricultural plumbing and multiple geyser systems are routine.",
+
+  "guideDiyVsPro": "Oudtshoorn's extreme temperatures make professional plumbing expertise particularly valuable. Pipes that seem fine in autumn can crack when winter frost hits exposed sections. Borehole systems involve pumps, pressure tanks, and controls that require specialist knowledge — a DIY mistake can burn out an expensive pump or contaminate your water supply. The hard water also causes problems: improvised repairs often fail faster due to scale buildup. For Oudtshoorn's climate and water conditions, qualified plumbers with local experience save money in the long run.",
+
+  "guideWhatToExpect": "Submit your request through ProHub and up to 5 verified Oudtshoorn plumbers will receive your job details. For emergencies like burst pipes or pump failures, expect same-day responses — though travel times to outlying farms can add to callout times. Standard quotes typically arrive within hours. Oudtshoorn plumbers should ask about your water source (municipal, borehole, or mixed), property type, and any specific challenges. For borehole work and large installations, expect site visits before final quotes.",
+
+  "guideChoosingProvider": "Oudtshoorn demands plumbers with specific semi-arid experience. When reviewing ProHub quotes, ask about experience with borehole systems, solar geysers, and freeze protection. Reviews from other Klein Karoo properties (farms, guest houses) indicate relevant experience. PIRB registration matters, and for borehole work, check familiarity with pump brands and pressure systems. For solar installations, confirm they're certified to install and can provide proper warranties and CoC documentation.",
+
   "faqs": [
     {
       "question": "How much does a plumber cost in Oudtshoorn?",
-      "answer": "Oudtshoorn plumber rates typically start at R320–R450 for a callout, with hourly rates of R350–R500. Rates are competitive given the lower Klein Karoo cost base. Geyser replacements range from R6,500–R14,000. Farm calls may incur travel fees."
+      "answer": "Oudtshoorn plumber rates typically range from R350-R550 per hour. Callout fees average R300-R500, with higher rates for farm visits and after-hours emergencies. Common job prices: geyser replacement R7,500-R16,000, solar geyser installation R15,000-R35,000, borehole pump replacement R4,000-R12,000, drain unblocking R500-R1,200. Get multiple ProHub quotes to compare."
     },
     {
-      "question": "Do Oudtshoorn plumbers cover De Rust and the farms?",
-      "answer": "Yes, ProHub plumbers in Oudtshoorn serve the town and surrounding area including De Rust, Dysselsdorp, Schoemanshoek, and the ostrich farm district. Travel fees apply for more distant locations. Some plumbers also service Calitzdorp."
+      "question": "Do Oudtshoorn plumbers work on borehole systems?",
+      "answer": "Yes, borehole expertise is common among Oudtshoorn plumbers given the Klein Karoo's reliance on groundwater. Services include pump installation and repair, pressure tank systems, filtration, and connecting boreholes to household plumbing. When requesting ProHub quotes, specify your borehole details — depth, current pump type, and any issues you're experiencing."
     },
     {
-      "question": "Can I get an emergency plumber in Oudtshoorn?",
-      "answer": "Yes, emergency plumbing services are available in Oudtshoorn. Town response times are typically 20–40 minutes. For outlying farms, response depends on location and time of day."
+      "question": "How do I prevent pipes freezing in Oudtshoorn winters?",
+      "answer": "Oudtshoorn's winter nights can drop below freezing, cracking exposed pipes. Prevention includes insulating exposed pipes (especially outside taps and roof lines), draining garden irrigation before cold snaps, and installing frost protection on vulnerable sections. Local plumbers offer winterisation services and can identify at-risk areas in your property."
     },
     {
-      "question": "Why is solar so popular for geysers in Oudtshoorn?",
-      "answer": "Oudtshoorn enjoys over 300 days of sunshine annually and hot, dry summers — perfect conditions for solar geysers. Expect energy savings of 60–80%. The significant winter temperature drop means a solar-electric hybrid system provides backup for cold snaps."
+      "question": "Is solar geyser installation recommended in Oudtshoorn?",
+      "answer": "Absolutely — Oudtshoorn's 300+ sunshine days make it ideal for solar water heating. Solar geysers typically pay for themselves within 3-5 years through electricity savings. Local plumbers experienced with solar systems can advise on sizing (based on household needs), optimal panel positioning, and backup element options for cloudy periods or high-demand times."
     },
     {
-      "question": "Can pipes freeze in Oudtshoorn's winter?",
-      "answer": "Yes, Oudtshoorn experiences frost and occasionally very cold nights in winter. Exposed pipes can freeze, especially in older properties or farm buildings. Plumbers can advise on insulation, heat tape, and frost protection measures."
-    },
-    {
-      "question": "Do Oudtshoorn plumbers work on guest houses and B&Bs?",
-      "answer": "Yes, many Oudtshoorn plumbers have experience with the tourism and hospitality sector. They understand the urgency of repairs during guest season and can provide regular maintenance to prevent problems. Commercial rates may apply for business properties."
+      "question": "Which areas do Oudtshoorn plumbers service?",
+      "answer": "ProHub plumbers cover all Oudtshoorn areas including the CBD, Bridgton, Bongolethu, Schoemanshoek, and De Rust. Many also service surrounding farms, the Cango Caves area, and can travel to Calitzdorp and Prince Albert. Confirm coverage and any travel fees for outlying properties when requesting quotes."
     }
-  ]
+  ],
+  "gallery": [
+    {
+      "url": "/images/plumber-burst-pipe-repair.png",
+      "alt": "Emergency plumber repairing burst pipe with water leak",
+      "caption": "Burst Pipe Repair",
+      "description": "24/7 emergency burst pipe repairs. Our plumbers respond fast to stop water damage and fix copper, PVC, or galvanised pipes."
+    },
+    {
+      "url": "/images/plumber-drain-unblocking.png",
+      "alt": "Professional drain unblocking with high-pressure jetter",
+      "caption": "Blocked Drain Cleaning",
+      "description": "Fast drain unblocking for sinks, showers, and sewer lines. We use high-pressure jetters to clear even the toughest blockages."
+    },
+    {
+      "url": "/images/plumber-geyser-installation.png",
+      "alt": "Plumber installing electric geyser hot water system",
+      "caption": "Geyser Installation & Repair",
+      "description": "Expert geyser installations, replacements, and repairs. Electric and solar systems fitted with full compliance certificates."
+    },
+    {
+      "url": "/images/plumber-tap-repair.png",
+      "alt": "Plumber fixing leaking tap faucet in kitchen",
+      "caption": "Leaking Tap Repairs",
+      "description": "Stop dripping taps wasting water and money. Quick repairs for kitchen, bathroom, and garden taps — all brands serviced."
+    },
+    {
+      "url": "/images/plumber-toilet-repair.png",
+      "alt": "Plumber repairing toilet cistern and flush mechanism",
+      "caption": "Toilet Repairs",
+      "description": "Running toilets, weak flushes, and cistern problems fixed fast. We repair and replace all toilet components and fittings."
+    },
+    {
+      "url": "/images/plumber-pressure-testing.png",
+      "alt": "Plumber testing water pressure with diagnostic gauge",
+      "caption": "Water Pressure Issues",
+      "description": "Diagnose and fix low water pressure problems. We test your system, find the cause, and restore proper flow throughout your home."
+    }
+  ],
+  "status": "live",
+  "lastUpdated": "2026-02-15T08:27:00.000Z"
 }

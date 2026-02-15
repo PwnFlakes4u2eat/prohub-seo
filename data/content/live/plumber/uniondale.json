@@ -1,35 +1,79 @@
 {
-  "title": "Best Plumbers in Uniondale | Get Free Quotes | ProHub",
-  "description": "Find trusted, verified plumbers in Uniondale. Compare quotes from local professionals for burst pipes, geyser installations, drain cleaning and more. Free quotes in minutes.",
-  "heroSubtitle": "Connect with Uniondale's top-rated plumbers in minutes. Whether you need emergency repairs in town, geyser installation for your farm, or plumbing maintenance at the foot of the Kammanassie Mountains — get up to 5 free quotes from verified local professionals.",
-  "guideServiceTypes": "Uniondale plumbers serve this historic Klein Karoo town and its farming district. Services include geyser installations, leak repairs, blocked drains, and bathroom renovations. The town's agricultural heritage means many plumbers are experienced with farm plumbing including borehole systems, irrigation connections, and large rural properties.",
-  "guideDiyVsPro": "Simple maintenance suits DIY, but Uniondale's older town buildings and farm properties often need professional assessment. The harsh Klein Karoo climate — very hot summers, cold winters — puts significant stress on plumbing systems. Professional installation ensures reliability through the seasonal extremes. Licensed plumbers are required for geyser and compliance work.",
-  "guideWhatToExpect": "Uniondale is served by local plumbers and professionals from George (via the Outeniqua Pass) and Oudtshoorn. Service may take longer to arrange than in larger towns, but plumbers serving the area understand rural needs and are reliable. For farms, plumbers are comfortable with travel and varied working conditions.",
-  "guideChoosingProvider": "Choose a plumber familiar with Uniondale's rural character. Check ProHub reviews, verify PIRB registration, and ask about experience with borehole systems if you're on a farm. Reliability and good communication are especially important given the remote location.",
+  "title": "Best Plumbers in Uniondale — Get Free Quotes | ProHub",
+  "description": "Find verified plumbers in Uniondale, Western Cape. Get up to 5 free quotes for burst pipes, geyser repairs, borehole systems & farm plumbing. Trusted local pros.",
+  "heroTitle": "Find Trusted Plumbers in Uniondale",
+  "heroSubtitle": "Get up to 5 free quotes from verified local plumbers. Compare prices and reviews before you hire.",
+  
+  "guideIntro": "Uniondale sits at the crossroads of the Long Kloof and the road to Knysna, a small farming town serving the surrounding agricultural community. The town itself is compact, but the plumbing service area extends across vast sheep and fruit farms in all directions. Properties here face classic Karoo challenges — reliance on boreholes, extreme temperature variations, and the need for self-sufficient water systems given the distance from major centres. The town's older buildings add heritage considerations, while farms need plumbers comfortable with agricultural systems and long travel distances. ProHub connects Uniondale residents with verified plumbers who understand rural and small-town plumbing realities.",
+
+  "guideServiceTypes": "Uniondale plumbers serve both town residents and the surrounding farming community. Services include borehole pump installation and maintenance, water storage systems for farms, solar geyser installations (abundant Karoo sunshine makes them effective), and agricultural water systems for livestock and irrigation. Town-based services cover standard geyser repairs, drain unblocking, leak detection, and bathroom renovations. For the agricultural sector, plumbers handle dam and reservoir connections, stock watering systems, and pack-house plumbing for the fruit farms in the Long Kloof. The remote context means plumbers often need to solve problems with whatever resources are available.",
+
+  "guideDiyVsPro": "Uniondale's remoteness creates a practical argument for professional plumbing. When the nearest plumbing supplier is an hour away, DIY mistakes become expensive in both time and frustration. Borehole systems — which most properties rely on — involve pumps, controls, and pressure systems requiring specialist knowledge. The extreme temperatures stress plumbing in ways that demand proper installation. While farming communities tend toward self-reliance, significant plumbing work is best left to professionals who can get it right the first time.",
+
+  "guideWhatToExpect": "When you request quotes through ProHub, plumbers serving Uniondale receive your job details. Most plumbers work from George or Oudtshoorn (45-60 minutes away), though some specialize in the Langkloof region. Emergency response times reflect these distances — expect 60-90 minutes for urgent callouts. Standard quotes typically arrive within a day. Plumbers experienced with this area understand farm logistics and often schedule multiple jobs per trip. For farm work, detailed site visits before quoting are standard.",
+
+  "guideChoosingProvider": "Uniondale requires plumbers comfortable with remote, rural work. When reviewing ProHub quotes, ask about experience with farm plumbing, borehole systems, and willingness to travel to outlying properties. Reviews from other Langkloof or Karoo properties indicate relevant experience. Check that plumbers carry adequate parts inventory — return trips for fittings add significant time and cost. PIRB registration confirms professional standards, but rural problem-solving skills matter equally here.",
+
   "faqs": [
     {
       "question": "How much does a plumber cost in Uniondale?",
-      "answer": "Expect callout fees of R400–R550 depending on the plumber's base location, with hourly rates of R380–R520. Geyser replacements range from R7,000–R15,000. Farm calls may include additional travel fees."
+      "answer": "Uniondale plumber rates typically range from R350-R550 per hour, plus significant travel charges from George or Oudtshoorn (R400-R700 depending on origin). Common job prices: geyser replacement R7,500-R15,000, borehole pump service R1,000-R3,000, drain unblocking R550-R1,200. Farm callouts typically have higher minimums. Get multiple ProHub quotes to compare."
     },
     {
-      "question": "Where do Uniondale plumbers come from?",
-      "answer": "Uniondale is served by plumbers from George (via Outeniqua Pass, about 70km), Oudtshoorn (90km), and occasionally from Willowmore direction. Travel time is 45–75 minutes depending on route. Some plumbers schedule regular Uniondale service days."
+      "question": "How quickly can plumbers reach Uniondale for emergencies?",
+      "answer": "Uniondale's location means emergency response typically takes 60-90 minutes from George or Oudtshoorn. For remote farm properties, add additional travel time. The distance underscores the importance of regular maintenance and having backup water supplies. For critical emergencies, plumbers prioritise, but logistics are realistic."
     },
     {
-      "question": "Can I get an emergency plumber in Uniondale?",
-      "answer": "Yes, emergency plumbing is available, though response times of 60–90 minutes reflect the distances involved. For serious issues, shut off water at the mains immediately. Having the contact of a reliable plumber in your phone saves time in emergencies."
+      "question": "Do plumbers service farms in the Langkloof?",
+      "answer": "Yes, ProHub plumbers serving Uniondale cover the Langkloof fruit farming region. Services include pack-house plumbing, irrigation systems, farmhouse maintenance, and worker accommodation plumbing. Farm work often requires flexible scheduling around harvest periods. Specify farm size and requirements when requesting quotes."
     },
     {
-      "question": "What geyser works best in Uniondale's extreme climate?",
-      "answer": "Solar geysers work excellently in summer with Uniondale's intense sunshine. However, the cold winters — temperatures can drop below freezing — make a hybrid solar-electric system essential. Proper pipe insulation prevents freeze damage in winter."
+      "question": "What water systems do farms use around Uniondale?",
+      "answer": "Farms in the Uniondale area typically rely on boreholes, rainwater harvesting, and small dams. Plumbers design and maintain systems that store and distribute water efficiently across large properties. This includes pump houses, reservoir tanks, gravity-fed distribution, and irrigation networks. Water management is critical in this semi-arid region."
     },
     {
-      "question": "Do Uniondale plumbers work on farms?",
-      "answer": "Yes, plumbers serving Uniondale are experienced with agricultural properties. They handle borehole pump systems, pressure tanks, irrigation connections, and farm housing. They understand the rural context and can advise on systems suited to farming operations."
-    },
-    {
-      "question": "Can pipes freeze in Uniondale winters?",
-      "answer": "Yes, Uniondale experiences hard frosts and occasionally sub-zero temperatures. Exposed pipes and outdoor plumbing can freeze. Plumbers can advise on insulation, heat tape, and frost protection measures to prevent costly winter damage."
+      "question": "Which areas do Uniondale plumbers service?",
+      "answer": "ProHub plumbers cover Uniondale town, the Langkloof valley, and surrounding farms toward Willowmore, Haarlem, and the Outeniqua Pass. Confirm coverage and travel fees when requesting quotes, especially for remote properties."
     }
-  ]
+  ],
+  "gallery": [
+    {
+      "url": "/images/plumber-burst-pipe-repair.png",
+      "alt": "Emergency plumber repairing burst pipe with water leak",
+      "caption": "Burst Pipe Repair",
+      "description": "24/7 emergency burst pipe repairs. Our plumbers respond fast to stop water damage and fix copper, PVC, or galvanised pipes."
+    },
+    {
+      "url": "/images/plumber-drain-unblocking.png",
+      "alt": "Professional drain unblocking with high-pressure jetter",
+      "caption": "Blocked Drain Cleaning",
+      "description": "Fast drain unblocking for sinks, showers, and sewer lines. We use high-pressure jetters to clear even the toughest blockages."
+    },
+    {
+      "url": "/images/plumber-geyser-installation.png",
+      "alt": "Plumber installing electric geyser hot water system",
+      "caption": "Geyser Installation & Repair",
+      "description": "Expert geyser installations, replacements, and repairs. Electric and solar systems fitted with full compliance certificates."
+    },
+    {
+      "url": "/images/plumber-tap-repair.png",
+      "alt": "Plumber fixing leaking tap faucet in kitchen",
+      "caption": "Leaking Tap Repairs",
+      "description": "Stop dripping taps wasting water and money. Quick repairs for kitchen, bathroom, and garden taps — all brands serviced."
+    },
+    {
+      "url": "/images/plumber-toilet-repair.png",
+      "alt": "Plumber repairing toilet cistern and flush mechanism",
+      "caption": "Toilet Repairs",
+      "description": "Running toilets, weak flushes, and cistern problems fixed fast. We repair and replace all toilet components and fittings."
+    },
+    {
+      "url": "/images/plumber-pressure-testing.png",
+      "alt": "Plumber testing water pressure with diagnostic gauge",
+      "caption": "Water Pressure Issues",
+      "description": "Diagnose and fix low water pressure problems. We test your system, find the cause, and restore proper flow throughout your home."
+    }
+  ],
+  "status": "live",
+  "lastUpdated": "2026-02-15T08:27:00.000Z"
 }

@@ -1,35 +1,79 @@
 {
-  "title": "Best Plumbers in Great Brak River | Get Free Quotes | ProHub",
-  "description": "Find trusted, verified plumbers in Great Brak River. Compare quotes from local professionals for burst pipes, geyser installations, drain cleaning and more. Free quotes in minutes.",
-  "heroSubtitle": "Connect with Great Brak River's top-rated plumbers in minutes. Whether you need emergency repairs in the village, a geyser upgrade in Tergniet, or plumbing for your Glentana property — get up to 5 free quotes from verified local professionals.",
-  "guideServiceTypes": "Great Brak River plumbers provide comprehensive services from emergency call-outs to planned renovations. Popular services include geyser installations, blocked drain clearing, leak detection, and bathroom upgrades. The area's mix of historic village properties, modern estates, and coastal homes at Tergniet and Glentana means local plumbers are versatile and experienced with various property types.",
-  "guideDiyVsPro": "Simple maintenance like tap washers and basic drain clearing is fine for DIY. However, Great Brak's older village properties often have dated plumbing that requires professional assessment. For coastal properties at Tergniet and Glentana, corrosion-resistant solutions are best installed by experienced plumbers. Licensed professionals are required for all geyser and mains work.",
-  "guideWhatToExpect": "Great Brak plumbers offer friendly, community-focused service. They know the local properties well and can quickly diagnose issues common to the area. Expect clear communication and fair pricing. For holiday homes, plumbers understand the need for reliable solutions that can handle vacancy periods.",
-  "guideChoosingProvider": "Choose a plumber familiar with Great Brak's mix of village, estate, and coastal properties. Check ProHub reviews from local residents, verify PIRB registration, and ask about experience with both older plumbing systems and modern installations. For coastal properties, ensure they use marine-grade materials.",
+  "title": "Best Plumbers in Great Brak River — Get Free Quotes | ProHub",
+  "description": "Find verified plumbers in Great Brak River, Western Cape. Get up to 5 free quotes for burst pipes, geyser repairs, drain unblocking & bathroom renovations. Trusted local pros.",
+  "heroTitle": "Find Trusted Plumbers in Great Brak River",
+  "heroSubtitle": "Get up to 5 free quotes from verified local plumbers. Compare prices and reviews before you hire.",
+  
+  "guideIntro": "Great Brak River — Grootbrak to locals — sits at the mouth of the river that gives it its name, creating unique plumbing challenges rarely found elsewhere on the Garden Route. Properties along the riverbank and lagoon experience tidal influences on their drainage and water tables, while the estuary's brackish water accelerates corrosion in ways pure saltwater doesn't. From the established village with its historic character to the newer developments on the island and along the river, properties need plumbers who understand how living water shapes plumbing systems. The town's quiet character belies technical complexity. ProHub connects Great Brak River residents with verified plumbers experienced in tidal properties and estuary-side challenges.",
+
+  "guideServiceTypes": "Great Brak River plumbers specialise in the unique challenges of estuary living. Services include drainage systems designed for tidal water table fluctuations, backflow prevention critical for properties where water levels change daily, corrosion-resistant installations for brackish water exposure, and sump pump systems for low-lying properties. Standard services cover geyser repairs and installations, leak detection, bathroom renovations, and drain unblocking. For the island properties and homes directly on the river, plumbers need experience with below-sea-level drainage and tidal influences that reverse flow directions.",
+
+  "guideDiyVsPro": "Great Brak River's tidal environment makes plumbing more complex than it appears. Drainage that works at low tide can fail spectacularly when the water table rises, and brackish water creates corrosion patterns different from either freshwater or pure salt exposure. Properties on the island and directly along the river require specialist knowledge about tidal drainage — a DIY installation that ignores these factors will cause problems during spring tides. For anything beyond basic tap maintenance, use plumbers who know the river and its influence.",
+
+  "guideWhatToExpect": "Submit your request through ProHub and up to 5 verified plumbers serving Great Brak River will receive your job details. Most plumbers come from the Mossel Bay or George area, with some local specialists. Emergency response is generally quick given the N2 accessibility. For properties on the river or island, expect plumbers to assess tidal conditions — some work needs to be scheduled around low tide. Detailed quotes should address the specific challenges of your property's location relative to the water.",
+
+  "guideChoosingProvider": "Great Brak River demands plumbers with specific local experience. When reviewing ProHub quotes, ask about familiarity with tidal properties, backflow systems, and estuary corrosion. Reviews from other riverfront or island property owners indicate relevant experience. For drainage work, confirm understanding of how the twice-daily tidal cycle affects your property's plumbing. PIRB registration ensures professional standards, but local knowledge is equally valuable here.",
+
   "faqs": [
     {
       "question": "How much does a plumber cost in Great Brak River?",
-      "answer": "Great Brak plumber rates typically start at R350–R480 for a callout, with hourly rates of R380–R530. The central location between George and Mossel Bay keeps travel costs reasonable. Geyser replacements range from R7,000–R15,000."
+      "answer": "Great Brak River plumber rates typically range from R400-R600 per hour. Callout fees average R350-R500. Common job prices: geyser replacement R8,000-R17,000, drain unblocking R600-R1,400, backflow valve installation R1,500-R4,000. Properties requiring tidal-scheduled work may incur additional fees. Get multiple ProHub quotes to compare."
     },
     {
-      "question": "Do Great Brak plumbers cover Tergniet and Glentana?",
-      "answer": "Yes, ProHub plumbers in Great Brak River serve the entire area including the village, Grootbrak, Tergniet, Glentana, and surrounds. Most also service nearby Klein Brak River, Hartenbos, and Mossel Bay."
+      "question": "How does the tidal river affect plumbing in Great Brak?",
+      "answer": "The Great Brak estuary creates twice-daily tidal cycles that affect water tables and drainage throughout low-lying areas. Properties near the river may experience reversed flow during high tides, requiring backflow prevention. Drainage efficiency varies with tidal conditions. Local plumbers design systems that function across the full tidal range."
     },
     {
-      "question": "Can I get an emergency plumber in Great Brak River?",
-      "answer": "Yes, emergency plumbing services are available. Local plumbers can typically respond within 30–45 minutes. For after-hours emergencies, plumbers from nearby Mossel Bay or George may also respond."
+      "question": "What is brackish water corrosion?",
+      "answer": "Great Brak River's estuary mixes saltwater and freshwater, creating brackish conditions. This mix is actually more corrosive than pure salt or fresh water due to electrochemical effects. Properties using river water or affected by groundwater seepage experience accelerated pipe and fitting corrosion. Local plumbers recommend specific materials and more frequent inspections for affected properties."
     },
     {
-      "question": "Why do coastal Great Brak properties need special plumbing?",
-      "answer": "Properties at Tergniet and Glentana are exposed to salt air which accelerates corrosion. Using marine-grade fixtures, proper material selection, and regular maintenance extends the life of your plumbing and prevents expensive failures."
+      "question": "Do plumbers service Great Brak River island properties?",
+      "answer": "Yes, ProHub plumbers service all Great Brak River areas including the island. Island properties have specific access requirements and tidal considerations — confirm your plumber understands the logistics. Some work may need to be scheduled around low tide for access or drainage reasons. Discuss property specifics when requesting quotes."
     },
     {
-      "question": "What geyser is best for Great Brak's climate?",
-      "answer": "Solar geysers perform excellently in Great Brak's sunny conditions. Heat pumps are also efficient. For holiday properties, consider instant gas geysers to avoid standby energy losses during vacancy."
-    },
-    {
-      "question": "Do Great Brak plumbers work on old village properties?",
-      "answer": "Yes, many local plumbers have experience with the older plumbing systems found in Great Brak's historic village core. They can advise on repairs, upgrades, or full repiping while respecting the character of older homes."
+      "question": "Which areas do Great Brak River plumbers service?",
+      "answer": "ProHub plumbers cover all Great Brak River areas including the village, island, and riverbank properties. Most also service Mossel Bay, Hartenbos, George, and surrounding areas. Confirm coverage and any travel fees when requesting quotes."
     }
-  ]
+  ],
+  "gallery": [
+    {
+      "url": "/images/plumber-burst-pipe-repair.png",
+      "alt": "Emergency plumber repairing burst pipe with water leak",
+      "caption": "Burst Pipe Repair",
+      "description": "24/7 emergency burst pipe repairs. Our plumbers respond fast to stop water damage and fix copper, PVC, or galvanised pipes."
+    },
+    {
+      "url": "/images/plumber-drain-unblocking.png",
+      "alt": "Professional drain unblocking with high-pressure jetter",
+      "caption": "Blocked Drain Cleaning",
+      "description": "Fast drain unblocking for sinks, showers, and sewer lines. We use high-pressure jetters to clear even the toughest blockages."
+    },
+    {
+      "url": "/images/plumber-geyser-installation.png",
+      "alt": "Plumber installing electric geyser hot water system",
+      "caption": "Geyser Installation & Repair",
+      "description": "Expert geyser installations, replacements, and repairs. Electric and solar systems fitted with full compliance certificates."
+    },
+    {
+      "url": "/images/plumber-tap-repair.png",
+      "alt": "Plumber fixing leaking tap faucet in kitchen",
+      "caption": "Leaking Tap Repairs",
+      "description": "Stop dripping taps wasting water and money. Quick repairs for kitchen, bathroom, and garden taps — all brands serviced."
+    },
+    {
+      "url": "/images/plumber-toilet-repair.png",
+      "alt": "Plumber repairing toilet cistern and flush mechanism",
+      "caption": "Toilet Repairs",
+      "description": "Running toilets, weak flushes, and cistern problems fixed fast. We repair and replace all toilet components and fittings."
+    },
+    {
+      "url": "/images/plumber-pressure-testing.png",
+      "alt": "Plumber testing water pressure with diagnostic gauge",
+      "caption": "Water Pressure Issues",
+      "description": "Diagnose and fix low water pressure problems. We test your system, find the cause, and restore proper flow throughout your home."
+    }
+  ],
+  "status": "live",
+  "lastUpdated": "2026-02-15T08:27:00.000Z"
 }

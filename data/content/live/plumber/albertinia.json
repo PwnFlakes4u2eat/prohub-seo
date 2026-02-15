@@ -1,35 +1,79 @@
 {
-  "title": "Best Plumbers in Albertinia | Get Free Quotes | ProHub",
-  "description": "Find trusted, verified plumbers in Albertinia. Compare quotes from local professionals for burst pipes, geyser installations, drain cleaning and more. Free quotes in minutes.",
-  "heroSubtitle": "Connect with Albertinia's top-rated plumbers in minutes. Whether you need emergency repairs in town, geyser installation on your aloe farm, or bathroom renovations — get up to 5 free quotes from verified local professionals.",
-  "guideServiceTypes": "Albertinia plumbers offer services ranging from emergency repairs to complete installations. Common jobs include geyser replacements, blocked drains, leak repairs, and bathroom renovations. As the 'Aloe Capital' surrounded by farming, many plumbers also handle agricultural plumbing including borehole systems, stock watering, and processing facility plumbing for the local aloe industry.",
-  "guideDiyVsPro": "Basic maintenance like tap repairs is DIY-appropriate. However, Albertinia's farming properties often have non-standard plumbing configurations including borehole systems that require professional expertise. The town's older properties may have aging infrastructure best assessed by experienced plumbers. Licensed professionals are required for geyser installations and compliance certificates.",
-  "guideWhatToExpect": "Albertinia plumbers provide practical, hardworking service suited to this agricultural community. They're used to working on both town properties and outlying farms, and understand the specific needs of agricultural operations. Expect honest assessments and fair pricing from tradespeople who know the local area well.",
-  "guideChoosingProvider": "Choose a plumber who understands Albertinia's mix of village homes and farming properties. Check ProHub reviews, verify PIRB registration, and ask about experience with borehole systems if relevant. Local knowledge is valuable in this tight-knit community.",
+  "title": "Best Plumbers in Albertinia — Get Free Quotes | ProHub",
+  "description": "Find verified plumbers in Albertinia, Western Cape. Get up to 5 free quotes for burst pipes, geyser repairs, drain unblocking & bathroom renovations. Trusted local pros.",
+  "heroTitle": "Find Trusted Plumbers in Albertinia",
+  "heroSubtitle": "Get up to 5 free quotes from verified local plumbers. Compare prices and reviews before you hire.",
+  
+  "guideIntro": "Albertinia is South Africa's aloe capital, a small N2 town where the aloe processing industry shapes the local economy. The town sits between the coastal strip and the interior, giving it a climate that transitions between the Garden Route's humidity and the Karoo's dryness. Properties range from the modest homes of the town centre to the farms producing aloe, cattle, and grain in the surrounding area. Water infrastructure reflects this agricultural focus — boreholes supplement municipal supply, and farms need plumbing that supports both domestic and processing requirements. ProHub connects Albertinia residents and farmers with verified plumbers who understand the town's mix of residential and light-industrial needs.",
+
+  "guideServiceTypes": "Albertinia plumbers handle both residential and agricultural requirements. Services include geyser repairs and installations, drain unblocking, leak detection, and bathroom renovations for town properties. For the aloe processing industry and farms, plumbers provide industrial-scale water systems, processing facility plumbing, and agricultural water management. Borehole pump maintenance serves farms supplementing municipal supply. The transitional climate means some properties face Karoo-like challenges (hard water, temperature extremes) while others deal with more coastal conditions — experienced plumbers adapt their approach accordingly.",
+
+  "guideDiyVsPro": "Albertinia's size means plumbing services are available but not abundant. A DIY mistake that requires professional correction may mean waiting for a plumber to travel from Riversdale or Mossel Bay. For the agricultural sector, food-processing compliance adds another layer of complexity that professionals handle better. The transitional climate creates mixed challenges that benefit from experienced assessment. For basic maintenance DIY is fine, but significant repairs or installations benefit from professional handling.",
+
+  "guideWhatToExpect": "When you request quotes through ProHub, plumbers serving Albertinia receive your job details. Some plumbers are based locally, while others travel from Riversdale, Mossel Bay, or George. Emergency response is generally available same-day. Standard quotes typically arrive within hours. For farm and industrial work, expect site visits before final quotes. Plumbers familiar with the area understand both the aloe industry requirements and standard residential needs.",
+
+  "guideChoosingProvider": "Albertinia benefits from plumbers who understand its mixed residential and agricultural character. When reviewing ProHub quotes, ask about experience with the property type you have — whether standard residential, farming, or aloe processing. Reviews from other N2 corridor or agricultural properties indicate relevant experience. For processing facilities, check food-industry compliance knowledge. PIRB registration confirms professional residential standards.",
+
   "faqs": [
     {
       "question": "How much does a plumber cost in Albertinia?",
-      "answer": "Albertinia plumber rates typically start at R300–R420 for a callout, with hourly rates of R330–R480. Farm calls may incur travel fees. Geyser replacements range from R6,000–R13,000. The town's lower cost of living translates to competitive plumbing rates."
+      "answer": "Albertinia plumber rates typically range from R350-R550 per hour. Callout fees average R250-R450, varying based on plumber location. Common job prices: geyser replacement R7,500-R15,000, drain unblocking R500-R1,200, tap replacement R300-R750. Agricultural and processing facility work is quoted per project. Get multiple ProHub quotes to compare."
     },
     {
-      "question": "Do Albertinia plumbers service surrounding farms?",
-      "answer": "Yes, most ProHub plumbers in Albertinia work throughout the farming district. They service properties between Riversdale and Mossel Bay, and into the hinterland. Travel fees apply for distant locations."
+      "question": "Do Albertinia plumbers service aloe processing facilities?",
+      "answer": "Yes, plumbers serving Albertinia understand the local aloe industry. Processing facility requirements include food-grade drainage, high-volume water supply, and equipment connections. When requesting ProHub quotes, specify if you need industrial or processing facility plumbing for appropriate matching."
     },
     {
-      "question": "Can plumbers work on borehole and farm water systems?",
-      "answer": "Yes, many Albertinia plumbers have experience with agricultural water systems including borehole pumps, pressure tanks, irrigation connections, and stock watering infrastructure. They understand the specific needs of farming operations."
+      "question": "Is water quality different in Albertinia?",
+      "answer": "Albertinia's transitional location means water quality varies. Town municipal water is generally good, while farm boreholes may have higher mineral content typical of the interior. Some properties experience a mix of characteristics. Local plumbers can assess your water quality and recommend filtration or treatment if needed."
     },
     {
-      "question": "What geyser is best for Albertinia properties?",
-      "answer": "Albertinia's sunny, dry climate is excellent for solar geysers — expect significant electricity savings. Heat pumps also perform well. For farms with existing solar power, electric geysers tied to your system make economic sense."
+      "question": "How quickly can plumbers respond to emergencies in Albertinia?",
+      "answer": "Emergency response in Albertinia typically ranges from 30 minutes (local plumbers) to 60 minutes (from Riversdale or Mossel Bay). The N2 location means good road access. For critical emergencies like burst mains, same-day response is usually available. Mark requests as urgent on ProHub for priority matching."
     },
     {
-      "question": "Can I get an emergency plumber in Albertinia?",
-      "answer": "Yes, emergency plumbing is available. Town response times are typically 20–40 minutes. For farms, response depends on location. Support from Riversdale or Mossel Bay may be available during busy periods."
-    },
-    {
-      "question": "Do Albertinia plumbers provide compliance certificates?",
-      "answer": "Yes, PIRB-registered plumbers on ProHub provide Certificates of Compliance for geyser installations and other certifiable work. This documentation is essential for property transactions and insurance."
+      "question": "Which areas do Albertinia plumbers service?",
+      "answer": "ProHub plumbers cover Albertinia town and surrounding farms. Many also service Riversdale, Heidelberg, and the N2 corridor toward Mossel Bay. Some cover Stilbaai for coastal properties. Confirm coverage and any travel fees when requesting quotes."
     }
-  ]
+  ],
+  "gallery": [
+    {
+      "url": "/images/plumber-burst-pipe-repair.png",
+      "alt": "Emergency plumber repairing burst pipe with water leak",
+      "caption": "Burst Pipe Repair",
+      "description": "24/7 emergency burst pipe repairs. Our plumbers respond fast to stop water damage and fix copper, PVC, or galvanised pipes."
+    },
+    {
+      "url": "/images/plumber-drain-unblocking.png",
+      "alt": "Professional drain unblocking with high-pressure jetter",
+      "caption": "Blocked Drain Cleaning",
+      "description": "Fast drain unblocking for sinks, showers, and sewer lines. We use high-pressure jetters to clear even the toughest blockages."
+    },
+    {
+      "url": "/images/plumber-geyser-installation.png",
+      "alt": "Plumber installing electric geyser hot water system",
+      "caption": "Geyser Installation & Repair",
+      "description": "Expert geyser installations, replacements, and repairs. Electric and solar systems fitted with full compliance certificates."
+    },
+    {
+      "url": "/images/plumber-tap-repair.png",
+      "alt": "Plumber fixing leaking tap faucet in kitchen",
+      "caption": "Leaking Tap Repairs",
+      "description": "Stop dripping taps wasting water and money. Quick repairs for kitchen, bathroom, and garden taps — all brands serviced."
+    },
+    {
+      "url": "/images/plumber-toilet-repair.png",
+      "alt": "Plumber repairing toilet cistern and flush mechanism",
+      "caption": "Toilet Repairs",
+      "description": "Running toilets, weak flushes, and cistern problems fixed fast. We repair and replace all toilet components and fittings."
+    },
+    {
+      "url": "/images/plumber-pressure-testing.png",
+      "alt": "Plumber testing water pressure with diagnostic gauge",
+      "caption": "Water Pressure Issues",
+      "description": "Diagnose and fix low water pressure problems. We test your system, find the cause, and restore proper flow throughout your home."
+    }
+  ],
+  "status": "live",
+  "lastUpdated": "2026-02-15T08:27:00.000Z"
 }
