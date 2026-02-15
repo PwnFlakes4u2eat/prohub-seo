@@ -359,6 +359,9 @@ export async function getStats(serviceSlug: string, townSlug: string) {
     .single();
 
   let providerCount = 0;
+  let avgRating: number | null = null;
+  let jobsThisMonth: number | null = null;
+  let matchingProviderIds: string[] = [];
 
   if (categoryData && regionData) {
     // Get matching providers
@@ -375,34 +378,46 @@ export async function getStats(serviceSlug: string, townSlug: string) {
     if (providerCategories && providerRegions) {
       const categoryProviderIds = new Set(providerCategories.map(pc => pc.provider_id));
       const matchingIds = providerRegions.filter(pr => categoryProviderIds.has(pr.provider_id));
+      matchingProviderIds = matchingIds.map(m => m.provider_id);
       
-      // Count verified providers
-      if (matchingIds.length > 0) {
-        const { count } = await supabase
+      // Count verified providers and get their ratings
+      if (matchingProviderIds.length > 0) {
+        const { data: providerData, count } = await supabase
           .from('providers')
-          .select('*', { count: 'exact', head: true })
-          .in('id', matchingIds.map(m => m.provider_id))
+          .select('avg_rating', { count: 'exact' })
+          .in('id', matchingProviderIds)
           .eq('status', 'verified');
+        
         providerCount = count || 0;
+        
+        // Calculate average rating from matching providers only
+        if (providerData && providerData.length > 0) {
+          const ratingsWithValues = providerData.filter(p => p.avg_rating && p.avg_rating > 0);
+          if (ratingsWithValues.length > 0) {
+            avgRating = ratingsWithValues.reduce((sum, p) => sum + Number(p.avg_rating), 0) / ratingsWithValues.length;
+          }
+        }
       }
     }
+
+    // Get jobs completed this month for this service/town
+    const now = new Date();
+    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1).toISOString();
+    
+    const { count: jobCount } = await supabase
+      .from('completed_jobs')
+      .select('*', { count: 'exact', head: true })
+      .eq('category_id', categoryData.id)
+      .eq('region_id', regionData.id)
+      .gte('completed_at', startOfMonth);
+    
+    jobsThisMonth = jobCount || null;
   }
-
-  // Get average rating from providers table
-  const { data: ratingData } = await supabase
-    .from('providers')
-    .select('avg_rating')
-    .eq('status', 'verified')
-    .gt('avg_rating', 0);
-
-  const avgRating = ratingData && ratingData.length > 0
-    ? ratingData.reduce((sum, r) => sum + Number(r.avg_rating), 0) / ratingData.length
-    : null;
 
   return {
     providerCount: providerCount || 0,
     avgRating: avgRating ? avgRating.toFixed(1) : null,
     avgResponseTime: '< 30 mins',
-    jobsThisMonth: null,
+    jobsThisMonth,
   };
 }
