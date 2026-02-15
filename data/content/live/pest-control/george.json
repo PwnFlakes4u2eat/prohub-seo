@@ -1,0 +1,79 @@
+{
+  "title": "Pest Control in George — Get Free Quotes | ProHub",
+  "description": "Professional pest control services in George, Western Cape. Get up to 5 free quotes for cockroaches, rats, termites, bees & general fumigation. Verified local experts.",
+  "heroTitle": "Professional Pest Control in George",
+  "heroSubtitle": "Get up to 5 free quotes from verified pest control experts. Protect your home or business from unwanted pests.",
+  
+  "guideIntro": "George's unique location at the foot of the Outeniqua Mountains, combined with its mild, humid climate, creates ideal conditions for a wide range of pests. From the older suburbs of Denneoord and Pacaltsdorp where ageing structures attract rodents and termites, to the coastal dampness near Herolds Bay that brings cockroaches indoors, pest problems in George require local expertise. The town's mix of residential estates, commercial centres along York Street, and surrounding farmland means pest controllers here deal with everything from restaurant infestations to crop-threatening insects. ProHub connects George residents and businesses with verified pest control professionals who understand the region's seasonal pest patterns and can respond quickly to both emergency callouts and scheduled treatments.",
+
+  "guideServiceTypes": "George pest control companies offer comprehensive services tailored to the Garden Route's pest challenges. Common treatments include general fumigation for cockroaches, ants, and household insects; rodent control using bait stations, traps, and exclusion methods; termite inspections and soil treatments for pre-construction and existing buildings; bee and wasp nest removal (with relocation options for honeybees); mosquito and fly control for outdoor areas; and flea treatments for homes with pets. Many George pest controllers also handle wildlife issues like bird proofing for commercial buildings, snake removal during summer months, and fishmoths in humid coastal properties. For businesses, HACCP-compliant pest management programmes are available.",
+
+  "guideDiyVsPro": "Hardware store sprays might knock down a few visible cockroaches, but they won't solve an infestation. Pests like German cockroaches breed rapidly in hidden areas — behind fridges, inside wall cavities, under sinks — where surface sprays don't reach. DIY rodent control often fails because rats are neophobic (fear new objects) and will avoid poorly placed traps for weeks. Termites require specialised detection equipment and registered pesticides that aren't available to consumers. For bee or wasp nests, attempting removal without proper protection risks serious stings and, for those with allergies, life-threatening reactions. Professional pest controllers use commercial-grade products, know exactly where pests hide, and provide guarantees on their work. In George's humid climate, where pests thrive year-round, professional treatment is almost always more cost-effective than repeated DIY attempts.",
+
+  "guideWhatToExpect": "When you submit a pest control request through ProHub, up to 5 verified George pest controllers receive your details. Most respond within hours — faster for urgent infestations. Expect questions about the type of pest, severity of the problem, and property size. Reputable companies will want to inspect before quoting on termites or large infestations, while standard cockroach or ant treatments can often be quoted over the phone. Quotes should include the treatment method, products used, safety information (especially important if you have children or pets), and any follow-up visits included. For ongoing pest management, many George companies offer monthly or quarterly service contracts at reduced rates.",
+
+  "guideChoosingProvider": "Look beyond price when selecting a pest controller. Check that they're registered with the Department of Agriculture and hold valid pesticide applicator certifications. Read ProHub reviews for comments about effectiveness — did the pests actually stay gone? — and professionalism. Ask about their guarantee policy: reputable companies offer free follow-up treatments if pests return within a specified period. For termite work, ensure they provide a certificate and are prepared to stake their reputation on their inspection. Companies that take time to explain the treatment process and provide aftercare instructions typically deliver better results than those offering suspiciously cheap quotes.",
+
+  "faqs": [
+    {
+      "question": "How much does pest control cost in George?",
+      "answer": "George pest control prices vary by treatment type and property size. General fumigation for a 3-bedroom home typically costs R800-R1,500. Rodent control programmes run R600-R1,200 initially plus R300-R500 for follow-ups. Termite inspections cost R1,000-R2,500, with treatments ranging from R5,000-R25,000 depending on severity. Bee removal averages R800-R2,000. Get multiple ProHub quotes to compare — prices vary significantly between companies."
+    },
+    {
+      "question": "What pests are common in George?",
+      "answer": "George's humid Garden Route climate supports diverse pest populations. Most common are German and American cockroaches (especially near the coast), rats and mice (prevalent in older suburbs and near restaurants), ants (garden ants and small black ants), and termites (subterranean species in the wetter months). Seasonal pests include mosquitoes in summer, wasps from spring through autumn, and increased rodent activity in winter as they seek shelter indoors."
+    },
+    {
+      "question": "How often should I get pest control in George?",
+      "answer": "For George homes, quarterly treatments (every 3 months) provide the best year-round protection against cockroaches, ants, and seasonal pests. Properties near bush areas or with previous termite activity should have annual termite inspections. Restaurants and food businesses typically require monthly pest management to maintain health compliance. After an infestation, follow-up treatments 2-3 weeks later ensure any hatching eggs are eliminated."
+    },
+    {
+      "question": "Is pest control safe for pets and children?",
+      "answer": "Professional pest controllers use products registered for residential use and follow strict safety protocols. Most treatments require vacating the property for 2-4 hours while products dry. Gel baits for cockroaches and enclosed rodent stations are designed to be inaccessible to pets and children. Always inform your pest controller about pets — including fish tanks, which are sensitive to airborne pesticides — and any family members with chemical sensitivities."
+    },
+    {
+      "question": "Do George pest controllers offer emergency callouts?",
+      "answer": "Yes, many George pest control companies offer same-day or emergency services for urgent situations like wasp nest discoveries, snake sightings, or severe infestations. Weekend and after-hours callouts typically carry a premium of R200-R500. When submitting your ProHub request, mark it as urgent and describe the situation clearly to get faster responses from available providers."
+    }
+  ],
+  "gallery": [
+    {
+      "url": "/images/pest-control-fumigation.png",
+      "alt": "Professional pest control fumigation treatment inside George home",
+      "caption": "Home Fumigation",
+      "description": "Complete indoor fumigation treatments for cockroaches, ants, fleas, and household insects. Safe products with minimal disruption to your family."
+    },
+    {
+      "url": "/images/pest-control-rodent.png",
+      "alt": "Pest controller setting rodent bait station for rats and mice in George",
+      "caption": "Rodent Control",
+      "description": "Effective rat and mouse control using tamper-proof bait stations, traps, and exclusion methods. We eliminate current infestations and prevent return."
+    },
+    {
+      "url": "/images/pest-control-cockroach.png",
+      "alt": "Cockroach gel bait treatment being applied in kitchen",
+      "caption": "Cockroach Treatment",
+      "description": "Targeted cockroach elimination using professional gel baits and residual sprays. We treat German, American, and Oriental cockroach infestations."
+    },
+    {
+      "url": "/images/pest-control-termite.png",
+      "alt": "Termite inspector examining wooden structures for damage in George property",
+      "caption": "Termite Inspections",
+      "description": "Comprehensive termite inspections and treatments. Protect your George property from costly structural damage with professional soil and timber treatments."
+    },
+    {
+      "url": "/images/pest-control-bee-wasp.png",
+      "alt": "Safe bee and wasp nest removal from residential property",
+      "caption": "Bee & Wasp Removal",
+      "description": "Safe removal of bee hives and wasp nests from your property. We offer honeybee relocation where possible and eliminate aggressive wasp colonies."
+    },
+    {
+      "url": "/images/pest-control-mosquito.png",
+      "alt": "Outdoor mosquito and fly control treatment in garden area",
+      "caption": "Mosquito & Fly Control",
+      "description": "Outdoor treatments to reduce mosquitoes and flies around your home or business. Perfect for entertaining areas, restaurants, and poolside spaces."
+    }
+  ],
+  "status": "live",
+  "lastUpdated": "2026-02-15T07:55:00.000Z"
+}
