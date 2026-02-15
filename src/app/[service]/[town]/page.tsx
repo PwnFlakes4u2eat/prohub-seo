@@ -86,7 +86,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
   const heroImages: Record<string, string> = {
     'plumber': 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1600&h=900&fit=crop&q=80',
     'electrician': 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1600&h=900&fit=crop&q=80',
-    'pest-control': 'https://images.unsplash.com/photo-1585244299246-1199ca3e9c72?w=1600&h=900&fit=crop&q=80',
+    'pest-control': '/images/pest-control-insect.png',
     'cleaning-service': 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1600&h=900&fit=crop&q=80',
     'garden-service': 'https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&h=900&fit=crop&q=80',
     'handyman': 'https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=1600&h=900&fit=crop&q=80',
