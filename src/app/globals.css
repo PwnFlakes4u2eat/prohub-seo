@@ -70,6 +70,11 @@ h1, h2, h3, h4, h5, h6 {
   border-color: hsl(38, 95%, 50%, 0.25);
 }
 
+/* Flip card animation */
+.duration-600 {
+  transition-duration: 600ms;
+}
+
 /* Animation */
 .fade-up {
   opacity: 0;

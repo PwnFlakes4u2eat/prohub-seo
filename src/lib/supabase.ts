@@ -231,12 +231,64 @@ export async function getProviders(serviceSlug: string, townSlug: string): Promi
   return providers;
 }
 
-// Fetch reviews for a service and town
+// Fetch reviews for a service and town (via providers)
 export async function getReviews(serviceSlug: string, townSlug: string): Promise<Review[]> {
+  // Convert townSlug to town name
+  const townName = townSlug
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+
+  // Map SEO slug to database slug
+  const dbSlug = slugMap[serviceSlug] || serviceSlug;
+
+  // Get category and region IDs
+  const { data: categoryData } = await supabase
+    .from('categories')
+    .select('id')
+    .eq('slug', dbSlug)
+    .single();
+
+  const { data: regionData } = await supabase
+    .from('regions')
+    .select('id')
+    .eq('name', townName)
+    .single();
+
+  if (!categoryData || !regionData) {
+    return [];
+  }
+
+  // Get providers matching both category and region
+  const { data: providerCategories } = await supabase
+    .from('provider_categories')
+    .select('provider_id')
+    .eq('category_id', categoryData.id);
+
+  const { data: providerRegions } = await supabase
+    .from('provider_regions')
+    .select('provider_id')
+    .eq('region_id', regionData.id);
+
+  if (!providerCategories || !providerRegions) {
+    return [];
+  }
+
+  // Find providers in both category and region
+  const categoryProviderIds = new Set(providerCategories.map(pc => pc.provider_id));
+  const matchingProviderIds = providerRegions
+    .filter(pr => categoryProviderIds.has(pr.provider_id))
+    .map(pr => pr.provider_id);
+
+  if (matchingProviderIds.length === 0) {
+    return [];
+  }
+
+  // Fetch reviews for these providers
   const { data, error } = await supabase
     .from('reviews')
     .select('*')
-    .eq('service_category', serviceSlug)
+    .in('provider_id', matchingProviderIds)
     .order('created_at', { ascending: false })
     .limit(6);
 
@@ -245,7 +297,17 @@ export async function getReviews(serviceSlug: string, townSlug: string): Promise
     return [];
   }
 
-  return data || [];
+  // Map to expected interface
+  return (data || []).map(r => ({
+    id: r.id,
+    provider_id: r.provider_id,
+    customer_name: r.reviewer_name || 'Anonymous',
+    rating: r.rating,
+    comment: r.comment || '',
+    service_category: serviceSlug,
+    is_verified_customer: true,
+    created_at: r.created_at,
+  }));
 }
 
 // Fetch blog posts for a service

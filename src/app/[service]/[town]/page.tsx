@@ -250,7 +250,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
       <section className="py-10 bg-background border-b border-border">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <div className="bg-card rounded-xl border border-border p-6 shadow-card">
+            <div className="bg-card rounded-xl border border-border p-6 card-elevated">
               <h2 className="font-display font-bold text-foreground text-lg mb-4 flex items-center gap-2">
                 <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
                 On This Page
@@ -294,30 +294,30 @@ export default async function ServiceTownPage({ params }: PageProps) {
             <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-foreground">How ProHub Works</h2>
             <p className="mt-4 text-muted-foreground text-lg max-w-xl mx-auto">Three simple steps to finding the right {service.name.toLowerCase()} in {town.name}</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="bg-card rounded-xl border border-border p-6 text-center card-elevated">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/20 transition-colors">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
               </div>
               <div className="text-sm font-semibold text-primary mb-2">Step 1</div>
-              <h3 className="text-xl font-display font-semibold text-foreground mb-3">Tell Us What You Need</h3>
-              <p className="text-muted-foreground leading-relaxed">Describe your job, add photos, and set your budget. Takes under 2 minutes.</p>
+              <h3 className="text-lg font-display font-semibold text-foreground mb-2">Tell Us What You Need</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">Describe your job, add photos, and set your budget. Takes under 2 minutes.</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            <div className="bg-card rounded-xl border border-border p-6 text-center card-elevated">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/20 transition-colors">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
               </div>
               <div className="text-sm font-semibold text-primary mb-2">Step 2</div>
-              <h3 className="text-xl font-display font-semibold text-foreground mb-3">Get Matched Instantly</h3>
-              <p className="text-muted-foreground leading-relaxed">We match you with up to 5 verified {service.namePlural.toLowerCase()} in {town.name}. They&apos;re notified via WhatsApp immediately.</p>
+              <h3 className="text-lg font-display font-semibold text-foreground mb-2">Get Matched Instantly</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">We match you with up to 5 verified {service.namePlural.toLowerCase()} in {town.name}. They&apos;re notified via WhatsApp immediately.</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            <div className="bg-card rounded-xl border border-border p-6 text-center card-elevated">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/20 transition-colors">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
               </div>
               <div className="text-sm font-semibold text-primary mb-2">Step 3</div>
-              <h3 className="text-xl font-display font-semibold text-foreground mb-3">Compare &amp; Hire</h3>
-              <p className="text-muted-foreground leading-relaxed">Review quotes, check ratings, and choose the {service.name.toLowerCase()} that&apos;s right for you. Simple.</p>
+              <h3 className="text-lg font-display font-semibold text-foreground mb-2">Compare &amp; Hire</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">Review quotes, check ratings, and choose the {service.name.toLowerCase()} that&apos;s right for you. Simple.</p>
             </div>
           </div>
         </div>
@@ -417,14 +417,14 @@ export default async function ServiceTownPage({ params }: PageProps) {
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">See the quality of work from our verified local {service.namePlural.toLowerCase()} in the {town.region}</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {galleryImages.map((img, index) => (
-              <div key={index} className="bg-card rounded-xl overflow-hidden shadow-card border border-border">
-                <figure className="group relative overflow-hidden">
+              <div key={index} className="group bg-card rounded-xl overflow-hidden border border-border card-elevated">
+                <figure className="relative overflow-hidden">
                   <img 
                     src={img.src}
                     alt={img.alt}
-                    className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-52 object-cover transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                   />
                 </figure>
@@ -448,7 +448,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
               <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Not sure whether to tackle it yourself or call a pro? This guide helps you decide.</p>
             </div>
             
-            <div className="bg-card rounded-xl border border-border overflow-hidden shadow-card">
+            <div className="bg-card rounded-xl border border-border overflow-hidden card-elevated">
               <div className="grid grid-cols-3 bg-foreground text-white">
                 <div className="px-4 py-4 font-semibold font-display text-sm">Task</div>
                 <div className="px-4 py-4 font-semibold font-display text-sm text-center border-l border-white/20">DIY?</div>
@@ -550,7 +550,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
               </p>
             </div>
             
-            <div className="bg-white rounded-xl border border-border overflow-hidden shadow-card">
+            <div className="bg-white rounded-xl border border-border overflow-hidden card-elevated">
               <div className="grid grid-cols-2 bg-foreground text-white px-6 py-4">
                 <span className="font-semibold text-sm font-display">Service</span>
                 <span className="font-semibold text-sm text-right font-display">Price Range</span>
@@ -584,28 +584,28 @@ export default async function ServiceTownPage({ params }: PageProps) {
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Join thousands of South Africans who trust ProHub to connect them with verified local service providers</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-primary shadow-card hover:-translate-y-1 transition-transform">
+            <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-primary card-elevated">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
               </div>
               <h3 className="font-display font-bold text-foreground mb-2">Verified Providers</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">Every provider is ID-verified with tracked reviews and job completion rates.</p>
             </div>
-            <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-primary shadow-card hover:-translate-y-1 transition-transform">
+            <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-primary card-elevated">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
               </div>
               <h3 className="font-display font-bold text-foreground mb-2">Instant WhatsApp Alerts</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">Providers are notified immediately. Get your first quote in under 30 minutes.</p>
             </div>
-            <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-primary shadow-card hover:-translate-y-1 transition-transform">
+            <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-primary card-elevated">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
               </div>
               <h3 className="font-display font-bold text-foreground mb-2">Compare &amp; Save</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">Receive up to 5 quotes side by side. Choose the best price and fit for your job.</p>
             </div>
-            <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-primary shadow-card hover:-translate-y-1 transition-transform">
+            <div className="bg-card rounded-xl p-6 border border-border border-l-4 border-l-primary card-elevated">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
               </div>
@@ -627,7 +627,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
             </div>
             <div className="flex flex-wrap justify-center gap-3">
               {town.localAreas.map((area: string) => (
-                <div key={area} className="flex items-center gap-2 bg-card rounded-lg px-4 py-3 border border-border shadow-sm">
+                <div key={area} className="flex items-center gap-2 bg-card rounded-xl px-4 py-3 border border-border card-elevated">
                   <svg className="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                   <span className="text-sm font-medium text-foreground truncate">{area}</span>
                 </div>
@@ -652,7 +652,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
               {content.faqs.map((faq, index) => (
                 <details 
                   key={index}
-                  className="group bg-white rounded-xl border border-border shadow-card overflow-hidden"
+                  className="group bg-white rounded-xl border border-border card-elevated overflow-hidden"
                 >
                   <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer list-none">
                     <h3 className="font-display font-semibold text-foreground">{faq.question}</h3>
@@ -711,7 +711,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
                 <a
                   key={related.slug}
                   href={`/${related.slug}/${townSlug}`}
-                  className="group flex flex-col items-center gap-3 p-5 rounded-xl bg-card border border-border hover:border-primary/30 hover:shadow-card transition-all duration-200"
+                  className="group flex flex-col items-center gap-3 p-5 rounded-xl bg-card border border-border card-elevated"
                 >
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <svg className="w-[22px] h-[22px] text-primary" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -740,7 +740,7 @@ export default async function ServiceTownPage({ params }: PageProps) {
                 <a
                   key={nearby.slug}
                   href={`/${serviceSlug}/${nearby.slug}`}
-                  className="group flex items-center gap-2 bg-card rounded-lg px-4 py-3 border border-border hover:border-primary/30 hover:shadow-card transition-all duration-200"
+                  className="group flex items-center gap-2 bg-card rounded-xl px-4 py-3 border border-border card-elevated"
                 >
                   <svg className="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
