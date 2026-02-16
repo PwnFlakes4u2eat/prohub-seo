@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
+import CookieConsent from "@/components/CookieConsent";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -107,6 +108,9 @@ export default function RootLayout({
         {/* Main Content */}
         <main>{children}</main>
 
+        {/* Cookie Consent Banner */}
+        <CookieConsent />
+
         {/* Footer */}
         <footer className="bg-foreground text-white py-16">
           <div className="container mx-auto px-4">
@@ -157,6 +161,7 @@ export default function RootLayout({
                   <li><a href="https://app.prohub.co.za/contact" className="hover:text-white transition-colors">Contact</a></li>
                   <li><a href="https://app.prohub.co.za/privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
                   <li><a href="https://app.prohub.co.za/terms" className="hover:text-white transition-colors">Terms of Service</a></li>
+                  <li><a href="https://app.prohub.co.za/cookies" className="hover:text-white transition-colors">Cookie Policy</a></li>
                 </ul>
               </div>
             </div>
