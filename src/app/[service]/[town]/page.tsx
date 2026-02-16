@@ -785,4 +785,4 @@ export default async function ServiceTownPage({ params }: PageProps) {
   );
 }
 
-export const revalidate = 86400;
+export const revalidate = 3600; // 1 hour

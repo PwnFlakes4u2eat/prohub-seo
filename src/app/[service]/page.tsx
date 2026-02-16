@@ -188,4 +188,4 @@ export default async function ServiceIndexPage({ params }: PageProps) {
   );
 }
 
-export const revalidate = 86400;
+export const revalidate = 3600; // 1 hour
