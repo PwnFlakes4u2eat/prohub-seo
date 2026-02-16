@@ -38,38 +38,38 @@
   ],
   "gallery": [
     {
-      "url": "https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=600&h=400&fit=crop&q=80",
-      "alt": "Handyman with tools ready for home repairs in George",
+      "url": "/images/handyman-door-repair.png",
+      "alt": "Handyman repairing door hinge in George home",
       "caption": "Professional Repairs",
       "description": "Expert repairs for doors, windows, hinges, and hardware. We fix what's broken and restore function to your home."
     },
     {
-      "url": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&q=80",
+      "url": "/images/handyman-furniture-assembly.png",
       "alt": "Furniture assembly service in George home",
       "caption": "Furniture Assembly",
       "description": "Fast, frustration-free furniture assembly. From flatpack to fully built — we handle Builders Warehouse, @Home, and online orders."
     },
     {
-      "url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop&q=80",
+      "url": "/images/handyman-shelf-installation.png",
       "alt": "Handyman installing shelves in George property",
       "caption": "Shelving & Mounting",
       "description": "Secure installation of shelves, TVs, mirrors, and wall fixtures. Proper anchoring for any wall type — brick, drywall, or hollow."
     },
     {
-      "url": "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&h=400&fit=crop&q=80",
+      "url": "/images/handyman-fence-repair.png",
       "alt": "Fence repair and maintenance in George garden",
       "caption": "Fence & Gate Repairs",
       "description": "Restore security and curb appeal with fence repairs, gate adjustments, and timber treatments. Weather damage fixed fast."
     },
     {
-      "url": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=400&fit=crop&q=80",
-      "alt": "Door repair and lock replacement service",
+      "url": "/images/handyman-lock-replacement.png",
+      "alt": "Door lock replacement service in George",
       "caption": "Door & Lock Repairs",
       "description": "Fix sticking doors, broken hinges, and faulty locks. We repair, adjust, and replace to keep your home secure."
     },
     {
-      "url": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&q=80",
-      "alt": "General home maintenance by verified handyman",
+      "url": "/images/handyman-maintenance.png",
+      "alt": "Professional handyman ready for home maintenance in George",
       "caption": "Home Maintenance",
       "description": "Tackle your to-do list in one visit. We handle multiple small jobs efficiently — saving you time and hassle."
     }
