@@ -1,0 +1,79 @@
+{
+  "title": "Best Handyman Services in Uniondale — Get Free Quotes | ProHub",
+  "description": "Find verified handymen in Uniondale, Western Cape. Get up to 5 free quotes for repairs, furniture assembly, odd jobs & home maintenance. Trusted local pros.",
+  "heroTitle": "Find Trusted Handymen in Uniondale",
+  "heroSubtitle": "Get up to 5 free quotes from verified local handymen. Compare prices and reviews before you hire.",
+  
+  "guideIntro": "Uniondale occupies a unique position — historically connecting the Garden Route to the Karoo interior, this farming town sits where the lush coastal climate meets the drier Klein Karoo. Properties here reflect generations of agricultural life, from historic homesteads to practical farm buildings. The climate swings between cold, wet winters and hot, dry summers, testing buildings in every season. ProHub connects you with verified handymen who understand the needs of Uniondale properties. Whether you're maintaining a family home in Uniondale Town, keeping farmhouse and outbuildings functional, or preparing a property for the next generation, a skilled handyman makes rural property ownership easier.",
+
+  "guideServiceTypes": "Uniondale handymen handle a broad spectrum of tasks that fall between DIY and specialist trades. Common jobs include furniture assembly (from Builders Warehouse flatpacks to online orders), door and window repairs, lock replacements, gutter cleaning and repairs, picture and TV mounting, shelving installation, minor carpentry, fence repairs, deck maintenance, and general home repairs. Many Uniondale handymen also offer painting touch-ups, pressure washing, basic tiling repairs, and weatherproofing. Given the agricultural setting, handymen here often have experience with farm building repairs, older construction methods, and the robust maintenance that rural properties require.",
+
+  "guideDiyVsPro": "If you're handy with tools and have the time, simple jobs like hanging pictures or tightening hinges are perfectly manageable. But hiring a handyman often makes sense even for 'easy' tasks when you factor in your time, the risk of mistakes, and the cost of buying tools you'll use once. A professional handyman with a bakkie full of equipment can complete in two hours what might take you an entire weekend — plus trips to the hardware store in George. For anything structural, electrical, or involving plumbing beyond basic fixes, handymen will typically recommend you call a licensed specialist. A good Uniondale handyman knows their limits and won't risk your safety or their reputation on work outside their expertise.",
+
+  "guideWhatToExpect": "When you submit a request through ProHub, describe your jobs in detail — handymen often work through a list of smaller tasks in a single visit, which is especially cost-effective given distances in this area. You'll typically receive quotes from verified handymen servicing Uniondale. Most charge either an hourly rate (R200-R450) or quote per job for larger tasks. For standard work, expect same-week availability; simpler jobs can often be scheduled within days. Good handymen bring their own tools and basic materials, though you'll usually need to supply specific items. Confirm what's included and any travel fees before work starts.",
+
+  "guideChoosingProvider": "The best handymen servicing Uniondale build their reputation on reliability and quality workmanship. Check ProHub reviews for comments about punctuality, tidiness, and whether they completed work as quoted. Ask about their experience with your specific job type — an excellent furniture assembler isn't necessarily great at carpentry. Confirm they have public liability insurance, especially for work involving ladders or power tools. For ongoing property maintenance, many handymen offer discounted rates for regular clients or maintenance contracts. If they quote significantly below market rate, ask why — cheap often means cutting corners.",
+
+  "faqs": [
+    {
+      "question": "How much does a handyman cost in Uniondale?",
+      "answer": "Handyman rates in Uniondale typically range from R200-R450 per hour, with possible travel fees for rural properties. Many offer half-day or full-day rates for multiple jobs, which is often better value. Common job prices: furniture assembly R150-R500 per item, door repairs R300-R1,200, shelf installation R200-R600, fence repairs R400-R1,500. Get multiple ProHub quotes to compare."
+    },
+    {
+      "question": "What jobs can a handyman do in Uniondale?",
+      "answer": "Handymen in Uniondale handle repairs, installations, and maintenance that don't require licensed tradespeople. This includes furniture assembly, door/window repairs, painting touch-ups, fence repairs, gutter cleaning, TV mounting, shelving, deck maintenance, lock changes, and general odd jobs. For electrical, plumbing, or structural work, they'll refer you to licensed specialists."
+    },
+    {
+      "question": "How do I find a reliable handyman in Uniondale?",
+      "answer": "ProHub verifies all listed handymen with ID and business checks. Read reviews from other customers, check their response times, and look for comments about quality and reliability. Ask for photos of previous work if possible. Avoid anyone who won't provide a quote or demands full payment upfront."
+    },
+    {
+      "question": "Do Uniondale handymen work weekends?",
+      "answer": "Many handymen offer weekend availability, though often at slightly higher rates. This is useful for occupied homes where weekday access is difficult. When submitting your ProHub request, mention your preferred days and times."
+    },
+    {
+      "question": "Which areas do Uniondale handymen service?",
+      "answer": "ProHub handymen cover Uniondale Town and surrounding farms. Many also service De Rust, Oudtshoorn, George, and nearby towns. Confirm coverage and any travel fees when requesting quotes."
+    }
+  ],
+  "gallery": [
+    {
+      "url": "/images/handyman-door-repair.png",
+      "alt": "Handyman repairing door hinge in Uniondale home",
+      "caption": "Professional Repairs",
+      "description": "Expert repairs for doors, windows, hinges, and hardware. We fix what's broken and restore function to your home."
+    },
+    {
+      "url": "/images/handyman-furniture-assembly.png",
+      "alt": "Furniture assembly service in Uniondale home",
+      "caption": "Furniture Assembly",
+      "description": "Fast, frustration-free furniture assembly. From flatpack to fully built — we handle Builders Warehouse, @Home, and online orders."
+    },
+    {
+      "url": "/images/handyman-shelf-installation.png",
+      "alt": "Handyman installing shelves in Uniondale property",
+      "caption": "Shelving & Mounting",
+      "description": "Secure installation of shelves, TVs, mirrors, and wall fixtures. Proper anchoring for any wall type — brick, drywall, or hollow."
+    },
+    {
+      "url": "/images/handyman-fence-repair.png",
+      "alt": "Fence repair and maintenance in Uniondale garden",
+      "caption": "Fence & Gate Repairs",
+      "description": "Restore security and curb appeal with fence repairs, gate adjustments, and timber treatments. Weather damage fixed fast."
+    },
+    {
+      "url": "/images/handyman-lock-replacement.png",
+      "alt": "Door lock replacement service in Uniondale",
+      "caption": "Door & Lock Repairs",
+      "description": "Fix sticking doors, broken hinges, and faulty locks. We repair, adjust, and replace to keep your home secure."
+    },
+    {
+      "url": "/images/handyman-maintenance.png",
+      "alt": "Professional handyman ready for home maintenance in Uniondale",
+      "caption": "Home Maintenance",
+      "description": "Tackle your to-do list in one visit. We handle multiple small jobs efficiently — saving you time and hassle."
+    }
+  ],
+  "status": "live",
+  "lastUpdated": "2026-02-16T18:08:00.000Z"
+}

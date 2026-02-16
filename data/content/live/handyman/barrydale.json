@@ -1,0 +1,79 @@
+{
+  "title": "Best Handyman Services in Barrydale — Get Free Quotes | ProHub",
+  "description": "Find verified handymen in Barrydale, Western Cape. Get up to 5 free quotes for repairs, furniture assembly, odd jobs & home maintenance. Trusted local pros.",
+  "heroTitle": "Find Trusted Handymen in Barrydale",
+  "heroSubtitle": "Get up to 5 free quotes from verified local handymen. Compare prices and reviews before you hire.",
+  
+  "guideIntro": "Barrydale has quietly become one of the Klein Karoo's most creative communities — artists, craftspeople, and weekenders have discovered this Route 62 village's charm. From the historic cottages in Barrydale Village to the rural properties around Warmwaterberg, buildings here range from original Karoo architecture to converted farm structures. The dry climate is kind to some materials but harsh on others, and the mix of permanent residents and part-time owners creates varying maintenance needs. ProHub connects you with verified handymen who appreciate Barrydale's artistic character while delivering practical results. Whether you're restoring a heritage property, maintaining a creative studio, or keeping your weekend retreat in shape, a skilled handyman makes the difference.",
+
+  "guideServiceTypes": "Barrydale handymen handle a broad spectrum of tasks that fall between DIY and specialist trades. Common jobs include furniture assembly (from Builders Warehouse flatpacks to online orders), door and window repairs, lock replacements, gutter cleaning and repairs, picture and TV mounting, shelving installation, minor carpentry, fence repairs, deck maintenance, and general home repairs. Many Barrydale handymen also offer painting touch-ups, pressure washing, basic tiling repairs, and heritage-sensitive restoration work. Given the artistic community, handymen here often help with gallery installations, studio setups, and the unique requests that creative spaces generate.",
+
+  "guideDiyVsPro": "If you're handy with tools and have the time, simple jobs like hanging pictures or tightening hinges are perfectly manageable. But hiring a handyman often makes sense even for 'easy' tasks when you factor in your time, the risk of mistakes, and the cost of buying tools you'll use once. A professional handyman with a bakkie full of equipment can complete in two hours what might take you an entire weekend — plus trips to the hardware store in Montagu or Ladismith. For anything structural, electrical, or involving plumbing beyond basic fixes, handymen will typically recommend you call a licensed specialist. A good Barrydale handyman knows their limits and won't risk your safety or their reputation on work outside their expertise.",
+
+  "guideWhatToExpect": "When you submit a request through ProHub, describe your jobs in detail — handymen often work through a list of smaller tasks in a single visit, which is more cost-effective than multiple callouts. You'll typically receive quotes from verified handymen servicing Barrydale. Most charge either an hourly rate (R200-R450) or quote per job for larger tasks. For standard work, expect same-week availability; simpler jobs can often be scheduled within days. Good handymen bring their own tools and basic materials, though you'll usually need to supply specific items like paint colours, shelf brackets to match existing ones, or specialised fittings. Confirm what's included before work starts.",
+
+  "guideChoosingProvider": "The best handymen servicing Barrydale build their reputation on reliability and quality workmanship. Check ProHub reviews for comments about punctuality, tidiness, and whether they completed work as quoted. Ask about their experience with your specific job type — an excellent furniture assembler isn't necessarily great at carpentry. Confirm they have public liability insurance, especially for work involving ladders or power tools. For ongoing property maintenance, many handymen offer discounted rates for regular clients or maintenance contracts. If they quote significantly below market rate, ask why — cheap often means cutting corners.",
+
+  "faqs": [
+    {
+      "question": "How much does a handyman cost in Barrydale?",
+      "answer": "Handyman rates in Barrydale typically range from R200-R450 per hour. Many offer half-day (R800-R1,500) or full-day (R1,200-R2,500) rates for multiple jobs, which is often better value. Common job prices: furniture assembly R150-R500 per item, door repairs R300-R1,200, shelf installation R200-R600, fence repairs R400-R1,500. Get multiple ProHub quotes to compare."
+    },
+    {
+      "question": "What jobs can a handyman do in Barrydale?",
+      "answer": "Handymen in Barrydale handle repairs, installations, and maintenance that don't require licensed tradespeople. This includes furniture assembly, door/window repairs, painting touch-ups, fence repairs, gutter cleaning, TV mounting, shelving, deck maintenance, lock changes, and general odd jobs. For electrical, plumbing, or structural work, they'll refer you to licensed specialists."
+    },
+    {
+      "question": "How do I find a reliable handyman in Barrydale?",
+      "answer": "ProHub verifies all listed handymen with ID and business checks. Read reviews from other customers, check their response times, and look for comments about quality and reliability. Ask for photos of previous work if possible. Avoid anyone who won't provide a quote or demands full payment upfront."
+    },
+    {
+      "question": "Do Barrydale handymen work weekends?",
+      "answer": "Many handymen offer weekend availability, which is valuable since many Barrydale properties are weekend retreats with owners visiting from Cape Town. When submitting your ProHub request, mention your preferred days and times."
+    },
+    {
+      "question": "Which areas do Barrydale handymen service?",
+      "answer": "ProHub handymen cover Barrydale Village and Warmwaterberg area. Many also service Ladismith, Montagu, Calitzdorp, and nearby Route 62 towns. Confirm coverage and any travel fees when requesting quotes."
+    }
+  ],
+  "gallery": [
+    {
+      "url": "/images/handyman-door-repair.png",
+      "alt": "Handyman repairing door hinge in Barrydale home",
+      "caption": "Professional Repairs",
+      "description": "Expert repairs for doors, windows, hinges, and hardware. We fix what's broken and restore function to your home."
+    },
+    {
+      "url": "/images/handyman-furniture-assembly.png",
+      "alt": "Furniture assembly service in Barrydale home",
+      "caption": "Furniture Assembly",
+      "description": "Fast, frustration-free furniture assembly. From flatpack to fully built — we handle Builders Warehouse, @Home, and online orders."
+    },
+    {
+      "url": "/images/handyman-shelf-installation.png",
+      "alt": "Handyman installing shelves in Barrydale property",
+      "caption": "Shelving & Mounting",
+      "description": "Secure installation of shelves, TVs, mirrors, and wall fixtures. Proper anchoring for any wall type — brick, drywall, or hollow."
+    },
+    {
+      "url": "/images/handyman-fence-repair.png",
+      "alt": "Fence repair and maintenance in Barrydale garden",
+      "caption": "Fence & Gate Repairs",
+      "description": "Restore security and curb appeal with fence repairs, gate adjustments, and timber treatments. Weather damage fixed fast."
+    },
+    {
+      "url": "/images/handyman-lock-replacement.png",
+      "alt": "Door lock replacement service in Barrydale",
+      "caption": "Door & Lock Repairs",
+      "description": "Fix sticking doors, broken hinges, and faulty locks. We repair, adjust, and replace to keep your home secure."
+    },
+    {
+      "url": "/images/handyman-maintenance.png",
+      "alt": "Professional handyman ready for home maintenance in Barrydale",
+      "caption": "Home Maintenance",
+      "description": "Tackle your to-do list in one visit. We handle multiple small jobs efficiently — saving you time and hassle."
+    }
+  ],
+  "status": "live",
+  "lastUpdated": "2026-02-16T18:08:00.000Z"
+}
